@@ -20,10 +20,17 @@ import io.material.catalog.R;
 
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.os.Handler;
+import android.os.Looper;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
+
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 /**
  * An Activity that displays a scrolling Top App Bar demo for the Catalog app, with a transparent
@@ -31,6 +38,8 @@ import androidx.annotation.Nullable;
  */
 public class TopAppBarScrollingTransparentStatusDemoActivity
     extends BaseTopAppBarActionBarDemoActivity {
+
+  private final Handler handler = new Handler(Looper.getMainLooper());
 
   @Override
   public View onCreateDemoView(
@@ -42,6 +51,83 @@ public class TopAppBarScrollingTransparentStatusDemoActivity
     Toolbar toolbar = view.findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
+    ExtendedFloatingActionButton button = view.findViewById(R.id.fling);
+    button.setOnClickListener(v -> {
+      handler.postDelayed(() -> fling(
+          view.getWidth() / 2,
+          view.getHeight() / 2,
+          view.getWidth() / 2,
+          view.getHeight() / 2 - 100,
+          500
+      ), 0L);
+
+      handler.postDelayed(() -> fling(
+          view.getWidth() / 2,
+          view.getHeight() / 2,
+          view.getWidth() / 2,
+          view.getHeight() / 2 + 100,
+          500
+      ), 1000L);
+    });
+
     return view;
+  }
+
+
+  private void fling(int fromX, int fromY,
+                     int toX, int toY,
+                     int stepCount) {
+
+    long downTime = SystemClock.uptimeMillis();
+    long eventTime = SystemClock.uptimeMillis();
+
+    // Pointer down
+
+    MotionEvent event = MotionEvent.obtain(
+        downTime,
+        eventTime,
+        MotionEvent.ACTION_DOWN,
+        fromX,
+        fromY,
+        0
+    );
+
+    dispatchTouchEvent(event);
+
+    // Pointer move
+
+    float xStep = (toX - fromX) * 1.0f / stepCount;
+    float yStep = (toY - fromY) * 1.0f / stepCount;
+
+    for (int i = 0; i < stepCount; i++) {
+      float x = fromX + xStep * i;
+      float y = fromY + yStep * i;
+
+      eventTime = SystemClock.uptimeMillis();
+      event = MotionEvent.obtain(
+          downTime,
+          eventTime,
+          MotionEvent.ACTION_MOVE,
+          x,
+          y,
+          0
+      );
+
+      dispatchTouchEvent(event);
+    }
+
+    // Pointer up
+
+    eventTime = SystemClock.uptimeMillis();
+    event = MotionEvent.obtain(
+        downTime,
+        eventTime,
+        MotionEvent.ACTION_UP,
+        toX,
+        toY,
+        0
+    );
+
+    dispatchTouchEvent(event);
   }
 }

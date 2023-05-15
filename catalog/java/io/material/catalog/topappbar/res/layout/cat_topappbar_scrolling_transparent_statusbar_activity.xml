@@ -45,4 +45,12 @@
     <include layout="@layout/cat_topappbar_filler_text_view"/>
   </androidx.core.widget.NestedScrollView>
 
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/fling"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|right|end"
+    android:layout_margin="16dp"
+    android:text="Fling, up and down"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
