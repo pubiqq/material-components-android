@@ -666,14 +666,20 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
   @Override
   public void refreshDrawableState() {
     super.refreshDrawableState();
-    if (this.icon != null) {
-      final int[] state = getDrawableState();
-      boolean changed = icon.setState(state);
 
-      // Force the view to draw if icon state has changed.
-      if (changed) {
-        invalidate();
-      }
+    final int[] state = getDrawableState();
+    boolean changed = false;
+    if (icon != null) {
+      changed |= icon.setState(state);
+    }
+
+    if (secondaryIcon != null) {
+      changed |= secondaryIcon.setState(state);
+    }
+
+    // Force the view to draw if icon state has changed.
+    if (changed) {
+      invalidate();
     }
   }
 
