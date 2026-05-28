@@ -1367,7 +1367,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
       case 0: // start
         return (icon != null && isIconStart()) ? icon : null;
       case 1: // top
-        return (icon != null && isIconEnd()) ? icon : null;
+        return (icon != null && isIconTop()) ? icon : null;
       case 2: // end
         return (icon != null && isIconEnd()) ? icon : null;
       default:
