@@ -1109,7 +1109,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
    */
   public void setSecondaryIcon(@Nullable Drawable icon) {
     if (secondaryIcon != icon) {
-      if (maybeRunAfterWidthAnimation(() -> setIcon(icon))) {
+      if (maybeRunAfterWidthAnimation(() -> setSecondaryIcon(icon))) {
         return;
       }
       originalWidth = UNSET;
