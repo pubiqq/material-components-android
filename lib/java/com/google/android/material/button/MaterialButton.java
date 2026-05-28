@@ -1569,8 +1569,8 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
    */
   public void setIconGravity(@IconGravity int iconGravity) {
     if (this.iconGravity != iconGravity) {
-      validateIconGravity();
       this.iconGravity = iconGravity;
+      validateIconGravity();
       updateIconPosition(getMeasuredWidth(), getMeasuredHeight());
     }
   }
@@ -1596,8 +1596,8 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
    */
   public void setSecondaryIconGravity(@IconGravity int secondaryIconGravity) {
     if (this.secondaryIconGravity != secondaryIconGravity) {
-      validateSecondaryIconGravity();
       this.secondaryIconGravity = secondaryIconGravity;
+      validateSecondaryIconGravity();
       updateSecondaryIconPosition(getMeasuredWidth(), getMeasuredHeight());
     }
   }
