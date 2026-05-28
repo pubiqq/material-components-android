@@ -611,7 +611,10 @@ public class MaterialButtonGroup extends LinearLayout {
     }
     item.setOnMenuItemClickListener(
         menuItem -> {
-          button.performClick();
+          // Menu items already perform all the actions associated with clicks, such as
+          // reporting accessibility events and playing sounds, so all we need from
+          // the original buttons is to invoke their click-related callbacks.
+          button.callOnClick();
           return true;
         });
     return item;

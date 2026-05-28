@@ -1792,6 +1792,16 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     return handled;
   }
 
+  @Override
+  public boolean callOnClick() {
+    final boolean checkable = isCheckable() && materialButtonHelper.isToggleCheckedStateOnClick();
+    if (checkable) {
+      toggle();
+    }
+
+    return super.callOnClick();
+  }
+
   /**
    * Returns whether or not clicking the button will toggle the checked state.
    *

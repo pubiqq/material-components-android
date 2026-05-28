@@ -281,7 +281,10 @@ public class OverflowLinearLayout extends LinearLayout {
       item.setEnabled(view.isEnabled());
       item.setOnMenuItemClickListener(
           menuItem -> {
-            view.performClick();
+            // Menu items already perform all the actions associated with clicks, such as
+            // reporting accessibility events and playing sounds, so all we need from
+            // the original buttons is to invoke their click-related callbacks.
+            view.callOnClick();
             if (item.isCheckable()) {
               item.setChecked(!item.isChecked());
             }
