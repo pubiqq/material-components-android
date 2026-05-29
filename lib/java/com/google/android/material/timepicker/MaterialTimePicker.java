@@ -288,7 +288,7 @@ public final class MaterialTimePicker extends DialogFragment implements OnDouble
           if (activePresenter instanceof TimePickerTextInputPresenter) {
             TimePickerTextInputPresenter presenter = (TimePickerTextInputPresenter) activePresenter;
             if (presenter.hasError()) {
-              presenter.vibrateAndMaybeBeep(root);
+              presenter.vibrate(root);
               presenter.accessibilityFocusOnError();
               return;
             }

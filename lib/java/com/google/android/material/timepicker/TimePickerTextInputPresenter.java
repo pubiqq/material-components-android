@@ -72,7 +72,7 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
             }
             if (s.length() > MINUTES_MAX_LENGTH) {
               s = s.delete(MINUTES_MAX_LENGTH, s.length()); // lock to 2 digits
-              vibrateAndMaybeBeep(minuteEditText);
+              vibrate(minuteEditText);
               return;
             }
             int minute = Integer.parseInt(s.toString());
@@ -100,7 +100,7 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
             }
             if (s.length() > HOURS_MAX_LENGTH) {
               s = s.delete(HOURS_MAX_LENGTH, s.length()); // lock to 2 digits
-              vibrateAndMaybeBeep(hourEditText);
+              vibrate(hourEditText);
               return;
             }
             int hour = Integer.parseInt(s.toString());
@@ -238,7 +238,7 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
     minuteTextInput.setError(true);
     minuteLabel.setText(minuteErrorText);
     minuteLabel.announceForAccessibility(minuteLabel.getText());
-    vibrateAndMaybeBeep(minuteLabel);
+    vibrate(minuteLabel);
   }
 
   @SuppressLint("FlaggedApi")
@@ -246,7 +246,7 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
     hourTextInput.setError(true);
     hourLabel.setText(time.format == CLOCK_24H ? hourError24hText : hourErrorText);
     hourLabel.announceForAccessibility(hourLabel.getText());
-    vibrateAndMaybeBeep(hourLabel);
+    vibrate(hourLabel);
   }
 
   private void clearMinuteError() {
@@ -268,13 +268,6 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
     clearHourError();
   }
 
-  void vibrateAndMaybeBeep(@NonNull View view) {
-    vibrate(view);
-    if (!isTouchExplorationEnabled(view.getContext())) {
-      beep(view.getContext());
-    }
-  }
-
   void accessibilityFocusOnError() {
     if (hourTextInput.hasError()) {
       requestAccessibilityFocusAndAnnounce(hourTextInput, hourLabel);
@@ -289,15 +282,8 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
     labelToAnnounce.announceForAccessibility(labelToAnnounce.getText());
   }
 
-  private void vibrate(@NonNull View view) {
+  void vibrate(@NonNull View view) {
     ViewCompat.performHapticFeedback(view, HapticFeedbackConstantsCompat.REJECT);
-  }
-
-  private void beep(@NonNull Context context) {
-    AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-    if (audioManager != null) {
-      audioManager.playSoundEffect(AudioManager.FX_KEYPRESS_INVALID);
-    }
   }
 
   private void setTime(TimeModel time) {
@@ -376,11 +362,5 @@ class TimePickerTextInputPresenter implements OnSelectionChange, TimePickerPrese
   public void clearCheck() {
     minuteTextInput.setChecked(false);
     hourTextInput.setChecked(false);
-  }
-
-  private static boolean isTouchExplorationEnabled(@NonNull Context context) {
-    AccessibilityManager accessibilityManager =
-        (AccessibilityManager) context.getSystemService(Context.ACCESSIBILITY_SERVICE);
-    return accessibilityManager != null && accessibilityManager.isTouchExplorationEnabled();
   }
 }
