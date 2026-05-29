@@ -102,6 +102,9 @@
     <item name="motionSpringDefaultEffects">@style/Motion.Material3.Spring.Expressive.Default.Effects</item>
     <item name="motionSpringSlowSpatial">@style/Motion.Material3.Spring.Expressive.Slow.Spatial</item>
     <item name="motionSpringSlowEffects">@style/Motion.Material3.Spring.Expressive.Slow.Effects</item>
+
+    <!-- Picker styles and themes. -->
+    <item name="materialTimePickerTheme">@style/ThemeOverlay.Material3Expressive.MaterialTimePicker</item>
   </style>
 
   <style name="Base.Theme.Material3Expressive.Dark" parent="Base.Theme.Material3.Dark">
@@ -179,6 +182,9 @@
     <item name="motionSpringDefaultEffects">@style/Motion.Material3.Spring.Expressive.Default.Effects</item>
     <item name="motionSpringSlowSpatial">@style/Motion.Material3.Spring.Expressive.Slow.Spatial</item>
     <item name="motionSpringSlowEffects">@style/Motion.Material3.Spring.Expressive.Slow.Effects</item>
+
+    <!-- Picker styles and themes. -->
+    <item name="materialTimePickerTheme">@style/ThemeOverlay.Material3Expressive.MaterialTimePicker</item>
   </style>
 
   <!-- We're not large, so redirect to Base.Theme.Material3Expressive themes. -->

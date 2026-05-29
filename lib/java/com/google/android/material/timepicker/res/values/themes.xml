@@ -39,4 +39,8 @@
     <item name="imageButtonStyle">@style/Widget.Material3.MaterialTimePicker.ImageButton</item>
     <item name="materialTimePickerTitleStyle">@style/TextAppearance.Material3.MaterialTimePicker.Title</item>
   </style>
+
+  <style name="ThemeOverlay.Material3Expressive.MaterialTimePicker" parent="ThemeOverlay.Material3.MaterialTimePicker">
+    <item name="materialButtonToggleGroupStyle">@style/Widget.Material3Expressive.MaterialTimePicker.MaterialButtonToggleGroup</item>
+  </style>
 </resources>

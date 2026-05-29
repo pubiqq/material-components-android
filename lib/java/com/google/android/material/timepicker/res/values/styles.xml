@@ -227,4 +227,6 @@
     <item name="clockHandColor">@macro/m3_comp_time_picker_clock_dial_selector_handle_container_color</item>
     <item name="clockNumberTextColor">@color/m3_timepicker_clock_text_color</item>
   </style>
+
+  <style name="Widget.Material3Expressive.MaterialTimePicker.MaterialButtonToggleGroup" parent="Widget.Material3.MaterialButtonToggleGroup" />
 </resources>
