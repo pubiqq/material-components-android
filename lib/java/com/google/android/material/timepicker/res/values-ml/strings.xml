@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">സമയം തിരഞ്ഞെടുക്കുക</string>
+  <string name="material_timepicker_enter_time">സമയം നൽകുക</string>
   <string name="material_timepicker_minute">മിനിറ്റ്</string>
   <string name="material_timepicker_hour">മണിക്കൂര്‍</string>
   <string name="material_timepicker_minute_error">മിനിറ്റ് 0–59 ആയിരിക്കണം</string>

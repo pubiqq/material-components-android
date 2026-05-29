@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">ಸಮಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+  <string name="material_timepicker_enter_time">ಸಮಯವನ್ನು ನಮೂದಿಸಿ</string>
   <string name="material_timepicker_minute">ನಿಮಿಷ</string>
   <string name="material_timepicker_hour">ಗಂಟೆ</string>
   <string name="material_timepicker_minute_error">ನಿಮಿಷವು 0–59 ಆಗಿರಬೇಕು</string>

@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Изаберите време</string>
+  <string name="material_timepicker_enter_time">Унесите време</string>
   <string name="material_timepicker_minute">Минут</string>
   <string name="material_timepicker_hour">Сат</string>
   <string name="material_timepicker_minute_error">Минут мора да буде 0–59</string>

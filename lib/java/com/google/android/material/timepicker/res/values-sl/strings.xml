@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">pop.</string>
   <string name="material_timepicker_am">dop.</string>
   <string name="material_timepicker_select_time">Izberite uro</string>
+  <string name="material_timepicker_enter_time">Vnesite uro</string>
   <string name="material_timepicker_minute">Minuta</string>
   <string name="material_timepicker_hour">Ura</string>
   <string name="material_timepicker_minute_error">Minuta mora biti 0–59</string>

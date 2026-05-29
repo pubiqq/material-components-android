@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">رات</string>
   <string name="material_timepicker_am">قبل از دوپہر</string>
   <string name="material_timepicker_select_time">وقت منتخب کریں</string>
+  <string name="material_timepicker_enter_time">وقت درج کریں</string>
   <string name="material_timepicker_minute">منٹ</string>
   <string name="material_timepicker_hour">گھنٹہ</string>
   <string name="material_timepicker_minute_error">منٹ 0-59 ہونا چاہیے</string>

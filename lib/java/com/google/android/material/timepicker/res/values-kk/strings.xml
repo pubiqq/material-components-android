@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Уақытты таңдау</string>
+  <string name="material_timepicker_select_time">Уақытты таңдаңыз</string>
+  <string name="material_timepicker_enter_time">Уақытты енгізіңіз</string>
   <string name="material_timepicker_minute">Mинут</string>
   <string name="material_timepicker_hour">Сағат</string>
   <string name="material_timepicker_minute_error">Минут 0–59 болуы керек.</string>

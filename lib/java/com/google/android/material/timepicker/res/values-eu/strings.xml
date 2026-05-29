@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Hautatu ordua</string>
+  <string name="material_timepicker_enter_time">Idatzi ordua</string>
   <string name="material_timepicker_minute">Minutua</string>
   <string name="material_timepicker_hour">Ordua</string>
   <string name="material_timepicker_minute_error">Minutuak 0-59 izan behar du</string>

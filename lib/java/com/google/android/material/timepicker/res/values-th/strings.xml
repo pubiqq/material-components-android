@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">เลือกเวลา</string>
+  <string name="material_timepicker_enter_time">ป้อนเวลา</string>
   <string name="material_timepicker_minute">นาที</string>
   <string name="material_timepicker_hour">ชั่วโมง</string>
   <string name="material_timepicker_minute_error">นาทีต้องเป็น 0-59</string>

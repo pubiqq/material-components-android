@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Aja valimine</string>
+  <string name="material_timepicker_select_time">Valige aeg</string>
+  <string name="material_timepicker_enter_time">Sisestage aeg</string>
   <string name="material_timepicker_minute">Minut</string>
   <string name="material_timepicker_hour">Tunnid</string>
   <string name="material_timepicker_minute_error">Minutite vahemik on 0–59</string>

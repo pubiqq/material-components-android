@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Ժամանակի ընտրություն</string>
+  <string name="material_timepicker_select_time">Ընտրեք ժամը</string>
+  <string name="material_timepicker_enter_time">Մուտքագրեք ժամը</string>
   <string name="material_timepicker_minute">Րոպե</string>
   <string name="material_timepicker_hour">Ժամ</string>
   <string name="material_timepicker_minute_error">Րոպեն պետք է լինի 0–59</string>

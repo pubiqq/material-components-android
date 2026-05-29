@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">eh</string>
   <string name="material_timepicker_am">fh</string>
   <string name="material_timepicker_select_time">Veldu tíma</string>
+  <string name="material_timepicker_enter_time">Sláðu inn tíma</string>
   <string name="material_timepicker_minute">Mínúta</string>
   <string name="material_timepicker_hour">Klukkustund</string>
   <string name="material_timepicker_minute_error">Mínúta þarf að vera 0–59</string>

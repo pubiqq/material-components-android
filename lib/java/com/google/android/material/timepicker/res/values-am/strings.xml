@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">ከሰዓት</string>
   <string name="material_timepicker_am">ጥዋት</string>
   <string name="material_timepicker_select_time">ጊዜ ምረጥ</string>
+  <string name="material_timepicker_enter_time">ጊዜ ያስገቡ</string>
   <string name="material_timepicker_minute">ደቂቃ</string>
   <string name="material_timepicker_hour">ሰዓት</string>
   <string name="material_timepicker_minute_error">ደቂቃ ከ0–59 መሆን አለበት</string>

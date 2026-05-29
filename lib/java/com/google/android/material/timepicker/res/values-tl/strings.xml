@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Pumili ng oras</string>
+  <string name="material_timepicker_select_time">Pumili ng Oras</string>
+  <string name="material_timepicker_enter_time">Maglagay ng Oras</string>
   <string name="material_timepicker_minute">Minuto</string>
   <string name="material_timepicker_hour">Oras</string>
   <string name="material_timepicker_minute_error">Dapat 0–59 ang minuto</string>

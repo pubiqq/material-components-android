@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">P/M</string>
   <string name="material_timepicker_am">PG</string>
   <string name="material_timepicker_select_time">Pilih masa</string>
+  <string name="material_timepicker_enter_time">Masukkan Masa</string>
   <string name="material_timepicker_minute">Minit</string>
   <string name="material_timepicker_hour">Jam</string>
   <string name="material_timepicker_minute_error">Minit mestilah antara 0–59</string>

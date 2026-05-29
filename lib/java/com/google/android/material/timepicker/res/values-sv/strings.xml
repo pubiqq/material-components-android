@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">EM</string>
   <string name="material_timepicker_am">FM</string>
   <string name="material_timepicker_select_time">Välj tid</string>
+  <string name="material_timepicker_enter_time">Ange tid</string>
   <string name="material_timepicker_minute">Minut</string>
   <string name="material_timepicker_hour">Timme</string>
   <string name="material_timepicker_minute_error">Minuten måste vara 0–59</string>

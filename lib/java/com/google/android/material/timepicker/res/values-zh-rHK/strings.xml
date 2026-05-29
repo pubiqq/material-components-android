@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">選取時間</string>
+  <string name="material_timepicker_enter_time">輸入時間</string>
   <string name="material_timepicker_minute">分鐘</string>
   <string name="material_timepicker_hour">小時</string>
   <string name="material_timepicker_minute_error">分鐘必須介乎 0 至 59</string>

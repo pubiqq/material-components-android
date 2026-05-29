@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">நேரத்தைத் தேர்ந்தெடுக்கவும்</string>
+  <string name="material_timepicker_select_time">நேரத்தைத் தேர்ந்தெடுங்கள்</string>
+  <string name="material_timepicker_enter_time">நேரத்தை டைப் செய்யுங்கள்</string>
   <string name="material_timepicker_minute">நிமிடம்</string>
   <string name="material_timepicker_hour">மணிநேரம்</string>
   <string name="material_timepicker_minute_error">நிமிடங்கள் 0–59 வரை</string>

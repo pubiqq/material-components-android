@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">ਸਮਾਂ ਚੁਣੋ</string>
+  <string name="material_timepicker_enter_time">ਸਮਾਂ ਦਾਖਲ ਕਰੋ</string>
   <string name="material_timepicker_minute">ਮਿੰਟ</string>
   <string name="material_timepicker_hour">ਘੰਟਾ</string>
   <string name="material_timepicker_minute_error">ਮਿੰਟ 0–59 ਹੋਣੇ ਲਾਜ਼ਮੀ ਹਨ</string>

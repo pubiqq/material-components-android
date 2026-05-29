@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">ល្ងាច</string>
   <string name="material_timepicker_am">ព្រឹក</string>
-  <string name="material_timepicker_select_time">ជ្រើស​ម៉ោង</string>
+  <string name="material_timepicker_select_time">ជ្រើសរើស​ពេលវេលា</string>
+  <string name="material_timepicker_enter_time">បញ្ចូលម៉ោង</string>
   <string name="material_timepicker_minute">នាទី​</string>
   <string name="material_timepicker_hour">ម៉ោង</string>
   <string name="material_timepicker_minute_error">នាទីត្រូវតែពី 0–59</string>

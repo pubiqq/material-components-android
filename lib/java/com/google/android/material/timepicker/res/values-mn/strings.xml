@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Цаг сонгох</string>
+  <string name="material_timepicker_enter_time">Цаг оруулах</string>
   <string name="material_timepicker_minute">Минут</string>
   <string name="material_timepicker_hour">Цаг</string>
   <string name="material_timepicker_minute_error">Минут нь 0–59 байх ёстой</string>

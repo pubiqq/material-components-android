@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">ip</string>
   <string name="material_timepicker_am">ap</string>
   <string name="material_timepicker_select_time">Valitse aika</string>
+  <string name="material_timepicker_enter_time">Lisää aika</string>
   <string name="material_timepicker_minute">Minuutti</string>
   <string name="material_timepicker_hour">Tunnit</string>
   <string name="material_timepicker_minute_error">Minuutin on oltava 0–59</string>

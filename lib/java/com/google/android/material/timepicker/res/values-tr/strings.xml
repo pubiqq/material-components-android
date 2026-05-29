@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Zamanı seçin</string>
+  <string name="material_timepicker_select_time">Saat Seçin</string>
+  <string name="material_timepicker_enter_time">Saat Girin</string>
   <string name="material_timepicker_minute">Dakika</string>
   <string name="material_timepicker_hour">Saat</string>
   <string name="material_timepicker_minute_error">Dakika 0-59 arasında olmalıdır</string>

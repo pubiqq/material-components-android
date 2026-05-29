@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Uhrzeit auswählen</string>
+  <string name="material_timepicker_enter_time">Uhrzeit eingeben</string>
   <string name="material_timepicker_minute">Minute</string>
   <string name="material_timepicker_hour">Stunde</string>
   <string name="material_timepicker_minute_error">Zulässige Werte: 0–59</string>

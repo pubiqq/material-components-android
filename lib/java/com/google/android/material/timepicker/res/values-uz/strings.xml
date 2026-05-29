@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Vaqtni tanlang</string>
+  <string name="material_timepicker_enter_time">Vaqtni kiriting</string>
   <string name="material_timepicker_minute">Daqiqa</string>
   <string name="material_timepicker_hour">Soat</string>
   <string name="material_timepicker_minute_error">Daqiqa 0–59 boʻlsin</string>

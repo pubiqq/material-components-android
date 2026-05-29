@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Select time</string>
+  <string name="material_timepicker_select_time">ସମୟ ଚୟନ କରନ୍ତୁ</string>
+  <string name="material_timepicker_enter_time">ସମୟ ଲେଖନ୍ତୁ</string>
   <string name="material_timepicker_minute">Minute</string>
   <string name="material_timepicker_hour">Hour</string>
   <string name="material_timepicker_minute_error">Minute must be 0–59</string>

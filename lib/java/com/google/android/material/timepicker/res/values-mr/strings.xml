@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">वेळ निवडा</string>
+  <string name="material_timepicker_enter_time">वेळ एंटर करा</string>
   <string name="material_timepicker_minute">मिनिट</string>
   <string name="material_timepicker_hour">तास</string>
   <string name="material_timepicker_minute_error">मिनिट ० ते ५९ मधील असावे</string>

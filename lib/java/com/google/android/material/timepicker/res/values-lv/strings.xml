@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Laika atlasīšana</string>
+  <string name="material_timepicker_select_time">Laika atlase</string>
+  <string name="material_timepicker_enter_time">Laika ievade</string>
   <string name="material_timepicker_minute">Minūte</string>
   <string name="material_timepicker_hour">Stunda</string>
   <string name="material_timepicker_minute_error">Minūtes vērtība: 0–59</string>

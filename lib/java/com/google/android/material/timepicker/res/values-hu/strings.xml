@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">du.</string>
   <string name="material_timepicker_am">de.</string>
   <string name="material_timepicker_select_time">Időpont kiválasztása</string>
+  <string name="material_timepicker_enter_time">Időpont megadása</string>
   <string name="material_timepicker_minute">Perc</string>
   <string name="material_timepicker_hour">Óra</string>
   <string name="material_timepicker_minute_error">A perc 0–59 lehet</string>

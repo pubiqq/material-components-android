@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">समय चयन गर्नुहोस्</string>
+  <string name="material_timepicker_enter_time">समय हाल्नुहोस्</string>
   <string name="material_timepicker_minute">मिनेट</string>
   <string name="material_timepicker_hour">घन्टा:</string>
   <string name="material_timepicker_minute_error">मिनेट ० र ५९ का बिचमा हुनु पर्छ</string>

@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Pasirinkite laiką</string>
+  <string name="material_timepicker_enter_time">Įveskite laiką</string>
   <string name="material_timepicker_minute">Minutė</string>
   <string name="material_timepicker_hour">Valanda</string>
   <string name="material_timepicker_minute_error">Minutė turi būti 0–59</string>

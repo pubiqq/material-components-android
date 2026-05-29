@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">p. m.</string>
   <string name="material_timepicker_am">a. m.</string>
-  <string name="material_timepicker_select_time">Selecció de l\'hora</string>
+  <string name="material_timepicker_select_time">Selecciona l\'hora</string>
+  <string name="material_timepicker_enter_time">Introdueix l\'hora</string>
   <string name="material_timepicker_minute">Minut</string>
   <string name="material_timepicker_hour">Hora</string>
   <string name="material_timepicker_minute_error">El minut ha de ser 0-59</string>

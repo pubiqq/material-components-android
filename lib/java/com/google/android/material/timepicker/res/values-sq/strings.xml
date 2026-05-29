@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PD</string>
   <string name="material_timepicker_am">PD</string>
   <string name="material_timepicker_select_time">Zgjidh orën</string>
+  <string name="material_timepicker_enter_time">Fut orën</string>
   <string name="material_timepicker_minute">Minuta</string>
   <string name="material_timepicker_hour">Ora</string>
   <string name="material_timepicker_minute_error">Min. duhet të jetë 0-59</string>

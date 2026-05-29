@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">p.m.</string>
   <string name="material_timepicker_am">a.m.</string>
-  <string name="material_timepicker_select_time">Selectați ora</string>
+  <string name="material_timepicker_select_time">Selectează ora</string>
+  <string name="material_timepicker_enter_time">Introdu ora</string>
   <string name="material_timepicker_minute">Minut</string>
   <string name="material_timepicker_hour">Ora</string>
   <string name="material_timepicker_minute_error">Minut: între 0 și 59</string>

@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">CH</string>
   <string name="material_timepicker_am">SA</string>
   <string name="material_timepicker_select_time">Chọn thời gian</string>
+  <string name="material_timepicker_enter_time">Nhập thời gian</string>
   <string name="material_timepicker_minute">Phút</string>
   <string name="material_timepicker_hour">Giờ</string>
   <string name="material_timepicker_minute_error">Số phút phải từ 0 đến 59</string>

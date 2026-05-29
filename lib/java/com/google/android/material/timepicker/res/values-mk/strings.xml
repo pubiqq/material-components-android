@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">по.</string>
   <string name="material_timepicker_am">пр.</string>
   <string name="material_timepicker_select_time">Изберете време</string>
+  <string name="material_timepicker_enter_time">Внесете време</string>
   <string name="material_timepicker_minute">Минута</string>
   <string name="material_timepicker_hour">Час</string>
   <string name="material_timepicker_minute_error">Опсег на мин.: 0 – 59</string>

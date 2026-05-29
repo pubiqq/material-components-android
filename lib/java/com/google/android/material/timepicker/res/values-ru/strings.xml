@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Выбор времени</string>
+  <string name="material_timepicker_select_time">Выберите время</string>
+  <string name="material_timepicker_enter_time">Укажите время</string>
   <string name="material_timepicker_minute">Минуты</string>
   <string name="material_timepicker_hour">Час</string>
   <string name="material_timepicker_minute_error">Укажите от 0 до 59 мин.</string>

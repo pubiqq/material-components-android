@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">अपराह्न</string>
   <string name="material_timepicker_am">पूर्वाह्न</string>
   <string name="material_timepicker_select_time">समय चुनें</string>
+  <string name="material_timepicker_enter_time">समय डालें</string>
   <string name="material_timepicker_minute">मिनट</string>
   <string name="material_timepicker_hour">घंटा</string>
   <string name="material_timepicker_minute_error">मिनट, 0 से 59 के बीच होना चाहिए</string>

@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">пп</string>
   <string name="material_timepicker_am">дп</string>
   <string name="material_timepicker_select_time">Виберіть час</string>
+  <string name="material_timepicker_enter_time">Введіть час</string>
   <string name="material_timepicker_minute">Хвилина</string>
   <string name="material_timepicker_hour">Година</string>
   <string name="material_timepicker_minute_error">Укажіть від 0 до 59 хв</string>

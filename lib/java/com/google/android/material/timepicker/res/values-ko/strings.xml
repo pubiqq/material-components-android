@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">오후</string>
   <string name="material_timepicker_am">오전</string>
   <string name="material_timepicker_select_time">시간 선택</string>
+  <string name="material_timepicker_enter_time">시간 입력</string>
   <string name="material_timepicker_minute">분</string>
   <string name="material_timepicker_hour">시간</string>
   <string name="material_timepicker_minute_error">분은 0~59여야 합니다.</string>

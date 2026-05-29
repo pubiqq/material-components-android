@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">ب.ظ</string>
   <string name="material_timepicker_am">ق.ظ</string>
   <string name="material_timepicker_select_time">انتخاب زمان</string>
+  <string name="material_timepicker_enter_time">وارد کردن زمان</string>
   <string name="material_timepicker_minute">دقیقه</string>
   <string name="material_timepicker_hour">ساعت</string>
   <string name="material_timepicker_minute_error">دقیقه باید بین ۰ تا ۵۹ باشد</string>

@@ -17,7 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
-  <string name="material_timepicker_select_time">Chagua wakati</string>
+  <string name="material_timepicker_select_time">Chagua Muda</string>
+  <string name="material_timepicker_enter_time">Weka Muda</string>
   <string name="material_timepicker_minute">Dakika</string>
   <string name="material_timepicker_hour">Saa</string>
   <string name="material_timepicker_minute_error">Sharti iwe dakika 0–59</string>

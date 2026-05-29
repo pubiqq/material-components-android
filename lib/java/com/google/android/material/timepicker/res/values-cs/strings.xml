@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">PM</string>
   <string name="material_timepicker_am">AM</string>
   <string name="material_timepicker_select_time">Vyberte čas</string>
+  <string name="material_timepicker_enter_time">Zadejte čas</string>
   <string name="material_timepicker_minute">Minuta</string>
   <string name="material_timepicker_hour">Hodina</string>
   <string name="material_timepicker_minute_error">Minuty musí být 0–59</string>

@@ -18,6 +18,7 @@
   <string name="material_timepicker_pm">ညနေ</string>
   <string name="material_timepicker_am">နံနက်</string>
   <string name="material_timepicker_select_time">အချိန်ရွေးပါ</string>
+  <string name="material_timepicker_enter_time">အချိန်ထည့်ပါ</string>
   <string name="material_timepicker_minute">မိနစ်</string>
   <string name="material_timepicker_hour">နာရီ</string>
   <string name="material_timepicker_minute_error">မိနစ်သည် ၀–၅၉ ဖြစ်ရမည်</string>
