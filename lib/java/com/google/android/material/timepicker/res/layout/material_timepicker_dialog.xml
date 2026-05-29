@@ -64,7 +64,7 @@
 
   <com.google.android.material.button.MaterialButton
     android:id="@+id/material_timepicker_mode_button"
-    style="?attr/imageButtonStyle"
+    style="?attr/materialTimePickerModeButtonStyle"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 

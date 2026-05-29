@@ -96,12 +96,12 @@ Element           | Style                                 | Theme attribute
 
 The style attributes are assigned to the following components:
 
-Element                         | Affected component              | Default
-------------------------------- | ------------------------------- | -------
-**chipStyle**                   | Number inputs in the clock mode | `@style/Widget.Material3.MaterialTimePicker.Display`
-**materialButtonOutlinedStyle** | AM/PM toggle                    | `@style/Widget.Material3.MaterialTimePicker.Button`
-**imageButtonStyle**            | Keyboard/Text Input button      | `@style/Widget.Material3.MaterialTimePicker.ImageButton`
-**materialClockStyle**          | Clock Face of the Time Picker   | `@style/Widget.Material3.MaterialTimePicker.Clock`
+Element                               | Affected component              | Default
+------------------------------------- | ------------------------------- | -------
+**chipStyle**                         | Number inputs in the clock mode | `@style/Widget.Material3.MaterialTimePicker.Display`
+**materialButtonOutlinedStyle**       | AM/PM toggle                    | `@style/Widget.Material3.MaterialTimePicker.Button`
+**materialTimePickerModeButtonStyle** | Keyboard/Text Input button      | `?attr/materialIconButtonStyle`
+**materialClockStyle**                | Clock Face of the Time Picker   | `@style/Widget.Material3.MaterialTimePicker.Clock`
 
 For the full list, see
 [styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/timepicker/res/values/styles.xml)
