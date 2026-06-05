@@ -7,24 +7,8 @@ path: /docs/contributing/
 
 # General Contributing Guidelines
 
-The Material Components contributing policies and procedures can be found in the
-main Material Components documentation repository’s
-[contributing page](https://github.com/material-components/material-components/blob/develop/CONTRIBUTING.md).
-
-For larger feature requests we might ask you to write a
-[Design Doc](https://docs.google.com/document/d/1ISW8sVEQpAs1X-pQ0zf2q3Sbz5NRS8jfjs-jnjo9iWk/edit).
-
 To make a contribution, you'll need to be able to build the library from source
 and run our tests.
-
-## Pull Request Process
-
-Because the material-components-android code is stored in two locations (i.e.,
-GitHub and Google), PRs are not directly merged into the repository. Instead,
-once a PR is complete (i.e., cla signed, CI passing, design reviewed, code
-reviewed), the PR will be converted to a commit sourced to the original author
-that is synced into the repository. Even though the PR list shows no merged PRs,
-we do accept contributions.
 
 ## Building From Source
 
