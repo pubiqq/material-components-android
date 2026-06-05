@@ -7,13 +7,6 @@ assignees: ''
 
 ---
 
-**ATTENTION: This library is now in maintenance mode.**
-**See https://github.com/material-components/material-components-android#readme.**
-
-**Only critical issues will be addressed.**
-
----
-
 **Description:** Full description of issue here
 
 **Expected behavior:** Screenshots and/or description of expected behavior
@@ -28,6 +21,6 @@ assignees: ''
 
 **Device:** Device on which the bug was encountered here
 
-To help us triage faster, please check to make sure you are using the [latest version](https://github.com/material-components/material-components-android/releases) of the library.
+To help us triage faster, please check to make sure you are using the [latest version](https://github.com/pubiqq/material-components-android/releases) of the library.
 
-We also happily accept [pull requests](https://github.com/material-components/material-components-android/pulls).
+We also happily accept [pull requests](https://github.com/pubiqq/material-components-android/pulls).
