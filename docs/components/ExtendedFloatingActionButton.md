@@ -41,7 +41,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 ![The deprecated original extended FAB and the small, medium, and large extended
 FABs from the expressive update.](assets/fabs/efab-expressive.png) The original
@@ -128,7 +128,7 @@ replaced with the small extended FAB. Surface FABs are also being deprecated.
 
 Element                       | Attribute                                                                                  | Related method(s)                                                  | Default value
 ----------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | -------------
-**Color**                     | `app:backgroundTint`                                                                       | `setBackgroundTintList`<br/>`getBackgroundTintList`                | `?attr/colorPrimaryContainer` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_button_background_color_selector.xml))
+**Color**                     | `app:backgroundTint`                                                                       | `setBackgroundTintList`<br/>`getBackgroundTintList`                | `?attr/colorPrimaryContainer` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_button_background_color_selector.xml))
 **Stroke color**              | `app:strokeColor`                                                                          | `setStrokeColor`<br/>`getStrokeColor`                              | `null`
 **Stroke width**              | `app:strokeWidth`                                                                          | `setStrokeWidth`<br/>`getStrokeWidth`                              | `0dp`
 **Size**                      | `app:collapsedSize`                                                                        | `setCollapsedSize`<br/>`getCollapsedSize`                         |
@@ -137,15 +137,15 @@ Element                       | Attribute                                       
 **Elevation**                 | `app:elevation`                                                                            | `setElevation`<br/>`getElevation`                                  | `6dp`
 **Hovered/Focused elevation** | `app:hoveredFocusedTranslationZ`                                                           | N/A                                                                | `2dp`
 **Pressed elevation**         | `app:pressedTranslationZ`                                                                  | N/A                                                                | `6dp`
-**Ripple**                    | `app:rippleColor`                                                                          |                                                                    | variations of `?attr/colorOnPrimaryContainer`, see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_button_ripple_color_selector.xml)
-**Motion**                    | `app:showMotionSpec`<br>`app:hideMotionSpec`<br/>`extendMotionSpec`<br/>`shrinkMotionSpec` | `set*MotionSpec`<br/>`set*MotionSpecResource`<br/>`get*MotionSpec` | see [animators](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/res/animator)
+**Ripple**                    | `app:rippleColor`                                                                          |                                                                    | variations of `?attr/colorOnPrimaryContainer`, see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_button_ripple_color_selector.xml)
+**Motion**                    | `app:showMotionSpec`<br>`app:hideMotionSpec`<br/>`extendMotionSpec`<br/>`shrinkMotionSpec` | `set*MotionSpec`<br/>`set*MotionSpecResource`<br/>`get*MotionSpec` | see [animators](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/res/animator)
 
 ### Icon attributes
 
 Element                           | Attribute         | Related method(s)                                         | Default value
 --------------------------------- | ----------------- | --------------------------------------------------------- | -------------
 **Icon**                          | `app:icon`        | `setIcon`<br/>`setIconResource`<br/>`getIcon`             | `null`
-**Color**                         | `app:iconTint`    | `setIconTint`<br/>`setIconTintResource`<br/>`getIconTint` | `?attr/colorOnPrimaryContainer` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_button_foreground_color_selector.xml))
+**Color**                         | `app:iconTint`    | `setIconTint`<br/>`setIconTintResource`<br/>`getIconTint` | `?attr/colorOnPrimaryContainer` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_button_foreground_color_selector.xml))
 **Size**                          | `app:iconSize`    | `setIconSize`<br/>`getIconSize`                           | `24dp`
 **Padding between icon and text** | `app:iconPadding` | `setIconPadding`<br/>`getIconPadding`                     | `12dp`
 
@@ -154,7 +154,7 @@ Element                           | Attribute         | Related method(s)       
 Element        | Attribute                | Related method(s)                 | Default value
 -------------- | ------------------------ | --------------------------------- | -------------
 **Text label** | `android:text`           | `setText`<br/>`getText`           | `null`
-**Color**      | `android:textColor`      | `setTextColor`<br/>`getTextColor` | `?attr/colorPrimaryContainer` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_button_foreground_color_selector.xml))
+**Color**      | `android:textColor`      | `setTextColor`<br/>`getTextColor` | `?attr/colorPrimaryContainer` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_button_foreground_color_selector.xml))
 **Typography** | `android:textAppearance` | `setTextAppearance`               | `?attr/textAppearanceLabelLarge`
 
 ### Styles
@@ -165,9 +165,9 @@ Element                                   | Style                               
 **Text-only when**<br/>**extended style** | `Widget.Material3.ExtendedFloatingActionButton.Primary`      | `?attr/extendedFloatingActionButtonPrimaryStyle`
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/res/values/attrs.xml).
 
 ## Variants of extended FAB
 
@@ -187,7 +187,7 @@ In larger window sizes, use a **medium** or **large extended FAB**.
 
 Before you can use Material extended FABs, you need to add a dependency to the
 Material Components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** If the `FloatingActionButton` is a child of a `CoordinatorLayout`, you
@@ -211,7 +211,7 @@ API and source code:
 
 *   `ExtendedFloatingActionButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton.java)
 
 The following example shows an extended FAB with a plus icon.
 
@@ -292,7 +292,7 @@ API and source code:
 
 *   `ExtendedFloatingActionButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/ExtendedFloatingActionButton.java)
 
 The following example shows a regular, small, and extended FAB with Material
 Theming.

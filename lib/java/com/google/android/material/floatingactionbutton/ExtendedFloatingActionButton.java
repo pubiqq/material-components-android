@@ -82,7 +82,7 @@ import java.util.List;
  * #setBackgroundTintList(android.content.res.ColorStateList)}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/FloatingActionButton.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/FloatingActionButton.md">component
  * developer guidance</a> and <a href="https://material.io/components/extended-fab/overview">design
  * guidelines</a>.
  */

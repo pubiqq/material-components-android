@@ -18,7 +18,7 @@ navigational events or custom animations.
 The easing and duration motion system is available in version `1.6.0` or later.
 The physics motion system is available in version `1.13.0` or later. For more
 information, see the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 1.  [Theming](#theming)
@@ -38,8 +38,8 @@ to make motion feel cohesive across an entire app.
 The spring (or physics) motion system is a set of six opinionated spring
 attributes intended to be used with the [Dynamic Animation AndroidX library](https://developer.android.com/develop/ui/views/animations/spring-animation#add-support-library).
 A spring attribute is configured as a style made up of a damping and stiffness
-value (see [MaterialSpring styleable](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/motion/res/values/attrs.xml)
-for available properties and [spring styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/motion/res/values/styles.xml)
+value (see [MaterialSpring styleable](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/motion/res/values/attrs.xml)
+for available properties and [spring styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/motion/res/values/styles.xml)
 for examples). The damping ratio describes how rapidly spring oscillations
 decay. Stiffness defines the strength of the spring. Learn more about how
 spring animations work [here](https://developer.android.com/develop/ui/views/animations/spring-animation).
@@ -75,7 +75,7 @@ button's shape and color when pressed, use two springs: a
 `motionSpringFastEffects` spring to animate the button's color.
 
 Spring attributes can be customized (or "themed") by overriding their value to
-your own [MaterialSpring](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/motion/res/values/attrs.xml)
+your own [MaterialSpring](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/motion/res/values/attrs.xml)
 style.
 
 #### Custom animations using the spring motion system
@@ -86,7 +86,7 @@ library and creating a spring animation
 [here](https://developer.android.com/develop/ui/views/animations/spring-animation#add-support-library).
 
 With your configured `SpringAnimation`, use
-[MotionUtils.resolveThemeSpring()](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/motion/MotionUtils.java)
+[MotionUtils.resolveThemeSpring()](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/motion/MotionUtils.java)
 to resolve a spring attribute from your theme into a SpringForce object. Then,
 use the resolved object to configure your SpringAnimation's SpringForce.
 
@@ -261,8 +261,8 @@ the
 *   [Reply (example email app)](https://github.com/material-components/material-components-android-examples/tree/develop/Reply)
 *   [Javadocs (AndroidX)](https://developer.android.com/reference/com/google/android/material/transition/package-summary)
 *   [Javadocs (Platform)](https://developer.android.com/reference/com/google/android/material/transition/platform/package-summary)
-*   [Catalog Demos](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/transition)
-*   [Library Source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/transition)
+*   [Catalog Demos](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/transition)
+*   [Library Source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/transition)
 *   [Android Platform Transition Guide](https://developer.android.com/training/transitions)
 *   [AndroidX Transition Library](https://developer.android.com/reference/androidx/transition/package-summary)
 

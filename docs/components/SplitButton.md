@@ -40,7 +40,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 <img src="assets/buttons/splitbutton-expressive.png" alt="5 sizes of split buttons." height="400"/>
 Split buttons have the same five recommended sizes as label and icon buttons
@@ -101,7 +101,7 @@ styling, with no style explicitly specified in the XML.
 
 Before you can use Material buttons, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** `<Button>` is auto-inflated as
@@ -121,7 +121,7 @@ trailing button should always have a menu icon.
 Source code:
 
 *   `MaterialSplitButton`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialSplitButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialSplitButton.java)
 
 The following example shows a split button with a leading label button and a
 trailing icon button that has an AnimatedVectorDrawable.
@@ -165,7 +165,7 @@ For more information on content labels, go to the
 
 The icon on the trailing button is animated. In the samples, this is done with
 an AVD, `m3_split_button_chevron_avd`
-[[source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/res/drawable/m3_split_button_chevron_avd.xml)].
+[[source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/res/drawable/m3_split_button_chevron_avd.xml)].
 
 ## Customizing split button
 
@@ -179,7 +179,7 @@ API and source code:
 
 *   `MaterialButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/button/MaterialButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows text, outlined and filled button types with Material
 theming.

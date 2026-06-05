@@ -39,7 +39,7 @@ More details on anatomy items in the
 ## M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive themes` setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive themes` setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 <img src="assets/dockedandfloatingtoolbars/floating-and-docked-toolbar-expressive.png" alt="The floating and docked toolbar" width="700">
 

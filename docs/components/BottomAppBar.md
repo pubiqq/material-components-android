@@ -45,7 +45,7 @@ revert back to the previous style.
 ## M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 The bottom app bar is being deprecated and should be replaced with the
 [docked toolbar](DockedToolbar.md), which functions similarly, but is shorter
@@ -93,7 +93,7 @@ Element                          | Attribute                          | Related 
 **Embedded elevation**           | `app:removeEmbeddedFabElevation`   | N/A                                                                    | `true`
 
 See the
-[FAB documentation](https://github.com/material-components/material-components-android/tree/master/docs/components/FloatingActionButton.md)
+[FAB documentation](https://github.com/pubiqq/material-components-android/tree/dev/docs/components/FloatingActionButton.md)
 for more attributes.
 
 ### Action item(s) attributes
@@ -119,15 +119,15 @@ Element           | Style                           | Theme attribute
 **Default style** | `Widget.Material3.BottomAppBar` | `bottomAppBarStyle`
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomappbar/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomappbar/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomappbar/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomappbar/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material bottom app bars, you need to add a dependency to the
 Material Components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Bottom app bar examples
@@ -339,12 +339,12 @@ API and source code:
     *   [Class definition](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout)
 *   `BottomAppBar`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/bottomappbar/BottomAppBar)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomappbar/BottomAppBar.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomappbar/BottomAppBar.java)
 *   `FloatingActionButton`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/floatingactionbutton/FloatingActionButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingactionbutton/FloatingActionButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingactionbutton/FloatingActionButton.java)
 *   `BottomAppBarCutCornersTopEdge`:
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/bottomappbar/BottomAppBarCutCornersTopEdge.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/bottomappbar/BottomAppBarCutCornersTopEdge.java)
 
 The following example shows a bottom app bar with Material theming.
 

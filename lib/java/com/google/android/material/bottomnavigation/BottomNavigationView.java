@@ -83,7 +83,7 @@ import com.google.android.material.navigation.NavigationBarView;
  * </pre>
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/BottomNavigation.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/BottomNavigation.md">component
  * developer guidance</a> and <a
  * href="https://material.io/components/navigation-bar/overview">design guidelines</a>.
  */

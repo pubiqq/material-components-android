@@ -39,7 +39,7 @@ More details on anatomy items are available in the
 Element                    | Attribute                                  | Related method(s)                                          | Default value
 -------------------------- | ------------------------------------------ | ---------------------------------------------------------- | -------------
 **To use material colors** | `app:useMaterialThemeColors`               | `setUseMaterialThemeColors`<br/>`isUseMaterialThemeColors` | `true` (ignored if `app:buttonTint` is set)
-**Color**                  | `app:buttonTint`                           | `setButtonTintList`<br/>`getButtonTintList`                | `?attr/colorOnSurface` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/radiobutton/res/color/m3_radiobutton_button_tint.xml))
+**Color**                  | `app:buttonTint`                           | `setButtonTintList`<br/>`getButtonTintList`                | `?attr/colorOnSurface` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/radiobutton/res/color/m3_radiobutton_button_tint.xml))
 **Min size**               | `android:minWidth`<br/>`android:minHeight` | `(set/get)MinWidth`<br/>`(set/get)MinHeight`               | `?attr/minTouchTargetSize`
 
 The color of the radio button defaults to `?attr/colorOnSurface` (unchecked) and
@@ -78,15 +78,15 @@ Element           | Style                                         | Theme attrib
 **Default style** | `Widget.Material3.CompoundButton.RadioButton` | `?attr/radioButtonStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/radiobutton/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/radiobutton/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/radiobutton/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/radiobutton/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material radio buttons, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding radio button
@@ -180,7 +180,7 @@ API and source code:
 
 *   `MaterialRadioButton`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/radiobutton/MaterialRadioButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/radiobutton/MaterialRadioButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/radiobutton/MaterialRadioButton.java)
 *   `RadioGroup`
     *   [Class definition](https://developer.android.com/reference/android/widget/RadioGroup)
 

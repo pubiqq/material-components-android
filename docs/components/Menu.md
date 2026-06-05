@@ -83,9 +83,9 @@ Element                     | Theme attribute              | Default value
 **Overflow menus**          | `?attr/actionOverflowMenuStyle`  | `@style/Widget.Material3.PopupMenu.Overflow`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/menu/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/menu/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/menu/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/menu/res/values/attrs.xml).
 
 ### Exposed dropdown menu
 
@@ -122,9 +122,9 @@ Element            | Style | Theme attribute
 Default style theme attribute: `?attr/textInputStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
 
 ## Variants of menus
 
@@ -460,12 +460,12 @@ API and source code:
 
 *   `TextInputLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/TextInputLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/TextInputLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/TextInputLayout.java)
 *   `AutoCompleteTextView`
     *   [Class definition](https://developer.android.com/reference/android/widget/AutoCompleteTextView)
 *   `MaterialAutoCompleteTextView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/MaterialAutoCompleteTextView)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
 
 The exposed dropdown menu is an `AutoCompleteTextView` within a
 `TextInputLayout`. It displays a dropdown menu below a text field.
@@ -550,7 +550,7 @@ the filter set to `false`.
 
 Before you can use Material menus, you need to add a dependency to the Material
 components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Menu examples
@@ -690,12 +690,12 @@ API and source code:
 
 *   `TextInputLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/TextInputLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/TextInputLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/TextInputLayout.java)
 *   `AutoCompleteTextView`
     *   [Class definition](https://developer.android.com/reference/android/widget/AutoCompleteTextView)
 *   `MaterialAutoCompleteTextView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/MaterialAutoCompleteTextView)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
 
 The following example shows filled and outlined exposed dropdown menu types with
 Material theming.

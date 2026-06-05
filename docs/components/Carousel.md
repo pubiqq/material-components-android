@@ -137,7 +137,7 @@ API and source code:
 
 *   `MultiBrowseCarouselStrategy`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/carousel/MultiBrowseCarouselStrategy)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/carousel/MultiBrowseCarouselStrategy.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/carousel/MultiBrowseCarouselStrategy.java)
 
 With a multi-browse strategy, large items are at the start of the list followed
 by medium and small items, depending on the size of the `RecyclerView`
@@ -245,7 +245,7 @@ snapHelper.attachToRecyclerView(carouselRecyclerView)
 
 Before you can use Material carousels, you need to add a dependency on the
 Material Components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding carousel
@@ -256,13 +256,13 @@ page.
     *   [Class definition](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView)
 *   `CarouselLayoutManager`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/carousel/CarouselLayoutManager)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/carousel/CarouselLayoutManager.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/carousel/CarouselLayoutManager.java)
 *   `CarouselStrategy`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/carousel/CarouselStrategy)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/carousel/CarouselStrategy.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/carousel/CarouselStrategy.java)
 *   `MaskableFrameLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/carousel/MaskableFrameLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/carousel/MaskableFrameLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/carousel/MaskableFrameLayout.java)
 
 Carousel is built on top of `RecyclerView`. To learn how to use `RecyclerView`
 to display a list of items, please see
@@ -353,7 +353,7 @@ no-op.
 corner radius. It's recommended to use the `?attr/shapeAppearanceExtraLarge`
 shape attribute but this can be set to any `ShapeAppearance` theme attribute or
 style. See
-[Shape theming](https://github.com/material-components/material-components-android/tree/master/docs/theming/Shape.md)
+[Shape theming](https://github.com/pubiqq/material-components-android/tree/dev/docs/theming/Shape.md)
 documentation for more details.
 
 ### Reacting to changes in item mask size

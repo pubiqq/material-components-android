@@ -125,7 +125,7 @@ import java.util.Locale;
  * Material Android components generally support (e.g. themed attributes).
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/BadgeDrawable.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/BadgeDrawable.md">component
  * developer guidance</a> and <a href="https://material.io/components/badges/overview">design
  * guidelines</a>.
  */

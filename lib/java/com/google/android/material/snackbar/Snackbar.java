@@ -67,7 +67,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
  * via {@link BaseTransientBottomBar#addCallback(BaseCallback)}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Snackbar.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Snackbar.md">component
  * developer guidance</a> and <a href="https://material.io/components/snackbar/overview">design
  * guidelines</a>.
  */

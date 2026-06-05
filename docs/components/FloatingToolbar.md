@@ -38,7 +38,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive themes` setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive themes` setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 <img src="assets/floatingtoolbar/floatingtoolbar-expressive.png" alt="The floating toolbar expressive.png" width="700"/>
 Floating toolbar show controls relevant to the current page
@@ -134,15 +134,15 @@ styles also include a theme overlay for `?attr/materialButtonStyle`,
 buttons inside of a floating toolbar.
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingtoolbar/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingtoolbar/res/values/styles.xml)
 and
-[floating toolbar attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingtoolbar/res/values/attrs.xml)
+[floating toolbar attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingtoolbar/res/values/attrs.xml)
 
 ## Code implementation
 
 Before you can use the floating toolbar, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding floating toolbar
@@ -233,7 +233,7 @@ screen space to show all the items.
 When using `OverflowLinearLayout`, you should also set `app:layout_overflowText`
 as that will be the text of the menu item that corresponds to the hidden child.
 Optionally, you can also set `app:layout_overflowIcon`. See
-[OverflowLinearLayout](https://github.com/material-components/material-components-android/tree/master//docs/components/Overflow.md)
+[OverflowLinearLayout](https://github.com/pubiqq/material-components-android/tree/dev//docs/components/Overflow.md)
 for more info.
 
 **Note:** if the child view that is clickable is not a direct child of
@@ -267,12 +267,12 @@ color or vertical styles should be explicitly set on the
 defined, such as for icon buttons. These are recommended to be set explicitly on
 the corresponding components inside `FloatingToolbarLayout`. See the full list
 of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingtoolbar/res/values/styles.xml).
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingtoolbar/res/values/styles.xml).
 
 API and source code:
 
 *   `FloatingToolBar`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingtoolbar/FloatingToolbarLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingtoolbar/FloatingToolbarLayout.java)
 
 ### Making floating toolbar accessible
 
@@ -351,7 +351,7 @@ Floating toolbars support the customization of color and typography.
 API and source code:
 
 *   `FloatingToolBarLayout`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/floatingtoolbar/FloatingToolbarLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/floatingtoolbar/FloatingToolbarLayout.java)
 
 #### Floating toolbar theming example
 

@@ -40,7 +40,7 @@ API and source code:
 *   `MaterialTextView`
 
     *   [Class description](https://developer.android.com/reference/com/google/android/material/textview/MaterialTextView)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textview/MaterialTextView.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textview/MaterialTextView.java)
 
     **Note:** If you use our full themes (which we recommend), `TextView` will
     auto-inflate to `MaterialTextView`, otherwise, you will need to specify

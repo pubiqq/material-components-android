@@ -89,15 +89,15 @@ Element                   | Theme attribute                  | Default value
 **Close button style**    | `?attr/snackbarCloseButtonStyle` | `@style/Widget.Material3.Button.IconButton.Close.Snackbar`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/snackbar/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/snackbar/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/snackbar/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/snackbar/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material snackbars, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding snackbar
@@ -229,7 +229,7 @@ API and source code:
 
 *   `Snackbar`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/snackbar/Snackbar.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/snackbar/Snackbar.java)
 
 The following is an example of a snackbar with an action button that uses the
 Material.io [Shrine](https://m2.material.io/design/material-studies/shrine.html)

@@ -69,7 +69,7 @@ More details on anatomy items in the
 
 Element                | Attribute                | Related method(s)                                                                       | Default value
 ---------------------- | ------------------------ | --------------------------------------------------------------------------------------- | -------------
-**Color**              | `app:boxBackgroundColor` | `setBoxBackgroundColor`<br/>`setBoxBackgroundColorResource`<br/>`getBoxBackgroundColor` | `?attr/colorSurfaceContainerHighest` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_filled_background_color.xml))
+**Color**              | `app:boxBackgroundColor` | `setBoxBackgroundColor`<br/>`setBoxBackgroundColorResource`<br/>`getBoxBackgroundColor` | `?attr/colorSurfaceContainerHighest` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_filled_background_color.xml))
 **Shape**              | `app:shapeAppearance`    | N/A                                                                                     | `?attr/shapeAppearanceCornerExtraSmall`
 **Text field enabled** | `android:enabled`        | `setEnabled`                                                                            | `true`
 
@@ -79,7 +79,7 @@ Element                 | Attribute                         | Related method(s) 
 ----------------------- | --------------------------------- | --------------------------------------------------------------------- | -------------
 **Icon**                | `app:startIconDrawable`           | `setStartIconDrawable`<br/>`getStartIconDrawable`                     | `null`
 **Content description** | `app:startIconContentDescription` | `setStartIconContentDescription`<br/>`getStartIconContentDescription` | `null`
-**Color**               | `app:startIconTint`               | `setStartIconTintList`                                                | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Color**               | `app:startIconTint`               | `setStartIconTintList`                                                | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Checkable**           | `app:startIconCheckable`          | `setStartIconCheckable`<br/>`isStartIconCheckable`                    | `false`
 **Size**                | `app:startIconMinSize`            | `setStartIconMinSize`<br/>`getStartIconMinSize`                       | `48dp`
 **Scale type**          | `app:startIconScaleType`          | `setStartIconScaleType` <br/> `getStartIconScaleType`                 | `ScaleType.CENTER`
@@ -89,8 +89,8 @@ Element                 | Attribute                         | Related method(s) 
 Element                        | Attribute                  | Related method(s)                                       | Default value
 ------------------------------ | -------------------------- | ------------------------------------------------------- | -------------
 **Text**                       | `android:hint`             | `setHint`<br/>`getHint`                                 | `null`
-**Color**                      | `android:textColorHint`    | `setDefaultHintTextColor`<br/>`getDefaultHintTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
-**Collapsed (floating) color** | `app:hintTextColor`        | `setHintTextColor`<br/>`getHintTextColor`               | `?attr/colorPrimary` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
+**Color**                      | `android:textColorHint`    | `setDefaultHintTextColor`<br/>`getDefaultHintTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
+**Collapsed (floating) color** | `app:hintTextColor`        | `setHintTextColor`<br/>`getHintTextColor`               | `?attr/colorPrimary` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
 **Typography**                 | `app:hintTextAppearance`   | `setHintTextAppearance`                                 | `?attr/textAppearanceBodySmall`
 **Animation**                  | `app:hintAnimationEnabled` | `setHintAnimationEnabled`<br/>`isHintAnimationEnabled`  | `true`
 **Expanded enabled**           | `app:expandedHintEnabled`  | `setExpandedHintEnabled`<br/>`isExpandedHintEnabled`    | `true`
@@ -106,7 +106,7 @@ Element                  | Attribute                                            
 **Typography**           | `android:textAppearance`                                                 | `setTextAppearance`                                          | `?attr/textAppearanceBodyLarge`
 **Input text color**     | `android:textColor`                                                      | `setTextColor`<br/>`getTextColors`<br/>`getCurrentTextColor` | `?attr/colorOnSurface`
 **Cursor color**         | N/A (color comes from the theme attr `?attr/colorControlActivated`)      | N/A                                                          | `?attr/colorPrimary`
-**Text highlight color** | N/A (color comes from the theme attr `?android:attr/textColorHighlight`) | N/A                                                          | [`@color/m3_highlighted_text`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_highlighted_text.xml)
+**Text highlight color** | N/A (color comes from the theme attr `?android:attr/textColorHighlight`) | N/A                                                          | [`@color/m3_highlighted_text`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_highlighted_text.xml)
 
 #### Input text attributes (set on the `TextInputLayout`)
 
@@ -120,11 +120,11 @@ Element                | Attribute                                | Related meth
 Element                             | Attribute                       | Related method(s)                                                 | Default value
 ----------------------------------- | ------------------------------- | ----------------------------------------------------------------- | -------------
 **Mode**                            | `app:endIconMode`               | `setEndIconMode`<br/>`getEndIconMode`                             | `END_ICON_NONE`
-**Color**                           | `app:endIconTint`               | `setEndIconTintList`                                              | `colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Color**                           | `app:endIconTint`               | `setEndIconTintList`                                              | `colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Custom icon**                     | `app:endIconDrawable`           | `setEndIconDrawable`<br/>`getEndIconDrawable`                     | `null`
 **Custom icon content description** | `app:endIconContentDescription` | `setEndIconContentDescription`<br/>`getEndIconContentDescription` | `null`
 **Custom icon checkable**           | `app:endIconCheckable`          | `setEndIconCheckable`<br/>`isEndIconCheckable`                    | `true`
-**Error icon**                      | `app:errorIconDrawable`         | `setErrorIconDrawable`<br/>`getErrorIconDrawable`                 | [`@drawable/mtrl_ic_error`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/drawable/mtrl_ic_error.xml)
+**Error icon**                      | `app:errorIconDrawable`         | `setErrorIconDrawable`<br/>`getErrorIconDrawable`                 | [`@drawable/mtrl_ic_error`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/drawable/mtrl_ic_error.xml)
 **Error icon color**                | `app:errorIconTint`             | `setErrorIconTintList`                                            | `?attr/colorError`
 **Size**                            | `app:endIconMinSize`            | `setEndIconMinSize`<br/>`getEndIconMinSize`                       | `48dp`
 **Scale type**                      | `app:endIconScaleType`          | `setEndIconScaleType` <br/> `getEndIconScaleType`                 | `ScaleType.CENTER`
@@ -133,7 +133,7 @@ Element                             | Attribute                       | Related 
 
 Element           | Attribute                   | Related method(s)                                                            | Default value
 ----------------- | --------------------------- | ---------------------------------------------------------------------------- | -------------
-**Color**         | `app:boxStrokeColor`        | `setBoxStrokeColor`<br/>`setBoxStrokeColorStateList`<br/>`getBoxStrokeColor` | `?attr/colorOutline` and `?attr/colorPrimary` (focused) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_stroke_color.xml))
+**Color**         | `app:boxStrokeColor`        | `setBoxStrokeColor`<br/>`setBoxStrokeColorStateList`<br/>`getBoxStrokeColor` | `?attr/colorOutline` and `?attr/colorPrimary` (focused) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_stroke_color.xml))
 **Error color**   | `app:boxStrokeErrorColor`   | `setBoxStrokeErrorColor`<br/>`getBoxStrokeErrorColor`                        | `?attr/colorError`
 **Width**         | `app:boxStrokeWidth`        | N/A                                                                          | `1dp`
 **Focused width** | `app:boxStrokeWidthFocused` | N/A                                                                          | `2dp`
@@ -144,7 +144,7 @@ Element                                  | Attribute                            
 ---------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------
 **Helper text enabled**                  | `app:helperTextEnabled`                                             | `setHelperTextEnabled`<br/>`isHelperTextEnabled`                                                                    | `false`
 **Helper text**                          | `app:helperText`                                                    | `setHelperText`<br/>`getHelperText`                                                                                 | `null`
-**Helper text color**                    | `app:helperTextColor`                                               | `setHelperTextColor`<br/>`getHelperTextColor`                                                                       | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Helper text color**                    | `app:helperTextColor`                                               | `setHelperTextColor`<br/>`getHelperTextColor`                                                                       | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Helper text typography**               | `app:helperTextAppearance`                                          | `setHelperTextAppearance`                                                                                           | `?attr/textAppearanceBodySmall`
 **Error text enabled**                   | `app:errorEnabled`                                                  | `setErrorEnabled`<br/>`isErrorEnabled`                                                                              | `false`
 **Error text**                           | N/A                                                                 | `setError`<br/>`getError`                                                                                           | `null`
@@ -154,17 +154,17 @@ Element                                  | Attribute                            
 **Counter text enabled**                 | `app:counterEnabled`                                                | `setCounterEnabled`<br/>`isCounterEnabled`                                                                          | `false`
 **Counter text length**                  | `app:counterMaxLength`                                              | `setCounterMaxLength`<br/>`getCounterMaxLength`                                                                     | `-1`
 **Counter text typography**              | `app:counterTextAppearance`<br/>`app:counterOverflowTextAppearance` | `setCounterTextAppearance`<br/>`setCounterOverflowTextAppearance`                                                   | `?attr/textAppearanceBodySmall`
-**Counter text color**                   | `app:counterTextColor`<br/>`app:counterOverflowTextColor`           | `setCounterTextColor`<br/>`setCounterOverflowTextColor`<br/>`getCounterTextColor`<br/>`getCounterOverflowTextColor` | `?attr/colorOnSurfaceVariant` (`app:counterTextColor`) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))<br/>`?attr/colorError` (`app:counterOverflowTextColor`)
+**Counter text color**                   | `app:counterTextColor`<br/>`app:counterOverflowTextColor`           | `setCounterTextColor`<br/>`setCounterOverflowTextColor`<br/>`getCounterTextColor`<br/>`getCounterOverflowTextColor` | `?attr/colorOnSurfaceVariant` (`app:counterTextColor`) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))<br/>`?attr/colorError` (`app:counterOverflowTextColor`)
 
 #### Prefix/suffix attributes
 
 Element               | Attribute                  | Related method(s)                             | Default value
 --------------------- | -------------------------- | --------------------------------------------- | -------------
 **Prefix**            | `app:prefixText`           | `setPrefixText`<br/>`getPrefixText`           | `null`
-**Prefix color**      | `app:prefixTextColor`      | `setPrefixTextColor`<br/>`getPrefixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Prefix color**      | `app:prefixTextColor`      | `setPrefixTextColor`<br/>`getPrefixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Prefix typography** | `app:prefixTextAppearance` | `setPrefixTextAppearance`                     | `?attr/textAppearanceTitleMedium`
 **Suffix**            | `app:suffixText`           | `setSuffixText`<br/>`getSuffixText`           | `null`
-**Suffix color**      | `app:suffixTextColor`      | `setSuffixTextColor`<br/>`getSuffixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Suffix color**      | `app:suffixTextColor`      | `setSuffixTextColor`<br/>`getSuffixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Suffix typography** | `app:suffixTextAppearance` | `setSuffixTextAppearance`                     | `?attr/textAppearanceTitleMedium`
 
 #### Styles
@@ -177,9 +177,9 @@ Element                               | Style                                   
 **Dense exposed dropdown menu style** | `Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu` | N/A
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
 
 </details>
 
@@ -190,7 +190,7 @@ and
 
 Element                  | Attribute                   | Related method(s)                                                            | Default value
 ------------------------ | --------------------------- | ---------------------------------------------------------------------------- | -------------
-**Stroke color**         | `app:boxStrokeColor`        | `setBoxStrokeColor`<br/>`setBoxStrokeColorStateList`<br/>`getBoxStrokeColor` | `?attr/colorOutline` and `?attr/colorPrimary` (focused) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_stroke_color.xml))
+**Stroke color**         | `app:boxStrokeColor`        | `setBoxStrokeColor`<br/>`setBoxStrokeColorStateList`<br/>`getBoxStrokeColor` | `?attr/colorOutline` and `?attr/colorPrimary` (focused) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_stroke_color.xml))
 **Stroke error color**   | `app:boxStrokeErrorColor`   | `setBoxStrokeErrorColor`<br/>`getBoxStrokeErrorColor`                        | `?attr/colorError`
 **Stroke width**         | `app:boxStrokeWidth`        | N/A                                                                          | `1dp`
 **Stroke focused width** | `app:boxStrokeWidthFocused` | N/A                                                                          | `2dp`
@@ -203,7 +203,7 @@ Element                 | Attribute                         | Related method(s) 
 ----------------------- | --------------------------------- | --------------------------------------------------------------------- | -------------
 **Icon**                | `app:startIconDrawable`           | `setStartIconDrawable`<br/>`getStartIconDrawable`                     | `null`
 **Content description** | `app:startIconContentDescription` | `setStartIconContentDescription`<br/>`getStartIconContentDescription` | `null`
-**Color**               | `app:startIconTint`               | `setStartIconTintList`                                                | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Color**               | `app:startIconTint`               | `setStartIconTintList`                                                | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Checkable**           | `app:startIconCheckable`          | `setStartIconCheckable`<br/>`isStartIconCheckable`                    | `false`
 
 #### Label attributes
@@ -211,7 +211,7 @@ Element                 | Attribute                         | Related method(s) 
 Element                        | Attribute                | Related method(s)                                       | Default value
 ------------------------------ | ------------------------ | ------------------------------------------------------- | -------------
 **Text**                       | `android:hint`           | `setHint`<br/>`getHint`                                 | `null`
-**Color**                      | `android:textColorHint`  | `setDefaultHintTextColor`<br/>`getDefaultHintTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
+**Color**                      | `android:textColorHint`  | `setDefaultHintTextColor`<br/>`getDefaultHintTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_label_color.xml))
 **Collapsed (floating) color** | `app:hintTextColor`      | `setHintTextColor`<br/>`getHintTextColor`               | `?attr/colorPrimary`
 **Typography**                 | `app:hintTextAppearance` | `setHintTextAppearance`                                 | `?attr/textAppearanceBodySmall`
 **Max number of lines**        | `app:hintMaxLines`       | `setHintMaxLines`<br/>`getHintMaxLines`                 | `1`
@@ -227,7 +227,7 @@ Element                  | Attribute                                            
 **Typography**           | `android:textAppearance`                                                 | `setTextAppearance`                                          | `?attr/textAppearanceBodyLarge`
 **Input text color**     | `android:textColor`                                                      | `setTextColor`<br/>`getTextColors`<br/>`getCurrentTextColor` | `?attr/colorOnSurface`
 **Cursor color**         | N/A (color comes from the theme attr `?attr/colorControlActivated`)      | N/A                                                          | `?attr/colorPrimary`
-**Text highlight color** | N/A (color comes from the theme attr `?android:attr/textColorHighlight`) | N/A                                                          | [`@color/m3_highlighted_text`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/color/res/color/m3_highlighted_text.xml)
+**Text highlight color** | N/A (color comes from the theme attr `?android:attr/textColorHighlight`) | N/A                                                          | [`@color/m3_highlighted_text`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/color/res/color/m3_highlighted_text.xml)
 
 #### Input text attributes (set on the `TextInputLayout`)
 
@@ -241,11 +241,11 @@ Element                | Attribute                                | Related meth
 Element                             | Attribute                       | Related method(s)                                                 | Default value
 ----------------------------------- | ------------------------------- | ----------------------------------------------------------------- | -------------
 **Mode**                            | `app:endIconMode`               | `setEndIconMode`<br/>`getEndIconMode`                             | `END_ICON_NONE`
-**Color**                           | `app:endIconTint`               | `setEndIconTintList`                                              | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Color**                           | `app:endIconTint`               | `setEndIconTintList`                                              | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Custom icon**                     | `app:endIconDrawable`           | `setEndIconDrawable`<br/>`getEndIconDrawable`                     | `null`
 **Custom icon content description** | `app:endIconContentDescription` | `setEndIconContentDescription`<br/>`getEndIconContentDescription` | `null`
 **Custom icon checkable**           | `app:endIconCheckable`          | `setEndIconCheckable`<br/>`isEndIconCheckable`                    | `true`
-**Error icon**                      | `app:errorIconDrawable`         | `setErrorIconDrawable`<br/>`getErrorIconDrawable`                 | [`@drawable/mtrl_ic_error`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/drawable/mtrl_ic_error.xml)
+**Error icon**                      | `app:errorIconDrawable`         | `setErrorIconDrawable`<br/>`getErrorIconDrawable`                 | [`@drawable/mtrl_ic_error`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/drawable/mtrl_ic_error.xml)
 **Error icon color**                | `app:errorIconTint`             | `setErrorIconTintList`                                            | `?attr/colorError`
 
 #### Helper/error/counter text attributes
@@ -254,7 +254,7 @@ Element                                  | Attribute                            
 ---------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------
 **Helper text enabled**                  | `app:helperTextEnabled`                                             | `setHelperTextEnabled`<br/>`isHelperTextEnabled`                                                                    | `false`
 **Helper text**                          | `app:helperText`                                                    | `setHelperText`<br/>`getHelperText`                                                                                 | `null`
-**Helper text color**                    | `app:helperTextColor`                                               | `setHelperTextColor`<br/>`getHelperTextColor`                                                                       | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Helper text color**                    | `app:helperTextColor`                                               | `setHelperTextColor`<br/>`getHelperTextColor`                                                                       | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Helper text typography**               | `app:helperTextAppearance`                                          | `setHelperTextAppearance`                                                                                           | `?attr/textAppearanceBodySmall`
 **Error text enabled**                   | `app:errorEnabled`                                                  | `setErrorEnabled`<br/>`isErrorEnabled`                                                                              | `false`
 **Error text**                           | N/A                                                                 | `setError`<br/>`getError`                                                                                           | `null`
@@ -264,17 +264,17 @@ Element                                  | Attribute                            
 **Counter text enabled**                 | `app:counterEnabled`                                                | `setCounterEnabled`<br/>`isCounterEnabled`                                                                          | `false`
 **Counter text length**                  | `app:counterMaxLength`                                              | `setCounterMaxLength`<br/>`getCounterMaxLength`                                                                     | `-1`
 **Counter text typography**              | `app:counterTextAppearance`<br/>`app:counterOverflowTextAppearance` | `setCounterTextAppearance`<br/>`setCounterOverflowTextAppearance`                                                   | `?attr/textAppearanceBodySmall`
-**Counter text color**                   | `app:counterTextColor`<br/>`app:counterOverflowTextColor`           | `setCounterTextColor`<br/>`setCounterOverflowTextColor`<br/>`getCounterTextColor`<br/>`getCounterOverflowTextColor` | `?attr/colorOnSurfaceVariant` (`app:counterTextColor`) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))<br/>`?attr/colorError` (`app:counterOverflowTextColor`)
+**Counter text color**                   | `app:counterTextColor`<br/>`app:counterOverflowTextColor`           | `setCounterTextColor`<br/>`setCounterOverflowTextColor`<br/>`getCounterTextColor`<br/>`getCounterOverflowTextColor` | `?attr/colorOnSurfaceVariant` (`app:counterTextColor`) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))<br/>`?attr/colorError` (`app:counterOverflowTextColor`)
 
 #### Prefix/suffix attributes
 
 Element               | Attribute                  | Related method(s)                             | Default value
 --------------------- | -------------------------- | --------------------------------------------- | -------------
 **Prefix**            | `app:prefixText`           | `setPrefixText`<br/>`getPrefixText`           | `null`
-**Prefix color**      | `app:prefixTextColor`      | `setPrefixTextColor`<br/>`getPrefixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Prefix color**      | `app:prefixTextColor`      | `setPrefixTextColor`<br/>`getPrefixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Prefix typography** | `app:prefixTextAppearance` | `setPrefixTextAppearance`                     | `?attr/textAppearanceTitleMedium`
 **Suffix**            | `app:suffixText`           | `setSuffixText`<br/>`getSuffixText`           | `null`
-**Suffix color**      | `app:suffixTextColor`      | `setSuffixTextColor`<br/>`getSuffixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
+**Suffix color**      | `app:suffixTextColor`      | `setSuffixTextColor`<br/>`getSuffixTextColor` | `?attr/colorOnSurfaceVariant` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/color/m3_textfield_indicator_text_color.xml))
 **Suffix typography** | `app:suffixTextAppearance` | `setSuffixTextAppearance`                     | `?attr/textAppearanceTitleMedium`
 
 #### Styles
@@ -287,9 +287,9 @@ Element                               | Style                                   
 **Dense exposed dropdown menu style** | `Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu` | N/A
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/attrs.xml).
 
 </details>
 
@@ -389,7 +389,7 @@ examples.
 
 Before you can use Material text fields, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 <details>
@@ -595,7 +595,7 @@ The exception for this is if a drawable was specified in XML via the
 precedence and override an existing default icon.
 
 For the full list, see
-[end icon modes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/res/values/attrs.xml#L149).
+[end icon modes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/res/values/attrs.xml#L149).
 
 </details>
 
@@ -788,10 +788,10 @@ API and source code:
 
 *   `TextInputLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/TextInputLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/TextInputLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/TextInputLayout.java)
 *   `TextInputEditText`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/textfield/TextInputEditText)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/TextInputEditText.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/TextInputEditText.java)
 
 The following example shows filled and outlined text field types with Material
 theming.

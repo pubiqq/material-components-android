@@ -33,7 +33,7 @@ Android system UI and apps running on the device.
 Before you can use the Material dark theme functionality, you need to add a
 dependency to the Material Components for Android library. For more information,
 go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 In order to support a dark theme for Android Q and above, make sure you are

@@ -107,7 +107,7 @@ import java.util.List;
  * {@code @style/ThemeOverlay.MaterialComponents.BottomAppBar.Surface}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/BottomAppBar.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/BottomAppBar.md">component
  * developer guidance</a> and <a
  * href="https://material.io/components/bottom-app-bar/overview">design guidelines</a>.
  *

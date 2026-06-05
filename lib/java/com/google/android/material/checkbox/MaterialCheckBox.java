@@ -80,7 +80,7 @@ import java.util.LinkedHashSet;
  * preserving the default {@code app:buttonIcon} checkmark at the same time.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Checkbox.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Checkbox.md">component
  * developer guidance</a> and <a href="https://material.io/components/checkbox/overview">design
  * guidelines</a>.
  */

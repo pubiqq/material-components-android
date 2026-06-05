@@ -46,7 +46,7 @@ import com.google.android.material.internal.ViewUtils;
  * {@link com.google.android.material.switchmaterial.SwitchMaterial} class.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Switch.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Switch.md">component
  * developer guidance</a> and <a href="https://material.io/components/switch/overview">design
  * guidelines</a>.
  */

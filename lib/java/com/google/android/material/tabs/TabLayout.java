@@ -159,7 +159,7 @@ import java.util.Iterator;
  * </pre>
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Tabs.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Tabs.md">component
  * developer guidance</a> and <a href="https://material.io/components/tabs/overview">design
  * guidelines</a>.
  *

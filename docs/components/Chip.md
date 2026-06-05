@@ -164,9 +164,9 @@ Element            | Theme attribute             | Default style
 **`ChipDrawable`** | `?attr/chipStandaloneStyle` | `Widget.Material3.Chip.Input`
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/res/values/styles.xml)
 and
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/res/values/attrs.xml).
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/res/values/attrs.xml).
 
 ## Variants of chips
 
@@ -404,7 +404,7 @@ as an image.
 
 Before you can use Material chips, you need to add a dependency to the Material
 Components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding chips
@@ -418,13 +418,13 @@ API and source code:
 
 *   `Chip`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/Chip)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/Chip.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/Chip.java)
 *   `ChipGroup`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/ChipGroup)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/ChipGroup.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/ChipGroup.java)
 *   `ChipDrawable`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/ChipDrawable)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/ChipDrawable.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/ChipDrawable.java)
 
 A `Chip` can be added in a layout with the following:
 
@@ -630,13 +630,13 @@ API and source code:
 
 *   `Chip`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/Chip)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/Chip.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/Chip.java)
 *   `ChipGroup`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/ChipGroup)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/ChipGroup.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/ChipGroup.java)
 *   `ChipDrawable`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/chip/ChipDrawable)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/chip/ChipDrawable.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/chip/ChipDrawable.java)
 
 The following example shows chips with Material theming.
 

@@ -42,7 +42,7 @@ import androidx.core.math.MathUtils;
  * right-to-left and does not need to make any account for layout direction itself.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Carousel.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Carousel.md">component
  * developer guidance</a> and <a href="https://material.io/components/carousel/overview">design
  * guidelines</a>.
  */

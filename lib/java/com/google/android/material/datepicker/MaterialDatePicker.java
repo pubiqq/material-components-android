@@ -72,7 +72,7 @@ import java.util.LinkedHashSet;
  * A {@link Dialog} with a header, {@link MaterialCalendar}, and set of actions.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/DatePicker.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/DatePicker.md">component
  * developer guidance</a> and <a href="https://material.io/components/date-pickers/overview">design
  * guidelines</a>.
  */

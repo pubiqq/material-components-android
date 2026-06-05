@@ -68,7 +68,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 The new **search app bar** supports icons inside and outside the search bar, and
 centered text. It opens the search view component when selected.
@@ -104,7 +104,7 @@ Element                         | Attribute                   | Related method(s
 ------------------------------- | --------------------------- | ------------------------------------------------ | -------------
 **Color**                       | `android:background`        | `setBackground`<br>`getBackground`               | `?attr/colorSurface`
 **`MaterialToolbar` elevation** | `android:elevation`         | `setElevation`<br>`getElevation`                 | `4dp`
-**`AppBarLayout` elevation**    | `android:stateListAnimator` | `setStateListAnimator`<br>`getStateListAnimator` | `0dp` to `4dp` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/res/animator/design_appbar_state_list_animator.xml))
+**`AppBarLayout` elevation**    | `android:stateListAnimator` | `setStateListAnimator`<br>`getStateListAnimator` | `0dp` to `4dp` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/res/animator/design_appbar_state_list_animator.xml))
 
 ### Navigation icon attributes
 
@@ -196,9 +196,9 @@ Element           | Style                                       | Theme attribut
 **Large style**   | `Widget.Material3.CollapsingToolbar.Large`  | `?attr/collapsingToolbarLayoutLargeStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/res/values/attrs.xml).
 
 ## Variants of app bars
 
@@ -465,7 +465,7 @@ To properly draw the subtitle in expanded mode. Please use the following:
 
 Before you can use Material top app bars, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 <details>
@@ -797,13 +797,13 @@ API and source code:
     *   [Class definition](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout)
 *   `AppBarLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/appbar/AppBarLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/AppBarLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/AppBarLayout.java)
 *   `MaterialToolbar`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/appbar/MaterialToolbar)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/MaterialToolbar.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/MaterialToolbar.java)
 *   `CollapsingToolbarLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/appbar/CollapsingToolbarLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/CollapsingToolbarLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/appbar/CollapsingToolbarLayout.java)
 
 A regular top app bar with Material theming:
 

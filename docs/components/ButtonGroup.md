@@ -42,7 +42,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 <img src="assets/buttons/buttongroup-expressive.png" alt="Standard button group in 3 of 5 available sizes, and segmented button group with just icon buttons and just common buttons." height="500"/>
 
@@ -116,9 +116,9 @@ individual button's shape is preserved.
 Source code:
 
 *   `MaterialButtonGroup`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButtonGroup.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButtonGroup.java)
 *   `MaterialButton`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows a button group with three buttons that have text
 labels.
@@ -168,9 +168,9 @@ spacing, 8dp inner corners, and fully rounded outer corners.
 Source code:
 
 *   `MaterialButtonGroup`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButtonGroup.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButtonGroup.java)
 *   `MaterialButton`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows a connected button group with three buttons that
 have text labels. To correctly style a button group as connected button group,
@@ -211,7 +211,7 @@ In the layout:
 
 Before you can use Material button groups, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** `<Button>` is auto-inflated as
@@ -448,7 +448,7 @@ API and source code:
 
 *   `MaterialButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/button/MaterialButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows text, outlined and filled button types with Material
 theming.

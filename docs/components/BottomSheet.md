@@ -94,10 +94,10 @@ Element                   | Theme overlay                              | Attribu
 **Default theme overlay** | `ThemeOverlay.Material3.BottomSheetDialog` | `?attr/bottomSheetDialogTheme`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/res/values/styles.xml),
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/res/values/attrs.xml),
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/res/values/styles.xml),
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/res/values/attrs.xml),
 and
-[themes and theme overlays](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/res/values/themes.xml).
+[themes and theme overlays](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/res/values/themes.xml).
 
 ## Variants of bottom sheets
 
@@ -119,7 +119,7 @@ API and source code:
 
 *   `BottomSheetBehavior`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetBehavior)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/BottomSheetBehavior.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/BottomSheetBehavior.java)
 
 #### Standard bottom sheet example
 
@@ -217,7 +217,7 @@ API and source code:
 
 *   `BottomSheetDialogFragment`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialogFragment)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/BottomSheetDialogFragment.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/BottomSheetDialogFragment.java)
 
 #### Modal bottom sheet example
 
@@ -294,7 +294,7 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
 
 Before you can use Material bottom sheets, you need to add a dependency to the
 Material components for Android library. For more information, see the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 <details>
@@ -544,10 +544,10 @@ API and source code:
 
 *   `BottomSheetBehavior`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetBehavior)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/BottomSheetBehavior.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/BottomSheetBehavior.java)
 *   `BottomSheetDialogFragment`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialogFragment)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/bottomsheet/BottomSheetDialogFragment.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomsheet/BottomSheetDialogFragment.java)
 
 The following example shows a bottom sheet with Material theming, in its
 collapsed and expanded states.

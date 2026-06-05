@@ -40,9 +40,9 @@ an `app:buttonIcon` drawable (the icon) layered on top of it.
 
 Element                      | Attribute                                  | Related method(s)                                        | Default value
 ---------------------------- | ------------------------------------------ | -------------------------------------------------------- | -------------
-**Button tint**              | `app:buttonTint`                           | `setButtonTintList`<br/>`getButtonTintList`              | `?attr/colorOnSurface` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/res/color/m3_checkbox_button_tint.xml))
-**Button icon drawable**     | `app:buttonIcon`                           | `setButtonIconDrawable`<br/>`getButtonIconDrawable`      | [@mtrl_checkbox_button_icon](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/res/drawable/mtrl_checkbox_button_icon.xml)
-**Button icon tint**         | `app:buttonIconTint`                       | `setButtonIconTintList`<br/>`getButtonIconTintList`      | `?attr/colorOnPrimary` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/res/color/m3_checkbox_button_icon_tint.xml))
+**Button tint**              | `app:buttonTint`                           | `setButtonTintList`<br/>`getButtonTintList`              | `?attr/colorOnSurface` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/res/color/m3_checkbox_button_tint.xml))
+**Button icon drawable**     | `app:buttonIcon`                           | `setButtonIconDrawable`<br/>`getButtonIconDrawable`      | [@mtrl_checkbox_button_icon](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/res/drawable/mtrl_checkbox_button_icon.xml)
+**Button icon tint**         | `app:buttonIconTint`                       | `setButtonIconTintList`<br/>`getButtonIconTintList`      | `?attr/colorOnPrimary` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/res/color/m3_checkbox_button_icon_tint.xml))
 **Min size**                 | `android:minWidth`<br/>`android:minHeight` | `(set/get)MinWidth`<br/>`(set/get)MinHeight`             | `?attr/minTouchTargetSize`
 **Centered icon if no text** | `app:centerIfNoTextEnabled`                | `setCenterIfNoTextEnabled`<br/>`isCenterIfNoTextEnabled` | `true`
 
@@ -79,15 +79,15 @@ Element           | Style                                      | Theme attribute
 **Default style** | `Widget.Material3.CompoundButton.CheckBox` | `?attr/checkboxStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material checkboxes, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding checkbox
@@ -330,7 +330,7 @@ API and source code:
 
 *   `MaterialCheckBox`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/checkbox/MaterialCheckBox)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/MaterialCheckBox.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/checkbox/MaterialCheckBox.java)
 
 The following example shows a checkbox with Material theming.
 

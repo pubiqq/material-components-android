@@ -220,7 +220,7 @@ following XML components:
 *   `<RadioButton` → [`MaterialRadioButton`](components/RadioButton.md)
 *   `<TextView` → [`MaterialTextView`](components/MaterialTextView.md)
 *   `<AutoCompleteTextView` →
-    [`MaterialAutoCompleteTextView`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
+    [`MaterialAutoCompleteTextView`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java)
 
 ### **`AppCompat` or `MaterialComponents` Themes**
 

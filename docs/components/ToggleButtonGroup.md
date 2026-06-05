@@ -11,7 +11,7 @@ path: /catalog/buttons/
 
 **Note:** Segmented buttons are being deprecated in the Material 3 expressive
 update. For those who have updated, use the
-[connected button group](https://github.com/material-components/material-components-android/tree/master/docs/components/ButtonGroup.md)
+[connected button group](https://github.com/pubiqq/material-components-android/tree/dev/docs/components/ButtonGroup.md)
 instead, which has mostly the same functionality but with an updated visual
 design.
 
@@ -47,7 +47,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 The segmented button is being deprecated. Use the
-[connected button group](https://github.com/material-components/material-components-android/tree/master/docs/components/ButtonGroup.md)
+[connected button group](https://github.com/pubiqq/material-components-android/tree/dev/docs/components/ButtonGroup.md)
 instead.
 [More on M3 Expressive](https://m3.material.io/blog/building-with-m3-expressive)
 
@@ -81,15 +81,15 @@ Element           | Style                                        | Theme attribu
 **Default style** | `Widget.Material3.MaterialButtonToggleGroup` | `?attr/materialButtonToggleGroupStyle`
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material buttons, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** `<Button>` is auto-inflated as
@@ -107,10 +107,10 @@ API and source code:
 
 *   `MaterialButtonToggleGroup`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/button/MaterialButtonToggleGroup)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButtonToggleGroup.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButtonToggleGroup.java)
 *   `MaterialButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/button/MaterialButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows a toggle button with three buttons that have text
 labels.
@@ -281,7 +281,7 @@ API and source code:
 
 *   `MaterialButton`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/button/MaterialButton)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/MaterialButton.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/MaterialButton.java)
 
 The following example shows text, outlined and filled button types with Material
 theming.

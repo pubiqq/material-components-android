@@ -74,7 +74,7 @@ Element    | Attribute          | Related method(s)                             
 Element     | Attribute                                                                                                                                                                                                                    | Related method(s)                                                                                   | Default value
 ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------
 **Divider** | `android:listDivider` in app theme                                                                                                                                                                                           | N/A                                                                                                 | Varies per platform version
-**Height**  | N/A (see [layout](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/internal/res/layout/design_navigation_item_separator.xml)) | N/A                                                                                                 | `1dp`
+**Height**  | N/A (see [layout](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/internal/res/layout/design_navigation_item_separator.xml)) | N/A                                                                                                 | `1dp`
 **Inset**   | `app:dividerInsetStart`<br/>`app:dividerInsetEnd`                                                                                                                                                                            | `setDividerInsetStart`<br/>`getDividerInsetStart`<br/>`setDividerInsetEnd`<br/>`getDividerInsetEnd` | `28dp`<br/>`28dp`
 
 ### Item attributes
@@ -147,7 +147,7 @@ API and source code:
 
 *   `NavigationView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/navigation/NavigationView)
-    *   [GitHub source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/NavigationView.java)
+    *   [GitHub source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/NavigationView.java)
 
 #### Standard navigation drawer example
 
@@ -214,7 +214,7 @@ API and source code:
 
 *   `NavigationView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/navigation/NavigationView)
-    *   [GitHub source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/NavigationView.java)
+    *   [GitHub source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/NavigationView.java)
 *   `DrawerLayout`
     *   [Class definition](https://developer.android.com/reference/androidx/drawerlayout/widget/DrawerLayout)
 
@@ -289,7 +289,7 @@ navigationView.setNavigationItemSelectedListener { menuItem ->
 ```
 
 For more information on top app bars see the
-[documentation](https://github.com/material-components/material-components-android/tree/master/docs/components/TopAppBar.md).
+[documentation](https://github.com/pubiqq/material-components-android/tree/dev/docs/components/TopAppBar.md).
 
 </details>
 
@@ -297,7 +297,7 @@ For more information on top app bars see the
 
 Before you can use navigation drawers, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page. For modal navigation drawers you also need to add a dependency to the
 AndroidX `DrawerLayout` library. For more information go to the
 [releases](https://developer.android.com/jetpack/androidx/releases/drawerlayout)
@@ -570,7 +570,7 @@ API and source code:
 
 *   `NavigationView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/navigation/NavigationView)
-    *   [GitHub source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/NavigationView.java)
+    *   [GitHub source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/NavigationView.java)
 
 The following example shows a navigation drawer with Material theming.
 

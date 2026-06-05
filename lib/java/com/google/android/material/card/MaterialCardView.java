@@ -78,7 +78,7 @@ import java.lang.annotation.RetentionPolicy;
  * android:id} and use {@link View#findViewById(int)}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Card.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Card.md">component
  * developer guidance</a> and <a href="https://material.io/components/cards/overview">design
  * guidelines</a>.
  */

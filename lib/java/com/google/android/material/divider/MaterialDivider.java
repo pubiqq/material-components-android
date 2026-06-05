@@ -45,7 +45,7 @@ import com.google.android.material.shape.MaterialShapeDrawable;
  * the correct thickness is set for the divider.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Divider.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Divider.md">component
  * developer guidance</a> and <a href="https://material.io/components/divider/overview">design
  * guidelines</a>.
  */

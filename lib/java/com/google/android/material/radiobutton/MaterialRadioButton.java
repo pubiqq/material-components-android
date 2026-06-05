@@ -44,7 +44,7 @@ import com.google.android.material.resources.MaterialResources;
  * be set.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/RadioButton.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/RadioButton.md">component
  * developer guidance</a> and <a href="https://material.io/components/radio-button/overview">design
  * guidelines</a>.
  */

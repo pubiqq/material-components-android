@@ -48,7 +48,7 @@ import java.util.List;
  * otherwise overlap.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Slider.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Slider.md">component
  * developer guidance</a> and <a href="https://material.io/components/sliders/overview">design
  * guidelines</a>.
  *

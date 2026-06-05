@@ -65,7 +65,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
  * implementation of {@link AlertDialog}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Dialog.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Dialog.md">component
  * developer guidance</a> and <a href="https://material.io/components/dialogs/overview">design
  * guidelines</a>.
  */

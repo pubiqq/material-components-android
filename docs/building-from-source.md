@@ -14,7 +14,7 @@ To do so:
 Clone the repository:
 
 ```sh
-git clone https://github.com/material-components/material-components-android.git
+git clone https://github.com/pubiqq/material-components-android.git
 ```
 
 Then, build the library's AARs using Gradle:
