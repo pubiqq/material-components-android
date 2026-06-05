@@ -9,7 +9,7 @@ path: /docs/using-snapshot-version/
 
 If you would like to depend on the cutting edge version of the MDC-Android
 library, you can use the
-[snapshot versions](https://github.com/material-components/material-components-android/packages/81484)
+[snapshot versions](https://github.com/pubiqq/material-components-android/packages/81484)
 that are published daily via
 [GitHub Packages](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages).
 
@@ -22,7 +22,7 @@ with your credentials:
 ```groovy
 maven {
     name = "MaterialSnapshots"
-    url = uri("https://maven.pkg.github.com/material-components/material-components-android")
+    url = uri("https://maven.pkg.github.com/pubiqq/material-components-android")
     credentials {
         username = "<github_username>"
         password = "<github_access_token>"
@@ -33,7 +33,7 @@ maven {
 Then you can use a snapshot version by adding a
 `com.google.android.material:material:<version>-SNAPSHOT` dependency as per
 usual (see latest release
-[here](https://github.com/material-components/material-components-android/packages/81484/versions)).
+[here](https://github.com/pubiqq/material-components-android/packages/81484/versions)).
 This will fetch the latest snapshot version, which your Gradle build won't
 cache. If you build after a new version has been published, that version will be
 used.
@@ -46,7 +46,7 @@ If you prefer to depend on a specific snapshot version, you can add
 `com.google.android.material:material:<version>-<uniqueversion>`, where
 `<uniqueversion>` is a combination of the date, a timestamp, and a counter (see
 all versions
-[here](https://github.com/material-components/material-components-android/packages/81484/versions)).
+[here](https://github.com/pubiqq/material-components-android/packages/81484/versions)).
 
 You can also find the list of versions through the
 [GraphQL explorer](https://developer.github.com/v4/explorer/) with the following
@@ -69,7 +69,7 @@ query:
 ```
 
 Alternatively, you could use
-[JitPack](https://jitpack.io/#material-components/material-components-android)
+[JitPack](https://jitpack.io/#pubiqq/material-components-android)
 to generate library releases based on specific commits.
 
 ## Useful Links

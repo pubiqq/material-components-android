@@ -104,9 +104,9 @@ Element                               | Affected component              | Defaul
 **materialClockStyle**                | Clock Face of the Time Picker   | `@style/Widget.Material3.MaterialTimePicker.Clock`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/timepicker/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/timepicker/res/values/styles.xml)
 and
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/timepicker/res/values/attrs.xml).
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/timepicker/res/values/attrs.xml).
 
 ## Variants of time pickers
 
@@ -128,7 +128,7 @@ accessible from any mobile time picker interface via the keyboard icon.
 
 Before you can use Material time pickers, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding time picker
@@ -139,7 +139,7 @@ API and source code:
 
 *   `MaterialTimePicker`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/timepicker/MaterialTimePicker)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/timepicker/MaterialTimePicker.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/timepicker/MaterialTimePicker.java)
 
 A time picker can be instantiated with `MaterialTimePicker.Builder`
 

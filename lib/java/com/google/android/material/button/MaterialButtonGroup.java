@@ -115,7 +115,7 @@ import java.util.TreeMap;
  * android:insetTop} on the children is recommended if using {@code VERTICAL}.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Button.md">component
  * developer guidance</a> and <a href="https://material.io/components/buttons/overview">design
  * guidelines</a>.
  */

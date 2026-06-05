@@ -92,7 +92,7 @@ and
 
 For a working demo of using the Compose FAB menu in a Views app via interop,
 take a look at
-[FabMenuDemoFragment.kt](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/fab/FabMenuDemoFragment.kt)
+[FabMenuDemoFragment.kt](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/fab/FabMenuDemoFragment.kt)
 in the Material Android Views Catalog app. This demo also shows how to handle
 light, dark, and dynamic color schemes to ensure the Compose
 `FloatingActionButtonMenu` looks correct within the Views app.

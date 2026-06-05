@@ -48,7 +48,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive` themes setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive` themes setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 <img src="assets/navigationrail/navigation-rail-expressive.png" alt="collapsed and expanded navigation rails" width="500">
 The collapsed and expanded navigation rails match visually and can transition
@@ -125,7 +125,7 @@ Element                  | Attribute                | Related methods           
 **Header bottom margin** | `app:headerMarginBottom` | N/A                                                        | `8dp`
 
 See the
-[FAB documentation](https://github.com/material-components/material-components-android/tree/master/docs/components/FloatingActionButton.md)
+[FAB documentation](https://github.com/pubiqq/material-components-android/tree/dev/docs/components/FloatingActionButton.md)
 for more attributes.
 
 ### Navigation Menu attributes
@@ -143,8 +143,8 @@ only visible when expanded.
 Element                           | Attribute                    | Related methods                                                     | Default value
 --------------------------------- | ---------------------------- | ------------------------------------------------------------------- | -------------
 **Menu resource**                 | `app:menu`                   | `inflateMenu`<br/>`getMenu`                                         | N/A
-**Ripple (inactive)**             | `app:itemRippleColor`        | `setItemRippleColor`<br/>`getItemRippleColor`                       | `?attr/colorPrimary` at 12% (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/res/color/mtrl_navigation_bar_ripple_color.xml))
-**Ripple (active)**               | `app:itemRippleColor`        | `setItemRippleColor`<br/>`getItemRippleColor`                       | `?attr/colorPrimary` at 12% (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/res/color/mtrl_navigation_bar_ripple_color.xml))
+**Ripple (inactive)**             | `app:itemRippleColor`        | `setItemRippleColor`<br/>`getItemRippleColor`                       | `?attr/colorPrimary` at 12% (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/res/color/mtrl_navigation_bar_ripple_color.xml))
+**Ripple (active)**               | `app:itemRippleColor`        | `setItemRippleColor`<br/>`getItemRippleColor`                       | `?attr/colorPrimary` at 12% (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/res/color/mtrl_navigation_bar_ripple_color.xml))
 **Label visibility mode**         | `app:labelVisibilityMode`    | `setLabelVisibilityMode`<br/>`getLabelVisibilityMode`               | `LABEL_VISIBILITY_AUTO`
 **Item minimum height**           | `app:itemMinHeight`          | `setItemMinimumHeight`<br/>`getItemMinimumHeight`                   | `NO_ITEM_MINIMUM_HEIGHT`
 **Collapsed item minimum height** | `app:collapsedItemMinHeight` | `setCollapsedItemMinimumHeight`<br/>`getCollapsedItemMinimumHeight` | `NO_ITEM_MINIMUM_HEIGHT`
@@ -208,16 +208,16 @@ Element           | Style                                 | Container color     
 **Default style** | `Widget.Material3.NavigationRailView` | `?attr/colorSurface` | `?attr/colorOnSurfaceVariant`    | `?attr/colorOnSurface`<br/>`?attr/colorOnSecondaryContainer` | `?attr/navigationRailStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigationrail/res/values/styles.xml),
-[navigation bar attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigation/res/values/attrs.xml),
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigationrail/res/values/styles.xml),
+[navigation bar attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigation/res/values/attrs.xml),
 and
-[navigation rail attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigationrail/res/values/attrs.xml).
+[navigation rail attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigationrail/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use the Material navigation rail, you need to add a dependency to
 the Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 <details>
@@ -540,7 +540,7 @@ API and source code:
 
 *   `NavigationRailView`
     *   [Class description](https://developer.android.com/reference/com/google/android/material/navigationrail/NavigationRailView)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/navigationrail/NavigationRailView.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/navigationrail/NavigationRailView.java)
 
 The following example shows a navigation rail with Material theming.
 

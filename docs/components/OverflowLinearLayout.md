@@ -46,9 +46,9 @@ Element             | Style                                     | Theme attribut
 **Popup overflow**  | `overflowLinearLayoutPopupMenuStyle`      | `?attr/overflowLinearLayoutPopupMenuStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/overflow/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/overflow/res/values/styles.xml)
 and
-[overflow linear layout attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/overflow/res/values/attrs.xml)
+[overflow linear layout attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/overflow/res/values/attrs.xml)
 
 ## Code implementation
 
@@ -83,7 +83,7 @@ for example usages with those components.
 API and source code:
 
 *   `OverflowLinearLayout`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/overflow/OverflowLinearLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/overflow/OverflowLinearLayout.java)
 
 ### Making overflow linear layout accessible
 

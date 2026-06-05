@@ -137,10 +137,10 @@ no need to set `?attr/sideSheetModalStyle` on your modal side sheet layout
 because the style is automatically applied to the parent `SideSheetDialog`.
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/res/values/styles.xml),
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/res/values/attrs.xml),
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/res/values/styles.xml),
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/res/values/attrs.xml),
 and
-[themes and theme overlays](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/res/values/themes.xml).
+[themes and theme overlays](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/res/values/themes.xml).
 
 ## Variants of side sheets
 
@@ -162,7 +162,7 @@ API and source code:
 
 *   `SideSheetBehavior`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/sidesheet/SideSheetBehavior)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/SideSheetBehavior.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/SideSheetBehavior.java)
 
 <h4 id="standard-side-sheet-example">Standard side sheet example</h4>
 
@@ -260,7 +260,7 @@ API and source code:
 
 *   `SideSheetDialog`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/sidesheet/SideSheetDialog)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/SideSheetDialog.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/SideSheetDialog.java)
 
 #### Modal side sheet example
 
@@ -287,14 +287,14 @@ automatically cancel the dialog after it is swiped off the screen.
 
 Before you can use Material side sheets, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding side sheets
 
 Note: Side sheets were introduced in `1.8.0`. To use side sheets, make sure
 you're depending on
-[library version `1.8.0`](https://github.com/material-components/material-components-android/releases/tag/1.8.0)
+[library version `1.8.0`](https://github.com/pubiqq/material-components-android/releases/tag/1.8.0)
 or later.
 
 **Standard side sheet basic usage:**
@@ -449,10 +449,10 @@ API and source code:
 
 *   `SideSheetBehavior`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/sidesheet/SideSheetBehavior)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/SideSheetBehavior.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/SideSheetBehavior.java)
 *   `SideSheetDialog`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/sidesheet/SideSheetDialog)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/sidesheet/SideSheetDialog.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/sidesheet/SideSheetDialog.java)
 
 Setting the theme attribute `sideSheetDialogTheme` to your custom `ThemeOverlay`
 will affect all side sheets.

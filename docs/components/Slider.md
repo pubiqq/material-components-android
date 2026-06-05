@@ -44,7 +44,7 @@ More details on anatomy items in the
 ### M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
-[`Material3Expressive themes` setup instructions](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md#material3expressive-themes).
+[`Material3Expressive themes` setup instructions](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md#material3expressive-themes).
 
 The slider includes expressive configurations for orientation, shape sizes, and
 an inset icon.
@@ -143,7 +143,7 @@ Element       | Attribute           | Related method(s)                         
 **Behavior**  | `app:labelBehavior` | `setLabelBehavior`<br/>`getLabelBehavior`   | `floating`
 
 **Note:** The value label is a
-[Tooltip](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tooltip/TooltipDrawable.java).
+[Tooltip](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tooltip/TooltipDrawable.java).
 
 ### Tick mark attributes
 
@@ -170,9 +170,9 @@ Element           | Style                     | Theme attribute
 **Default style** | `Widget.Material3.Slider` | `?attr/sliderStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/slider/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/slider/res/values/styles.xml)
 and
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/slider/res/values/attrs.xml).
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/slider/res/values/attrs.xml).
 
 ### Non-text contrast update
 
@@ -202,7 +202,7 @@ API and source code:
 
 *   `Slider`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/slider/Slider)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/slider/Slider.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/slider/Slider.java)
 
 **Add a `Standard slider` to a layout:**
 
@@ -280,7 +280,7 @@ maximum value.
 
 *   `RangeSlider`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/slider/RangeSlider)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/slider/RangeSlider.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/slider/RangeSlider.java)
 
 **Add a `range slider` to a layout:**
 
@@ -346,7 +346,7 @@ rangeSlider.addOnChangeListener { rangeSlider, value, fromUser ->
 
 Before you can use Material sliders, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Making sliders accessible
@@ -404,7 +404,7 @@ API and source code:
 
 *   `Slider`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/slider/Slider)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/slider/Slider.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/slider/Slider.java)
 
 The following example shows a range slider with Material theming.
 

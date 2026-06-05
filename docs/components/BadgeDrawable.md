@@ -66,7 +66,7 @@ label will be `app:badgeText`.
 
 Before you can use Material badges, you need to add a dependency to the Material
 components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** This component is still under development and may not support the full
@@ -89,10 +89,10 @@ API and source code:
 
 *   `BadgeDrawable`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/badge/BadgeDrawable)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/badge/BadgeDrawable.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/badge/BadgeDrawable.java)
 *   `BadgeUtils`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/badge/BadgeUtils)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/badge/BadgeUtils.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/badge/BadgeUtils.java)
 
 Create an instance of `BadgeDrawable` by calling `create(Context)` or
 `createFromAttributes(Context, AttributeSet, int, int)}`.

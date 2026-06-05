@@ -19,7 +19,7 @@ path: /adaptive/canonicallayouts/
 *   [Supporting Panel demo](#supporting-panel-demo)
 
 The canonical layout demos found in the
-[MDC catalog](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/)
+[MDC catalog](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/)
 are examples of adaptive layouts in which components and views change depending
 on device configuration, such as screen size, orientation, and/or the presence
 of a physical fold.
@@ -35,7 +35,7 @@ documentation.
 
 To use the Material library, you will need to add a dependency to the Material
 Components for Android library. For more information, see the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 The AndroidX
@@ -60,22 +60,22 @@ out their documentation:
 ## Demos
 
 The catalog's
-[Adaptive demo](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/)
+[Adaptive demo](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/)
 has implementations of the following canonical layouts:
 
 *   List View demo
-    *   [`AdaptiveListViewDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoActivity.java)
-    *   [`AdaptiveListViewDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
-    *   [`AdaptiveListViewDetailDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
+    *   [`AdaptiveListViewDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoActivity.java)
+    *   [`AdaptiveListViewDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
+    *   [`AdaptiveListViewDetailDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
 *   Feed demo
-    *   [`AdaptiveFeedDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoActivity.java)
-    *   [`AdaptiveFeedDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoFragment.java)
+    *   [`AdaptiveFeedDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoActivity.java)
+    *   [`AdaptiveFeedDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoFragment.java)
 *   Single View Hero demo
-    *   [`AdaptiveHeroDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoActivity.java)
-    *   [`AdaptiveHeroDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoFragment.java)
+    *   [`AdaptiveHeroDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoActivity.java)
+    *   [`AdaptiveHeroDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoFragment.java)
 *   Supporting Panel demo
-    *   [`AdaptiveSupportingPanelDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoActivity.java)
-    *   [`AdaptiveSupportingPanelDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoFragment.java)
+    *   [`AdaptiveSupportingPanelDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoActivity.java)
+    *   [`AdaptiveSupportingPanelDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoFragment.java)
 
 ## General implementation
 
@@ -162,7 +162,7 @@ In code, in the `Activity` class, we adjust each component visibility by
 checking the current screen width. We also set a click listener on the
 navigation rail's header button so that it triggers a modal navigation drawer to
 be shown. Take a look at
-[`AdaptiveUtils.java`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveUtils.java)
+[`AdaptiveUtils.java`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveUtils.java)
 to see in detail how that is done.
 
 ### Displaying the main `Fragment`
@@ -262,9 +262,9 @@ selected email view by its side.
 
 Source code:
 
-*   [`AdaptiveListViewDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoActivity.java)
-*   [`AdaptiveListViewDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
-*   [`AdaptiveListViewDetailDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
+*   [`AdaptiveListViewDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoActivity.java)
+*   [`AdaptiveListViewDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
+*   [`AdaptiveListViewDetailDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveListViewDemoFragment.java)
 
 This demo differs a bit from the others because it uses two fragments.
 
@@ -325,8 +325,8 @@ This demo is an example of a news feed layout.
 
 Source code:
 
-*   [`AdaptiveFeedDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoActivity.java)
-*   [`AdaptiveFeedDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoFragment.java)
+*   [`AdaptiveFeedDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoActivity.java)
+*   [`AdaptiveFeedDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveFeedDemoFragment.java)
 
 **AdaptiveFeedDemoFragment.java**
 
@@ -405,8 +405,8 @@ on the screen size.
 
 Source code:
 
-*   [`AdaptiveHeroDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoActivity.java)
-*   [`AdaptiveHeroDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoFragment.java)
+*   [`AdaptiveHeroDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoActivity.java)
+*   [`AdaptiveHeroDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveHeroDemoFragment.java)
 
 **AdaptiveHeroDemoFragment.java**
 
@@ -459,8 +459,8 @@ depending on certain screen configurations.
 
 Source code:
 
-*   [`AdaptiveSupportingPanelDemoActivity`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoActivity.java)
-*   [`AdaptiveSupportingPanelDemoFragment`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoFragment.java)
+*   [`AdaptiveSupportingPanelDemoActivity`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoActivity.java)
+*   [`AdaptiveSupportingPanelDemoFragment`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/adaptive/AdaptiveSupportingPanelDemoFragment.java)
 
 **AdaptiveSupportingPanelDemoFragment.java**
 

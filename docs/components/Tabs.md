@@ -73,14 +73,14 @@ Element       | Attribute            | Related method(s)                  | Defa
 Element   | Attribute      | Related method(s)                                                | Default value
 --------- | -------------- | ---------------------------------------------------------------- | -------------
 **Icon**  | `android:icon` | `setIcon`<br>`getIcon`                                           | `null`
-**Color** | `tabIconTint`  | `setTabIconTint`<br>`setTabIconTintResource`<br>`getTabIconTint` | `colorOnSurfaceVariant` and `colorPrimary` (activated) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/color/m3_tabs_icon_color.xml))
+**Color** | `tabIconTint`  | `setTabIconTint`<br>`setTabIconTintResource`<br>`getTabIconTint` | `colorOnSurfaceVariant` and `colorPrimary` (activated) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/color/m3_tabs_icon_color.xml))
 
 ### Tab item text label attributes
 
 Element                   | Attribute                   | Related method(s)                                               | Default value
 ------------------------- | --------------------------- | --------------------------------------------------------------- | -------------
 **Text**                  | `android:text`              | `setText`<br>`getText`                                          | `null`
-**Color**                 | `tabTextColor`              | `setTabTextColors`<br>`getTabTextColors`                        | `colorOnSurfaceVariant` and `colorPrimary` (activated) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/color/m3_tabs_icon_color.xml))
+**Color**                 | `tabTextColor`              | `setTabTextColors`<br>`getTabTextColors`                        | `colorOnSurfaceVariant` and `colorPrimary` (activated) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/color/m3_tabs_icon_color.xml))
 **Typography**            | `tabTextAppearance`         | N/A                                                             | `?attr/textAppearanceTitleSmall`
 **Active tab typography** | `tabSelectedTextAppearance` | N/A                                                             | None; will use `tabTextAppearance` instead
 **Inline label**          | `tabInlineLabel`            | `setInlineLabel`<br>`setInlineLabelResource`<br>`isInlineLabel` | `false`
@@ -92,7 +92,7 @@ attributes in `tabTextAppearance` to avoid unintended behavior.
 
 Element              | Attribute                                                                                     | Related method(s)                                                            | Default value
 -------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------
-**Ripple color**     | `tabRippleColor`                                                                              | `setTabRippleColor`<br>`setTabRippleColorResource`<br>`getTabRippleColor`    | `colorOnSurfaceVariant` at 16% opacity and `colorPrimary` at 16% opacity (activated) (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/color/m3_tabs_ripple_color.xml))
+**Ripple color**     | `tabRippleColor`                                                                              | `setTabRippleColor`<br>`setTabRippleColorResource`<br>`getTabRippleColor`    | `colorOnSurfaceVariant` at 16% opacity and `colorPrimary` at 16% opacity (activated) (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/color/m3_tabs_ripple_color.xml))
 **Unbounded ripple** | `tabUnboundedRipple`                                                                          | `setUnboundedRipple`<br>`setUnboundedRippleResource`<br>`hasUnboundedRipple` | `false`
 **Gravity**          | `tabGravity`                                                                                  | `setTabGravity`<br>`getTabGravity`                                           | `fill`
 **Min width**        | `tabMinWidth`                                                                                 | N/A                                                                          | `72dp` (scrollable) or `wrap_content`
@@ -104,7 +104,7 @@ Element              | Attribute                                                
 Element                | Attribute                       | Related method(s)                                                | Default value
 ---------------------- | ------------------------------- | ---------------------------------------------------------------- | -------------
 **Color**              | `tabIndicatorColor`             | `setSelectedTabIndicatorColor`                                   | `colorPrimary`
-**Drawable**           | `tabIndicator`                  | `setSelectedTabIndicator`<br>`getSelectedTabIndicator`           | [`m3_tabs_rounded_line_indicator`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/drawable/m3_tabs_rounded_line_indicator.xml)
+**Drawable**           | `tabIndicator`                  | `setSelectedTabIndicator`<br>`getSelectedTabIndicator`           | [`m3_tabs_rounded_line_indicator`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/drawable/m3_tabs_rounded_line_indicator.xml)
 **Height**             | `tabIndicatorHeight`            | `setSelectedTabIndicatorHeight`                                  | `2dp`
 **Full width**         | `tabIndicatorFullWidth`         | `setTabIndicatorFullWidth`<br>`isTabIndicatorFullWidth`          | `false`
 **Animation mode**     | `tabIndicatorAnimationMode`     | `setTabIndicatorAnimationMode`<br>`getTabIndicatorAnimationMode` | `elastic`
@@ -120,15 +120,15 @@ Element                           | Style                                  | The
 **Primary secondary color style** | `Widget.Material3.TabLayout.Secondary` | `?attr/tabSecondaryStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material tabs, you need to add a dependency to the Material
 components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 ### Adding tabs
@@ -136,7 +136,7 @@ page.
 ![Three fixed tabs with one tab selected.](assets/tabs/tabs-basic.png)
 
 A
-[`TabLayout`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/TabLayout.java)
+[`TabLayout`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/TabLayout.java)
 can be added to a layout:
 
 ```xml
@@ -149,7 +149,7 @@ can be added to a layout:
 </com.google.android.material.tabs.TabLayout>
 ```
 
-[`TabItem`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/TabItem.java)s
+[`TabItem`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/TabItem.java)s
 can then be added as children of the `TabLayout` and adjusted as needed:
 
 ```xml
@@ -274,7 +274,7 @@ Setting up a `TabLayout` with a
 [`ViewPager2`](https://developer.android.com/reference/androidx/viewpager2/widget/ViewPager2)
 relies on the same concepts as doing so with a `ViewPager`, but the
 implementation is different. Everything is handled by the
-[`TabLayoutMediator`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/TabLayoutMediator.java)
+[`TabLayoutMediator`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/TabLayoutMediator.java)
 class:
 
 ```kt
@@ -299,7 +299,7 @@ TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
 "88", and a red badge with "999".](assets/tabs/tabs-badged.png)
 
 Tabs support badging with the
-[`BadgeDrawable`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/badge/BadgeDrawable.java)
+[`BadgeDrawable`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/badge/BadgeDrawable.java)
 class:
 
 ```kt
@@ -421,10 +421,10 @@ API and source code:
 
 *   `TabLayout`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/TabLayout.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/TabLayout.java)
 *   `TabItem`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/tabs/TabItem)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/tabs/TabItem.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/tabs/TabItem.java)
 
 The following example shows a row of scrollable tabs with Material theming.
 

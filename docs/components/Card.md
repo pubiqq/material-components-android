@@ -46,12 +46,12 @@ More details on anatomy items in the
 Element              | Attribute                 | Related method(s)                                                   | Default value
 -------------------- | ------------------------- | ------------------------------------------------------------------- | -------------
 **Color**            | `app:cardBackgroundColor` | `setCardBackgroundColor`<br/>`getCardBackgroundColor`               | `?attr/colorSurface` (outlined style)</br>`?attr/colorSurfaceContainerHighest` (filled style)</br>`?attr/colorSurfaceContainerLow` (elevated style)
-**Foreground color** | `app:cardForegroundColor` | `setCardForegroundColor`<br/>`getCardForegroundColor`               | `@android:color/transparent` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/card/res/color/m3_card_foreground_color.xml))
+**Foreground color** | `app:cardForegroundColor` | `setCardForegroundColor`<br/>`getCardForegroundColor`               | `@android:color/transparent` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/card/res/color/m3_card_foreground_color.xml))
 **Stroke color**     | `app:strokeColor`         | `setStrokeColor`<br/>`getStrokeColor`<br/>`getStrokeColorStateList` | `?attr/colorOutline` (unchecked)<br/>`?attr/colorSecondary` (checked)
 **Stroke width**     | `app:strokeWidth`         | `setStrokeWidth`<br/>`getStrokeWidth`                               | `1dp` (outlined style)<br/>`0dp` (elevated or filled style)
 **Shape**            | `app:shapeAppearance`     | `setShapeAppearanceModel`<br/>`getShapeAppearanceModel`             | `?attr/shapeAppearanceCornerMedium`
 **Elevation**        | `app:cardElevation`       | `setCardElevation`<br/>`setCardMaxElevation`                        | `0dp` (outlined or filled style)<br/>`1dp` (elevated style)
-**Ripple color**     | `app:rippleColor`         | `setRippleColor`<br/>`setRippleColorResource`<br/>`getRippleColor`  | `?attr/colorOnSurfaceVariant` at 20% opacity (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/card/res/color/m3_card_ripple_color.xml))
+**Ripple color**     | `app:rippleColor`         | `setRippleColor`<br/>`setRippleColorResource`<br/>`getRippleColor`  | `?attr/colorOnSurfaceVariant` at 20% opacity (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/card/res/color/m3_card_ripple_color.xml))
 
 **Note:** We recommend that cards on mobile have `8dp` margins.
 `android:layout_margin` will [**NOT**](https://stackoverflow.com/a/13365288)
@@ -66,7 +66,7 @@ border, regardless of the `app:strokeWidth` value.
 
 Element       | Attribute            | Related method(s)                                                                    | Default value
 ------------- | -------------------- | ------------------------------------------------------------------------------------ | -------------
-**Icon**      | `checkedIcon`        | `setCheckedIcon`<br/>`setCheckedIconResource`<br/>`getCheckedIcon`                   | [`@drawable/ic_mtrl_checked_circle.xml`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/resources/res/drawable/ic_mtrl_checked_circle.xml)
+**Icon**      | `checkedIcon`        | `setCheckedIcon`<br/>`setCheckedIconResource`<br/>`getCheckedIcon`                   | [`@drawable/ic_mtrl_checked_circle.xml`](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/resources/res/drawable/ic_mtrl_checked_circle.xml)
 **Color**     | `checkedIconTint`    | `setCheckedIconTint`<br/>`getCheckedIconTint`                                        | `?attr/colorOutline` (unchecked)<br/>`?attr/colorSecondary` (checked)
 **Checkable** | `android:checkable`  | `setCheckable`<br/>`isCheckable`                                                     | `false`
 **Size**      | `checkedIconSize`    | `setCheckedIconSize`<br/>`setCheckedIconSizeResource`<br/>`getCheckedIconSize`       | `24dp`
@@ -91,9 +91,9 @@ Element              | Style                                                    
 **Additional style** | `Widget.Material3.CardView.Elevated`,`Widget.Material3.CardView.Filled` | `?attr/materialCardViewOutlinedStyle`,`?attr/materialCardViewFilledStyle`,`?attr/materialCardViewElevatedStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/card/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/card/res/values/styles.xml)
 and
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/card/res/values/attrs.xml).
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/card/res/values/attrs.xml).
 
 ## Variants of cards
 
@@ -255,7 +255,7 @@ Action 2 buttons in purple" height ="500"/>
 
 Before you can use a Material card, you need to add a dependency to the Material
 components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 Cards support [checking](#making-cards-checkable) and
@@ -326,10 +326,10 @@ private inner class ViewDragHelperCallback : ViewDragHelper.Callback() {
 ```
 
 Alternatively, the
-[Material catalog](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/card)
+[Material catalog](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/card)
 has an implementation example that you can copy, which uses a custom class
 called
-[`DraggableCoordinatorLayout`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/draggable/DraggableCoordinatorLayout.java).
+[`DraggableCoordinatorLayout`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/draggable/DraggableCoordinatorLayout.java).
 It is used as the parent container.
 
 In the layout:
@@ -411,9 +411,9 @@ private val cardDelegate = object : AccessibilityDelegate() {
 ```
 
 **Note:** Cards also support a swipe-to-dismiss behavior through the use of
-['SwipeDismissBehavior'](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/behavior/SwipeDismissBehavior.java).
+['SwipeDismissBehavior'](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/behavior/SwipeDismissBehavior.java).
 You can see an example
-[here](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/card/CardSwipeDismissFragment.java).
+[here](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/card/CardSwipeDismissFragment.java).
 
 ### Making cards accessible
 
@@ -438,7 +438,7 @@ API and source code
 
 *   `MaterialCardView`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/card/MaterialCardView)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/card/MaterialCardView.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/card/MaterialCardView.java)
 
 **Note:** You don't need to specify a style tag as long as you are using a
 Material components theme. If not, set the style to
@@ -501,7 +501,7 @@ Use the style in the layout. This affects only this specific card:
 
 In order to optimize shape theming, some (optional) adjustments need to be made
 to the card layout to incorporate
-[ShapeableImageView](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/imageview/ShapeableImageView.java).
+[ShapeableImageView](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/imageview/ShapeableImageView.java).
 
 In the layout:
 

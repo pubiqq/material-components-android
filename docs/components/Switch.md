@@ -98,15 +98,15 @@ Element           | Style                                            | Theme att
 **Default style** | `Widget.Material3.CompoundButton.MaterialSwitch` | `?attr/materialSwitchStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/materialswitch/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/materialswitch/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/materialswitch/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/materialswitch/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material switches, you need to add a dependency on the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 **Note:** The `MaterialSwitch` widget provides a complete implementation of
@@ -193,7 +193,7 @@ API and source code:
 
 *   `MaterialSwitch`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/materialswitch/MaterialSwitch)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/materialswitch/MaterialSwitch.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/materialswitch/MaterialSwitch.java)
 
 **Note:** Since version 1.7.0, the new `MaterialSwitch` class will replace the
 obsolete `SwitchMaterial` class. In most cases you should be able to just
@@ -367,9 +367,9 @@ Element           | Style
 Default style theme attribute: `?attr/switchStyle`
 
 For the full list, see
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/switchmaterial/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/switchmaterial/res/values/styles.xml)
 and
-[attrs](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/switchmaterial/res/values/attrs.xml).
+[attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/switchmaterial/res/values/attrs.xml).
 
 <h3 id="theming-switch-deprecated"> Theming switch</h3>
 
@@ -381,7 +381,7 @@ API and source code:
 
 *   `SwitchMaterial`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/switchmaterial/SwitchMaterial)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/switchmaterial/SwitchMaterial.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/switchmaterial/SwitchMaterial.java)
 
 The following example shows a list of switches with Material theming.
 

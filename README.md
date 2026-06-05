@@ -21,14 +21,14 @@ take a look at our [Getting Started](docs/getting-started.md) guide.
 For usage questions: ask on
 [Stack Overflow](http://stackoverflow.com/questions/tagged/material-components).
 
-Bugs or feature requests should be submitted at our [GitHub Issues section](https://github.com/material-components/material-components-android/issues).
+Bugs or feature requests should be submitted at our [GitHub Issues section](https://github.com/pubiqq/material-components-android/issues).
 
 Note: If your issue or feature request is for Material Jetpack Compose, please
 file it at the [Compose Issue Tracker](https://issuetracker.google.com/issues/new?component=742043&template=1346811)
 instead.
 
 ## Useful Links
-- [All Components](https://github.com/pubiqq/material-components-android/tree/master/lib/)
+- [All Components](https://github.com/pubiqq/material-components-android/tree/dev/lib/)
 - [Getting Started](docs/getting-started.md)
 - [Contributing](docs/contributing.md)
 - [Using Snapshot Version](docs/using-snapshot-version.md)

@@ -109,7 +109,7 @@ import java.lang.annotation.RetentionPolicy;
  * interfere with any views which you add.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/TopAppBar.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/TopAppBar.md">component
  * developer guidance</a> and <a href="https://material.io/components/top-app-bar/overview">design
  * guidelines</a>.
  *

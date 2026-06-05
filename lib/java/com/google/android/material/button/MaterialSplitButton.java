@@ -65,7 +65,7 @@ import androidx.core.view.ViewCompat;
  * <p>MaterialSplitButton is a {@link MaterialButtonGroup} with only two {@link MaterialButton}s.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Button.md">component
  * developer guidance</a> and <a href="https://material.io/components/buttons/overview">design
  * guidelines</a>.
  */

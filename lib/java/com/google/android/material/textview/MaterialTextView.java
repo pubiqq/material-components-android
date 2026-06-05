@@ -74,7 +74,7 @@ import com.google.android.material.resources.MaterialResources;
  * href="https://developer.android.com/guide/topics/ui/themes.html">Styles and Themes</a>.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/MaterialTextView.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/MaterialTextView.md">component
  * developer guidance</a>.
  */
 public class MaterialTextView extends AppCompatTextView {

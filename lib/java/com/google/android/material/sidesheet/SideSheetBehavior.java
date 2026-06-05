@@ -72,7 +72,7 @@ import java.util.Set;
  * side sheet.
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/SideSheet.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/SideSheet.md">component
  * developer guidance</a> and <a href="https://material.io/components/side-sheets/overview">design
  * guidelines</a>.
  */

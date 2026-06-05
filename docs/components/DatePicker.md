@@ -210,7 +210,7 @@ Element   | Attribute            | Related  method(s) | Default value
 Element        | Attribute                                | Related method(s) | Default value
 -------------- | ---------------------------------------- | ----------------- | -------------
 **Style**      | `app:materialCalendarHeaderCancelButton` | N/A               | `@style/Widget.Material3.MaterialCalendar.HeaderCancelButton`
-**Text color** | `android:textColor`                      | N/A               | `?attr/colorOnSurface` (see all [states](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/button/res/color/m3_text_button_foreground_color_selector.xml))
+**Text color** | `android:textColor`                      | N/A               | `?attr/colorOnSurface` (see all [states](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/button/res/color/m3_text_button_foreground_color_selector.xml))
 **Icon color** | `app:iconTint`                           | N/A               | `?attr/colorOnSurfaceVariant`
 
 ### Styles and theme overlays
@@ -229,10 +229,10 @@ Default theme attribute (set on the app's theme): `?attr/materialCalendarTheme`,
 `?attr/materialCalendarFullscreenTheme` (fullscreen)
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/res/values/styles.xml),
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/res/values/attrs.xml),
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/res/values/styles.xml),
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/res/values/attrs.xml),
 and
-[theme overlays](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/res/values/themes.xml).
+[theme overlays](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/res/values/themes.xml).
 
 ## Variants of date pickers
 
@@ -407,7 +407,7 @@ val datePicker = datePickerBuilder.build() datePicker.show()
 
 Before you can use Material date pickers, you need to add a dependency to the
 Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 Date pickers should be suitable for the context in which they appear and can be
@@ -419,10 +419,10 @@ embedded into dialogs on mobile devices.
 
 *   `MaterialDatePicker`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/datepicker/MaterialDatePicker)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/MaterialDatePicker.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/MaterialDatePicker.java)
 *   `CalendarConstraints`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/datepicker/CalendarConstraints)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/CalendarConstraints.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/CalendarConstraints.java)
 
 **A date range picker can be instantiated with
 `MaterialDatePicker.Builder.dateRangePicker()`:**
@@ -464,7 +464,7 @@ MaterialDatePicker.Builder.datePicker()
 
 **A `DayViewDecorator` can be set allowing customizing the day of month views
 within the picker
-([example of a `DayViewDecorator`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/datepicker/CircleIndicatorDecorator.java)):**
+([example of a `DayViewDecorator`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/datepicker/CircleIndicatorDecorator.java)):**
 
 ```kt
 MaterialDatePicker.Builder.datePicker()
@@ -557,7 +557,7 @@ val constraintsBuilder =
 
 You can also use `DateValidatorPointBackward` or customize by creating a class
 that implements `DateValidator`
-([example of a `DateValidatorWeekdays`](https://github.com/material-components/material-components-android/tree/master/catalog/java/io/material/catalog/datepicker/DateValidatorWeekdays.java)
+([example of a `DateValidatorWeekdays`](https://github.com/pubiqq/material-components-android/tree/dev/catalog/java/io/material/catalog/datepicker/DateValidatorWeekdays.java)
 in the MDC catalog).
 
 **To set the constraint to the picker's builder:**
@@ -594,10 +594,10 @@ API and source code:
 
 *   `MaterialDatePicker`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/datepicker/MaterialDatePicker)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/MaterialDatePicker.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/MaterialDatePicker.java)
 *   `CalendarConstraints`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/datepicker/CalendarConstraints)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/datepicker/CalendarConstraints.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/datepicker/CalendarConstraints.java)
 
 The following example shows a date picker with Material theming.
 

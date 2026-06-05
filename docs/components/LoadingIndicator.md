@@ -73,15 +73,15 @@ Element             | Style                                         | Theme attr
 **Contained style** | `Widget.Material3.LoadingIndicator.Contained`  | N/A
 
 See the full list of
-[styles](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/loadingindicator/res/values/styles.xml)
+[styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/loadingindicator/res/values/styles.xml)
 and
-[attributes](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/loadingindicator/res/values/attrs.xml).
+[attributes](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/loadingindicator/res/values/attrs.xml).
 
 ## Code implementation
 
 Before you can use Material loading indicators, you need to add a dependency to
 the Material Components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 Loading indicators inform users about the indeterminate ongoing processes, such
@@ -103,7 +103,7 @@ shape.
 Source code:
 
 *   `LoadingIndicator`
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/loadingindicator/LoadingIndicator.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/loadingindicator/LoadingIndicator.java)
 
 A loading indicator can be added to a layout:
 

@@ -264,19 +264,19 @@ Element                                                   | Style               
 
 Before you can use the Material Search components, you need to add a dependency
 to the Material components for Android library. For more information, go to the
-[Getting started](https://github.com/material-components/material-components-android/tree/master/docs/getting-started.md)
+[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
 Note: Material Search was introduced in `1.8.0`. To use Material Search, make
 sure you're depending on
-[library version `1.8.0`](https://github.com/material-components/material-components-android/releases/tag/1.8.0)
+[library version `1.8.0`](https://github.com/pubiqq/material-components-android/releases/tag/1.8.0)
 or later.
 
 API and source code
 
 *   [Class definition](https://developer.android.com/reference/com/google/android/material/search/SearchView)
 
-*   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/search/SearchView.java)
+*   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/search/SearchView.java)
 
 ### Adding Search bar
 
@@ -314,7 +314,7 @@ API and source code:
 
 *   `SearchBar`
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/search/SearchBar)
-    *   [Class source](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/search/SearchBar.java)
+    *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/search/SearchBar.java)
 
 ### Adding Search view
 

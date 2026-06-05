@@ -128,7 +128,7 @@ import java.util.Set;
  * </pre>
  *
  * <p>For more information, see the <a
- * href="https://github.com/material-components/material-components-android/blob/master/docs/components/Search.md">component
+ * href="https://github.com/pubiqq/material-components-android/blob/dev/docs/components/Search.md">component
  * developer guidance</a> and <a href="https://material.io/components/search/overview">design
  * guidelines</a>.
  */
