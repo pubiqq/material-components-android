@@ -3059,7 +3059,7 @@ public class TextInputLayout extends LinearLayout {
   }
 
   private boolean canDrawStroke() {
-    return boxStrokeWidthPx > -1 && boxStrokeColor != Color.TRANSPARENT;
+    return boxStrokeWidthPx > -1 && Color.alpha(boxStrokeColor) > 0;
   }
 
   void updateEditTextBackground() {

@@ -1332,7 +1332,7 @@ public final class MaterialContainerTransform extends Transition {
       // Fill the container at the current layer with a color. Useful when the start or end view
       // does not have a background or when the container size exceeds the image size which it can
       // in large start/end size changes.
-      if (containerPaint.getColor() != Color.TRANSPARENT && containerPaint.getAlpha() > 0) {
+      if (Color.alpha(containerPaint.getColor()) > 0 && containerPaint.getAlpha() > 0) {
         canvas.drawRect(getBounds(), containerPaint);
       }
     }
@@ -1459,10 +1459,10 @@ public final class MaterialContainerTransform extends Transition {
               FadeThroughProvider.FADE_THROUGH_THRESHOLD);
 
       // Update start and end container paints to share the same opacity as their respective view
-      if (startContainerPaint.getColor() != Color.TRANSPARENT) {
+      if (Color.alpha(startContainerPaint.getColor()) > 0) {
         startContainerPaint.setAlpha(fadeModeResult.startAlpha);
       }
-      if (endContainerPaint.getColor() != Color.TRANSPARENT) {
+      if (Color.alpha(endContainerPaint.getColor()) > 0) {
         endContainerPaint.setAlpha(fadeModeResult.endAlpha);
       }
 

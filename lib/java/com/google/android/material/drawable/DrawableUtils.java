@@ -88,7 +88,7 @@ public final class DrawableUtils {
    * method will remove any set tints on the drawable.
    */
   public static void setTint(@NonNull Drawable drawable, @ColorInt int color) {
-    boolean hasTint = color != Color.TRANSPARENT;
+    boolean hasTint = Color.alpha(color) > 0;
     if (VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
       // On API 21, AppCompat's WrappedDrawableApi21 class only supports tinting certain types of
       // drawables. Replicates the logic here to support all types of drawables.

@@ -674,7 +674,7 @@ public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView 
     }
 
     private boolean hasSelectedColor() {
-      return simpleItemSelectedColor != Color.TRANSPARENT;
+      return Color.alpha(simpleItemSelectedColor) > 0;
     }
 
     private boolean hasSelectedRippleColor() {

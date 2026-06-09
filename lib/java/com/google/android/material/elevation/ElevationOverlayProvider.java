@@ -134,7 +134,7 @@ public class ElevationOverlayProvider {
     int backgroundColorOpaque = ColorUtils.setAlphaComponent(backgroundColor, 255);
     int overlayColorOpaque =
         MaterialColors.layer(backgroundColorOpaque, elevationOverlayColor, overlayAlphaFraction);
-    if (overlayAlphaFraction > 0 && elevationOverlayAccentColor != Color.TRANSPARENT) {
+    if (overlayAlphaFraction > 0 && Color.alpha(elevationOverlayAccentColor) > 0) {
       int overlayAccentColor =
           ColorUtils.setAlphaComponent(elevationOverlayAccentColor, OVERLAY_ACCENT_COLOR_ALPHA);
       overlayColorOpaque = MaterialColors.layer(overlayColorOpaque, overlayAccentColor);

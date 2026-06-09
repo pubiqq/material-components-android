@@ -477,7 +477,7 @@ public class ShapeableImageView extends AppCompatImageView implements Shapeable 
     int colorForState =
         strokeColor.getColorForState(getDrawableState(), strokeColor.getDefaultColor());
 
-    if (strokeWidth > 0 && colorForState != Color.TRANSPARENT) {
+    if (strokeWidth > 0 && Color.alpha(colorForState) > 0) {
       borderPaint.setColor(colorForState);
       canvas.drawPath(path, borderPaint);
     }

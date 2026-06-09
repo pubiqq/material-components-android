@@ -438,7 +438,7 @@ final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicato
     int paintColor = MaterialColors.compositeARGBWithAlpha(color, drawableAlpha);
     drawingDeterminateIndicator = false;
     int trackStopIndicatorSize = spec.getActualTrackStopIndicatorSize();
-    if (trackStopIndicatorSize > 0 && paintColor != Color.TRANSPARENT) {
+    if (trackStopIndicatorSize > 0 && Color.alpha(paintColor) > 0) {
       // Draws the stop indicator at the end of the track if needed.
       paint.setStyle(Style.FILL);
       paint.setColor(paintColor);
