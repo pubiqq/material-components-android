@@ -2948,11 +2948,6 @@ public class TabLayout extends HorizontalScrollView {
       // Clip children / view to padding when no badge is displayed.
       setClipChildren(flag);
       setClipToPadding(flag);
-      ViewGroup parent = (ViewGroup) getParent();
-      if (parent != null) {
-        parent.setClipChildren(flag);
-        parent.setClipToPadding(flag);
-      }
     }
 
     final void updateOrientation() {
@@ -3113,6 +3108,8 @@ public class TabLayout extends HorizontalScrollView {
     SlidingTabIndicator(Context context) {
       super(context);
       setWillNotDraw(false);
+      setClipChildren(false);
+      setClipToPadding(false);
     }
 
     void setSelectedIndicatorHeight(int height) {
