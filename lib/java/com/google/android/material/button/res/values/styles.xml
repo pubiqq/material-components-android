@@ -334,6 +334,7 @@
     <item name="containerInsetRight">8dp</item>
     <item name="containerIconSize">@dimen/m3_comp_icon_button_xsmall_icon_size</item>
     <item name="containerStrokeWidth">@dimen/m3_comp_icon_button_xsmall_outlined_outline_width</item>
+    <item name="labelTextAppearance">@macro/m3_comp_button_xsmall_label_text</item>
     <item name="containerShapePressed">@macro/m3_comp_icon_button_xsmall_pressed_container_shape</item>
     <item name="containerShapeChecked">@macro/m3_comp_icon_button_xsmall_selected_container_shape_round</item>
     <item name="containerShapeDefault">@style/ShapeAppearance.M3.Comp.IconButton.Xsmall.Container.Shape.Round</item>
@@ -377,6 +378,7 @@
     <item name="containerInsetRight">4dp</item>
     <item name="containerIconSize">@dimen/m3_comp_icon_button_small_icon_size</item>
     <item name="containerStrokeWidth">@dimen/m3_comp_icon_button_small_outlined_outline_width</item>
+    <item name="labelTextAppearance">@macro/m3_comp_button_small_label_text</item>
     <item name="containerShapePressed">@macro/m3_comp_icon_button_small_pressed_container_shape</item>
     <item name="containerShapeChecked">@macro/m3_comp_icon_button_small_selected_container_shape_round</item>
     <item name="containerShapeDefault">@style/ShapeAppearance.M3.Comp.IconButton.Small.Container.Shape.Round</item>
@@ -420,6 +422,7 @@
     <item name="containerInsetRight">0dp</item>
     <item name="containerIconSize">@dimen/m3_comp_icon_button_medium_icon_size</item>
     <item name="containerStrokeWidth">@dimen/m3_comp_icon_button_medium_outlined_outline_width</item>
+    <item name="labelTextAppearance">@macro/m3_comp_button_medium_label_text</item>
     <item name="containerShapePressed">@macro/m3_comp_icon_button_medium_pressed_container_shape</item>
     <item name="containerShapeChecked">@macro/m3_comp_icon_button_medium_selected_container_shape_round</item>
     <item name="containerShapeDefault">@style/ShapeAppearance.M3.Comp.IconButton.Medium.Container.Shape.Round</item>
@@ -459,6 +462,7 @@
     <item name="containerInsetRight">0dp</item>
     <item name="containerIconSize">@dimen/m3_comp_icon_button_large_icon_size</item>
     <item name="containerStrokeWidth">@dimen/m3_comp_icon_button_large_outlined_outline_width</item>
+    <item name="labelTextAppearance">@macro/m3_comp_button_large_label_text</item>
     <item name="containerShapePressed">@macro/m3_comp_icon_button_large_pressed_container_shape</item>
     <item name="containerShapeChecked">@macro/m3_comp_icon_button_large_selected_container_shape_round</item>
     <item name="containerShapeDefault">@style/ShapeAppearance.M3.Comp.IconButton.Large.Container.Shape.Round</item>
@@ -498,6 +502,7 @@
     <item name="containerInsetRight">0dp</item>
     <item name="containerIconSize">@dimen/m3_comp_icon_button_xlarge_icon_size</item>
     <item name="containerStrokeWidth">@dimen/m3_comp_icon_button_xlarge_outlined_outline_width</item>
+    <item name="labelTextAppearance">@macro/m3_comp_button_xlarge_label_text</item>
     <item name="containerShapePressed">@macro/m3_comp_icon_button_xlarge_pressed_container_shape</item>
     <item name="containerShapeChecked">@macro/m3_comp_icon_button_xlarge_selected_container_shape_round</item>
     <item name="containerShapeDefault">@style/ShapeAppearance.M3.Comp.IconButton.Xlarge.Container.Shape.Round</item>
