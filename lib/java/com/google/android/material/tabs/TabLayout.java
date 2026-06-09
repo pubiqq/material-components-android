@@ -3442,7 +3442,10 @@ public class TabLayout extends HorizontalScrollView {
     boolean hasIconAndText = false;
     for (int i = 0, count = tabs.size(); i < count; i++) {
       Tab tab = tabs.get(i);
-      if (tab != null && tab.getIcon() != null && !TextUtils.isEmpty(tab.getText())) {
+      if (tab != null
+          && tab.getIcon() != null
+          && tab.getTabLabelVisibility() == TAB_LABEL_VISIBILITY_LABELED
+          && !TextUtils.isEmpty(tab.getText())) {
         hasIconAndText = true;
         break;
       }
