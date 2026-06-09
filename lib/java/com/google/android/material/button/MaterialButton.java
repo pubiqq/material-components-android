@@ -608,11 +608,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     }
 
     if (allowedWidthDecrease == UNSET) {
-      int localIconSizeAndPadding =
-          icon == null
-              ? 0
-              : getIconPadding() + (iconSize == 0 ? icon.getIntrinsicWidth() : iconSize);
-      allowedWidthDecrease = getMeasuredWidth() - getTextLayoutWidth() - localIconSizeAndPadding;
+      allowedWidthDecrease = getMeasuredWidth() - getContentWidth();
     }
 
     if (originalPaddingStart == UNSET) {
@@ -780,8 +776,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         return;
       }
 
-      int localIconSize = iconSize == 0 ? icon.getIntrinsicHeight() : iconSize;
-      int newIconTop = getIconTop(buttonHeight, localIconSize);
+      int newIconTop = getIconTop(buttonHeight);
       if (iconTop != newIconTop) {
         iconTop = newIconTop;
         updateIcon(/* needsIconReset= */ false);
@@ -815,8 +810,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         return;
       }
 
-      int localSecondaryIconSize = iconSize == 0 ? secondaryIcon.getIntrinsicHeight() : iconSize;
-      int newIconTop = getIconTop(buttonHeight, localSecondaryIconSize);
+      int newIconTop = getIconTop(buttonHeight);
       if (secondaryIconTop != newIconTop) {
         secondaryIconTop = newIconTop;
         updateSecondaryIcon(/* needsIconReset= */ false);
@@ -833,21 +827,10 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
   }
 
   private int getIconLeft(int buttonWidth, @IconGravity int gravity) {
-    int localIconSize = 0;
-    if (icon != null) {
-      localIconSize = iconSize == 0 ? icon.getIntrinsicWidth() : iconSize;
-    }
-    int localSecondaryIconSize = 0;
-    if (secondaryIcon != null) {
-      localSecondaryIconSize = iconSize == 0 ? secondaryIcon.getIntrinsicWidth() : iconSize;
-    }
     int availableWidth =
         buttonWidth
-            - getTextLayoutWidth()
+            - getContentWidth()
             - getPaddingEnd()
-            - localIconSize
-            - localSecondaryIconSize
-            - iconPadding
             - getPaddingStart();
     Alignment textAlignment = getActualTextAlignment();
     int iconLeft = textAlignment == Alignment.ALIGN_CENTER ? availableWidth / 2 : availableWidth;
@@ -858,16 +841,76 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     return iconLeft;
   }
 
-  private int getIconTop(int buttonHeight, int iconSize) {
+  private int getIconTop(int buttonHeight) {
     return max(
         0, // Always put the icon on top if the content height is taller than the button.
         (buttonHeight
-            - getTextHeight()
+            - getContentHeight()
             - getPaddingTop()
-            - iconSize
-            - iconPadding
             - getPaddingBottom())
             / 2);
+  }
+
+  private int getContentWidth() {
+    int horizontalIconsRoomWidth = 0;
+    int verticalIconsRoomWidth = 0;
+
+    if (icon != null) {
+      int iconSize = getIconSize();
+      int iconWidth = iconSize != 0 ? iconSize : icon.getIntrinsicWidth();
+      int iconPadding = getIconPadding();
+
+      if (isIconStart() || isIconEnd()) {
+        horizontalIconsRoomWidth += (iconWidth + iconPadding);
+      } else if (isIconTop()) {
+        verticalIconsRoomWidth = max(verticalIconsRoomWidth, iconWidth);
+      }
+    }
+
+    if (secondaryIcon != null) {
+      int secondaryIconSize = getIconSize();
+      int secondaryIconWidth = secondaryIconSize != 0 ? secondaryIconSize : secondaryIcon.getIntrinsicWidth();
+      int secondaryIconPadding = getIconPadding();
+
+      if (isSecondaryIconStart() || isSecondaryIconEnd()) {
+        horizontalIconsRoomWidth += (secondaryIconWidth + secondaryIconPadding);
+      } else if (isSecondaryIconTop()) {
+        verticalIconsRoomWidth = max(verticalIconsRoomWidth, secondaryIconWidth);
+      }
+    }
+
+    return max(getTextLayoutWidth() + horizontalIconsRoomWidth, verticalIconsRoomWidth);
+  }
+
+  private int getContentHeight() {
+    int horizontalIconsRoomHeight = 0;
+    int verticalIconsRoomHeight = 0;
+
+    if (icon != null) {
+      int iconSize = getIconSize();
+      int iconHeight = iconSize != 0 ? iconSize : icon.getIntrinsicHeight();
+      int iconPadding = getIconPadding();
+
+      if (isIconTop()) {
+        verticalIconsRoomHeight += (iconHeight + iconPadding);
+      } else if (isIconStart() || isIconEnd()) {
+        horizontalIconsRoomHeight = max(horizontalIconsRoomHeight, iconHeight);
+      }
+    }
+
+    if (secondaryIcon != null) {
+      int secondaryIconSize = getIconSize();
+      int secondaryIconHeight = secondaryIconSize != 0 ? secondaryIconSize : secondaryIcon.getIntrinsicHeight();
+      int secondaryIconPadding = getIconPadding();
+
+      if (isSecondaryIconTop()) {
+        verticalIconsRoomHeight += (secondaryIconHeight + secondaryIconPadding);
+      } else if (isSecondaryIconStart() || isSecondaryIconEnd()) {
+        horizontalIconsRoomHeight = max(horizontalIconsRoomHeight, secondaryIconHeight);
+      }
+    }
+
+    return max(getTextHeight() + verticalIconsRoomHeight, horizontalIconsRoomHeight);
   }
 
   private int getTextLayoutWidth() {
