@@ -2510,6 +2510,7 @@ public class TabLayout extends HorizontalScrollView {
       contentDesc = null;
       position = INVALID_POSITION;
       customView = null;
+      labelVisibilityMode = TAB_LABEL_VISIBILITY_LABELED;
     }
   }
 
