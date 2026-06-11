@@ -137,9 +137,6 @@ import java.util.Locale;
  * <p>The {@link LabelFormatter} interface defines a formatter to be used to render text within the
  * value indicator label on interaction.
  *
- * <p>{@link BasicLabelFormatter} is a simple implementation of the {@link LabelFormatter} that
- * displays the selected value using letters to indicate magnitude (e.g.: 1.5K, 3M, 12B, etc..).
- *
  * <p>With the default style {@link
  * com.google.android.material.R.style#Widget_MaterialComponents_Slider}, colorPrimary and
  * colorOnPrimary are used to customize the color of the slider when enabled, and colorOnSurface is

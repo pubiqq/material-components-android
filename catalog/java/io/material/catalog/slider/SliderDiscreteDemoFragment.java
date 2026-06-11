@@ -24,7 +24,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import com.google.android.material.materialswitch.MaterialSwitch;
-import com.google.android.material.slider.BasicLabelFormatter;
 import com.google.android.material.slider.Slider;
 import io.material.catalog.feature.DemoFragment;
 import java.util.Arrays;

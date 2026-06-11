@@ -1,11 +1,11 @@
 /*
- * Copyright 2020 The Android Open Source Project
+ * Copyright 2026 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,20 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.android.material.slider;
+package io.material.catalog.slider;
 
 import androidx.annotation.NonNull;
+
+import com.google.android.material.slider.LabelFormatter;
+
 import java.util.Locale;
 
-/**
- * A simple implementation of the {@link LabelFormatter} interface, that limits the number
- * displayed inside a discrete slider's bubble to three digits, and a single-character suffix that
- * denotes magnitude (e.g.: 1.5K, 2.2M, 1.3B, 2T).
- *
- * @deprecated Use another implementation of {@link LabelFormatter}.
- */
-@Deprecated
-public final class BasicLabelFormatter implements LabelFormatter {
+class BasicLabelFormatter implements LabelFormatter {
 
   private static final long TRILLION = 1000000000000L;
   private static final int BILLION = 1000000000;
@@ -38,15 +33,15 @@ public final class BasicLabelFormatter implements LabelFormatter {
   @Override
   public String getFormattedValue(float value) {
     if (value >= TRILLION) {
-      return String.format(Locale.US, "%.1fT", value / TRILLION);
+      return String.format(Locale.ENGLISH, "%.1fT", value / TRILLION);
     } else if (value >= BILLION) {
-      return String.format(Locale.US, "%.1fB", value / BILLION);
+      return String.format(Locale.ENGLISH, "%.1fB", value / BILLION);
     } else if (value >= MILLION) {
-      return String.format(Locale.US, "%.1fM", value / MILLION);
+      return String.format(Locale.ENGLISH, "%.1fM", value / MILLION);
     } else if (value >= THOUSAND) {
-      return String.format(Locale.US, "%.1fK", value / THOUSAND);
+      return String.format(Locale.ENGLISH, "%.1fK", value / THOUSAND);
     }
 
-    return String.format(Locale.US, "%.0f", value);
+    return String.format(Locale.ENGLISH, "%.0f", value);
   }
 }
