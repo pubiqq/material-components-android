@@ -719,13 +719,14 @@ abstract class BaseSlider<
     int minSideSpaceWidthForInactiveTick = tickInactiveRadius;
     int minSideSpaceWidthForStopIndicator = MathUtils.ceilDiv(trackStopIndicatorSize, 2);
 
-    int newTrackSidePadding = MathUtils.max(
-        minTrackSidePadding,
-        minSideSpaceWidthForThumb,
-        minSideSpaceWidthForTrack,
-        minSideSpaceWidthForActiveTick,
-        minSideSpaceWidthForInactiveTick,
-        minSideSpaceWidthForStopIndicator);
+    int newTrackSidePadding =
+        minTrackSidePadding +
+            MathUtils.max(
+                minSideSpaceWidthForThumb,
+                minSideSpaceWidthForTrack,
+                minSideSpaceWidthForActiveTick,
+                minSideSpaceWidthForInactiveTick,
+                minSideSpaceWidthForStopIndicator);
 
     if (trackSidePadding == newTrackSidePadding) {
       return false;
