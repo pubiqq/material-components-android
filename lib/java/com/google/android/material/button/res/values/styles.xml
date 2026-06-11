@@ -114,6 +114,12 @@
     <item name="materialThemeOverlay">@style/ThemeOverlay.Material3Expressive.Button.TextButton.Snackbar</item>
   </style>
 
+  <style name="Widget.Material3Expressive.Button.IconButton.Close.Snackbar" parent="Widget.Material3Expressive.Button.IconButton.Standard">
+    <item name="android:contentDescription">@string/mtrl_button_snackbar_close_content_description</item>
+    <item name="icon">@drawable/mtrl_close_24px</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.Material3Expressive.Button.IconButton.Close.Snackbar</item>
+  </style>
+
   <!-- Styles for M3 Expressive Icon Buttons. -->
 
   <!-- M3 Expressive icon only button filled container style. -->
@@ -190,11 +196,13 @@
   </style>
 
   <!-- M3 Expressive Button Theme Overlay for the text only variant on a Snackbar. -->
-  <style name="ThemeOverlay.Material3Expressive.Button.TextButton.Snackbar" parent="ThemeOverlay.Material3.Button.TextButton.Snackbar">
-    <item name="colorContainerChecked">?attr/colorContainer</item>
-    <item name="colorContainerUnchecked">?attr/colorContainer</item>
-    <item name="colorOnContainerChecked">?attr/colorOnContainer</item>
-    <item name="colorOnContainerUnchecked">?attr/colorOnSurfaceInverse</item>
+  <style name="ThemeOverlay.Material3Expressive.Button.TextButton.Snackbar" parent="ThemeOverlay.Material3Expressive.Button.TextButton">
+    <item name="colorOnContainer">?attr/colorPrimaryInverse</item>
+  </style>
+
+  <!-- M3 Expressive Button Theme Overlay for the close button on a Snackbar. -->
+  <style name="ThemeOverlay.Material3Expressive.Button.IconButton.Close.Snackbar" parent="ThemeOverlay.Material3Expressive.Button.IconButton.Standard">
+    <item name="colorOnContainer">?attr/colorOnSurfaceInverse</item>
   </style>
 
   <!-- M3 Expressive Button Theme Overlay for the elevated container variant. -->
