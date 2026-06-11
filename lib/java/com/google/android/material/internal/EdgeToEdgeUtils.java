@@ -133,13 +133,6 @@ public class EdgeToEdgeUtils {
   }
 
   private static int getStatusBarColor(Context context, boolean isEdgeToEdgeEnabled) {
-    if (isEdgeToEdgeEnabled && VERSION.SDK_INT < VERSION_CODES.M) {
-      // Light status bars are only supported on M+. So we need to use a translucent black status
-      // bar instead to ensure the text/icon contrast of it.
-      int opaqueStatusBarColor =
-          MaterialColors.getColor(context, android.R.attr.statusBarColor, Color.BLACK);
-      return ColorUtils.setAlphaComponent(opaqueStatusBarColor, EDGE_TO_EDGE_BAR_ALPHA);
-    }
     if (isEdgeToEdgeEnabled) {
       return TRANSPARENT;
     }

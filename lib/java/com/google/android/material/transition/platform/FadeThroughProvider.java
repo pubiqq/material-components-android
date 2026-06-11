@@ -37,7 +37,6 @@ import androidx.annotation.Nullable;
  *
  * <p>FadeThroughProvider differs from FadeProvider in that it fades out and in views sequentially.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class FadeThroughProvider implements VisibilityAnimatorProvider {
 
   static final float FADE_THROUGH_THRESHOLD = 0.35F;

@@ -24,8 +24,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.TintTypedArray;
 import androidx.appcompat.widget.TooltipCompat;
@@ -107,12 +106,8 @@ public class OverflowLinearLayout extends LinearLayout {
     }
     int overflowMenuStyle =
         MaterialAttributes.resolveOrThrow(this, R.attr.overflowLinearLayoutPopupMenuStyle);
-    PopupMenu popupMenu;
-    if (VERSION.SDK_INT > VERSION_CODES.LOLLIPOP) {
-      popupMenu = new PopupMenu(getContext(), overflowButton, Gravity.CENTER, 0, overflowMenuStyle);
-    } else {
-      popupMenu = new PopupMenu(getContext(), overflowButton, Gravity.CENTER);
-    }
+    PopupMenu popupMenu =
+        new PopupMenu(getContext(), overflowButton, Gravity.CENTER, 0, overflowMenuStyle);
     int overflowItemIconPadding =
         context
             .getResources()

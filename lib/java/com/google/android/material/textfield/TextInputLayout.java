@@ -59,7 +59,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStructure;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -97,7 +96,6 @@ import com.google.android.material.internal.CheckableImageButton;
 import com.google.android.material.internal.CollapsingTextHelper;
 import com.google.android.material.internal.DescendantOffsetUtils;
 import com.google.android.material.internal.StaticLayoutBuilderCompat;
-import com.google.android.material.internal.StaticLayoutBuilderCompat.StaticLayoutBuilderCompatException;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.motion.MotionUtils;
@@ -2860,11 +2858,10 @@ public class TextInputLayout extends LinearLayout {
     try {
       TextViewCompat.setTextAppearance(textView, textAppearance);
 
-      if (VERSION.SDK_INT >= VERSION_CODES.M
-          && textView.getTextColors().getDefaultColor() == Color.MAGENTA) {
+      if (textView.getTextColors().getDefaultColor() == Color.MAGENTA) {
         // Caused by our theme not extending from Theme.Design*. On API 23 and
-        // above, unresolved theme attrs result in MAGENTA rather than an exception.
-        // Flag so that we use a decent default
+        // above, unresolved theme attrs result in MAGENTA. Flag so that we use
+        // a decent default.
         useDefaultColor = true;
       }
     } catch (Exception e) {
@@ -3347,30 +3344,24 @@ public class TextInputLayout extends LinearLayout {
       textPaint.setTextSize(placeholderTextView.getTextSize());
       textPaint.setTypeface(placeholderTextView.getTypeface());
       textPaint.setLetterSpacing(placeholderTextView.getLetterSpacing());
-      try {
-        StaticLayout placeholderLayout =
-            StaticLayoutBuilderCompat.obtain(placeholderText, textPaint, availableWidth)
-                .setIsRtl(getLayoutDirection() == LAYOUT_DIRECTION_RTL)
-                .setIncludePad(true)
-                .setLineSpacing(
-                    placeholderTextView.getLineSpacingExtra(),
-                    placeholderTextView.getLineSpacingMultiplier())
-                .setStaticLayoutBuilderConfigurer(
-                    builder -> {
-                      if (VERSION.SDK_INT >= VERSION_CODES.M) {
-                        builder.setBreakStrategy(placeholderTextView.getBreakStrategy());
-                      }
-                    })
-                .build();
-        float extraHeight = 0;
-        if (boxBackgroundMode == BOX_BACKGROUND_FILLED) {
-          extraHeight = collapsingTextHelper.getCollapsedTextHeight()
-              + boxCollapsedPaddingTopPx + extraSpaceBetweenPlaceholderAndHint;
-        }
-        newMinHeight = placeholderLayout.getHeight() + extraHeight;
-      } catch (StaticLayoutBuilderCompatException e) {
-        Log.e(TAG, e.getCause().getMessage(), e);
+      StaticLayout placeholderLayout =
+          StaticLayoutBuilderCompat.obtain(placeholderText, textPaint, availableWidth)
+              .setIsRtl(getLayoutDirection() == LAYOUT_DIRECTION_RTL)
+              .setIncludePad(true)
+              .setLineSpacing(
+                  placeholderTextView.getLineSpacingExtra(),
+                  placeholderTextView.getLineSpacingMultiplier())
+              .setStaticLayoutBuilderConfigurer(
+                  builder -> {
+                    builder.setBreakStrategy(placeholderTextView.getBreakStrategy());
+                  })
+              .build();
+      float extraHeight = 0;
+      if (boxBackgroundMode == BOX_BACKGROUND_FILLED) {
+        extraHeight = collapsingTextHelper.getCollapsedTextHeight()
+            + boxCollapsedPaddingTopPx + extraSpaceBetweenPlaceholderAndHint;
       }
+      newMinHeight = placeholderLayout.getHeight() + extraHeight;
     }
 
     minHeight = Math.max(minHeight, newMinHeight);

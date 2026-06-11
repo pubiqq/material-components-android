@@ -1372,7 +1372,7 @@ public class BottomAppBar extends Toolbar implements AttachedBehavior {
             // Manage the bottomMargin of the fab if it wasn't explicitly set to something. This
             // adds space below the fab if the BottomAppBar is hidden.
             if (originalBottomMargin == 0) {
-              // Extra padding is added for the fake shadow on API < 21. Ensure we don't add too
+              // Extra padding is added for the compat shadow. Ensure we don't add too
               // much space by removing that extra padding if the fab mode is cradle.
               if (child.fabAnchorMode == FAB_ANCHOR_MODE_CRADLE) {
                 int bottomShadowPadding = (v.getMeasuredHeight() - height) / 2;

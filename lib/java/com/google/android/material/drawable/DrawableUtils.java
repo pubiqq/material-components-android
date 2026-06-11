@@ -16,11 +16,6 @@
 
 package com.google.android.material.drawable;
 
-import com.google.android.material.R;
-
-import static java.lang.Math.max;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources.NotFoundException;
@@ -52,8 +47,6 @@ import androidx.annotation.RestrictTo.Scope;
 import androidx.annotation.XmlRes;
 import androidx.core.graphics.drawable.DrawableCompat;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -88,21 +81,10 @@ public final class DrawableUtils {
    * method will remove any set tints on the drawable.
    */
   public static void setTint(@NonNull Drawable drawable, @ColorInt int color) {
-    boolean hasTint = Color.alpha(color) > 0;
-    if (VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
-      // On API 21, AppCompat's WrappedDrawableApi21 class only supports tinting certain types of
-      // drawables. Replicates the logic here to support all types of drawables.
-      if (hasTint) {
-        drawable.setColorFilter(color, PorterDuff.Mode.SRC_IN);
-      } else {
-        drawable.setColorFilter(null);
-      }
+    if (Color.alpha(color) > 0) {
+      drawable.setTint(color);
     } else {
-      if (hasTint) {
-        drawable.setTint(color);
-      } else {
-        drawable.setTintList(null);
-      }
+      drawable.setTintList(null);
     }
   }
 
@@ -150,18 +132,7 @@ public final class DrawableUtils {
   }
 
   public static void setRippleDrawableRadius(@Nullable RippleDrawable drawable, int radius) {
-    if (VERSION.SDK_INT >= VERSION_CODES.M) {
-      drawable.setRadius(radius);
-    } else {
-      try {
-        @SuppressLint("PrivateApi")
-        Method setMaxRadiusMethod =
-            RippleDrawable.class.getDeclaredMethod("setMaxRadius", int.class);
-        setMaxRadiusMethod.invoke(drawable, radius);
-      } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-        throw new IllegalStateException("Couldn't set RippleDrawable radius", e);
-      }
-    }
+    drawable.setRadius(radius);
   }
 
   /**
@@ -171,8 +142,16 @@ public final class DrawableUtils {
   @Nullable
   public static Drawable createTintableDrawableIfNeeded(
       @Nullable Drawable drawable, @Nullable ColorStateList tintList, @Nullable Mode tintMode) {
-    return createTintableMutatedDrawableIfNeeded(
-        drawable, tintList, tintMode, /* forceMutate= */ false);
+    if (drawable == null) {
+      return null;
+    }
+    if (tintList != null) {
+      drawable = DrawableCompat.wrap(drawable).mutate();
+      if (tintMode != null) {
+        drawable.setTintMode(tintMode);
+      }
+    }
+    return drawable;
   }
 
   /**
@@ -183,32 +162,15 @@ public final class DrawableUtils {
    * <p>Use this method instead of the above if the passed in drawable will be a child of a {@link
    * LayerDrawable} in APIs < 23, its tintList may be null, and it may be mutated, in order to
    * prevent issue where the drawable may not have its constant state set up properly.
+   *
+   * @deprecated This method is no longer needed since the library's minimum SDK is now 23.
+   * Use {@link #createTintableDrawableIfNeeded} instead.
    */
+  @Deprecated
   @Nullable
   public static Drawable createTintableMutatedDrawableIfNeeded(
       @Nullable Drawable drawable, @Nullable ColorStateList tintList, @Nullable Mode tintMode) {
-    return createTintableMutatedDrawableIfNeeded(
-        drawable, tintList, tintMode, VERSION.SDK_INT < VERSION_CODES.M);
-  }
-
-  @Nullable
-  private static Drawable createTintableMutatedDrawableIfNeeded(
-      @Nullable Drawable drawable,
-      @Nullable ColorStateList tintList,
-      @Nullable Mode tintMode,
-      boolean forceMutate) {
-    if (drawable == null) {
-      return null;
-    }
-    if (tintList != null) {
-      drawable = DrawableCompat.wrap(drawable).mutate();
-      if (tintMode != null) {
-        drawable.setTintMode(tintMode);
-      }
-    } else if (forceMutate) {
-      drawable.mutate();
-    }
-    return drawable;
+    return createTintableDrawableIfNeeded(drawable, tintList, tintMode);
   }
 
   /**
@@ -289,24 +251,9 @@ public final class DrawableUtils {
       }
     }
 
-    LayerDrawable drawable;
-    if (VERSION.SDK_INT >= VERSION_CODES.M) {
-      drawable = new LayerDrawable(new Drawable[] {bottomLayerDrawable, topLayerDrawable});
-
-      drawable.setLayerSize(1, topLayerNewWidth, topLayerNewHeight);
-      drawable.setLayerGravity(1, Gravity.CENTER);
-    } else {
-      topLayerDrawable =
-          new ScaledDrawableWrapper(topLayerDrawable, topLayerNewWidth, topLayerNewHeight);
-
-      drawable = new LayerDrawable(new Drawable[] {bottomLayerDrawable, topLayerDrawable});
-
-      final int horizontalInset =
-          max((bottomLayerDrawable.getIntrinsicWidth() - topLayerNewWidth) / 2, 0);
-      final int verticalInset =
-          max((bottomLayerDrawable.getIntrinsicHeight() - topLayerNewHeight) / 2, 0);
-      drawable.setLayerInset(1, horizontalInset, verticalInset, horizontalInset, verticalInset);
-    }
+    LayerDrawable drawable = new LayerDrawable(new Drawable[]{bottomLayerDrawable, topLayerDrawable});
+    drawable.setLayerSize(1, topLayerNewWidth, topLayerNewHeight);
+    drawable.setLayerGravity(1, Gravity.CENTER);
 
     return drawable;
   }

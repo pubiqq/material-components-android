@@ -517,8 +517,6 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
       return;
     }
 
-    // Needs to explicitly set visibility of two drawables. ProgressBar.setIndeterminate doesn't
-    // handle it properly for pre-lollipop.
     DrawableWithAnimatedVisibilityChange oldDrawable =
         (DrawableWithAnimatedVisibilityChange) getCurrentDrawable();
     if (oldDrawable != null) {

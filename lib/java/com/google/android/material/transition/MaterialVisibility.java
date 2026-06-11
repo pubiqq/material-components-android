@@ -28,7 +28,6 @@ import androidx.annotation.Nullable;
 import androidx.transition.TransitionValues;
 import androidx.transition.Visibility;
 import com.google.android.material.animation.AnimationUtils;
-import com.google.android.material.animation.AnimatorSetCompat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -134,7 +133,7 @@ abstract class MaterialVisibility<P extends VisibilityAnimatorProvider> extends 
 
     maybeApplyThemeValues(sceneRoot.getContext(), appearing);
 
-    AnimatorSetCompat.playTogether(set, animators);
+    set.playTogether(animators);
     return set;
   }
 

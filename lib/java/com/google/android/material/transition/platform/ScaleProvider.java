@@ -37,7 +37,6 @@ import androidx.annotation.Nullable;
  * disappearing. This is useful when pairing two animating targets, one appearing and one
  * disappearing, that should both be either growing or shrinking to create a visual relationship.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class ScaleProvider implements VisibilityAnimatorProvider {
 
   private float outgoingStartScale = 1f;

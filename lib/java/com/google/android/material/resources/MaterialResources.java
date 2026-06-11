@@ -18,15 +18,13 @@ package com.google.android.material.resources;
 
 import com.google.android.material.R;
 
-import static android.util.TypedValue.COMPLEX_UNIT_MASK;
 import static androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.os.Build.VERSION_CODES;
+
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.TintTypedArray;
 import android.util.TypedValue;
@@ -214,7 +212,7 @@ public class MaterialResources {
 
     // If the resource is in scaled pixels (sp) manually unpack the resource and scale to density
     // but not font scale.
-    if (getComplexUnit(v) == TypedValue.COMPLEX_UNIT_SP) {
+    if (v.getComplexUnit() == TypedValue.COMPLEX_UNIT_SP) {
       // Get the raw value. If text size is set to 14sp in the dimen file, this will return 14.
       // Scale the raw value using density and round to avoid truncating.
       return Math.round(
@@ -245,7 +243,7 @@ public class MaterialResources {
       return defValue;
     }
 
-    if (getComplexUnit(v) == TypedValue.COMPLEX_UNIT_SP) {
+    if (v.getComplexUnit() == TypedValue.COMPLEX_UNIT_SP) {
       // Get the raw value. If the line height is set to 14sp in the dimen file, this will return
       // 14. Scale the raw value using density and round to avoid truncating.
       return Math.round(
@@ -255,20 +253,6 @@ public class MaterialResources {
     // If the resource is not is sp, return with regular resource system scaling.
     return TypedValue.complexToDimensionPixelSize(
         v.data, context.getResources().getDisplayMetrics());
-  }
-
-  /**
-   * Return the complex unit type for the given value.
-   *
-   * <p>This is a compat method of {@link TypedValue#getComplexUnit()}, which is only available on
-   * API 22 and above.
-   */
-  private static int getComplexUnit(TypedValue tv) {
-    if (Build.VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1) {
-      return tv.getComplexUnit();
-    } else {
-      return (COMPLEX_UNIT_MASK & (tv.data >> TypedValue.COMPLEX_UNIT_SHIFT));
-    }
   }
 
   /**

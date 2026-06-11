@@ -143,7 +143,7 @@ public class AnimationCoordinator {
 
     if (!durationAnimations.isEmpty()) {
       AnimatorSet animatorSet = new AnimatorSet();
-      AnimatorSetCompat.playTogether(animatorSet, new ArrayList<>(durationAnimations));
+      animatorSet.playTogether(durationAnimations);
       animatorSet.addListener(
           new AnimatorListenerAdapter() {
             @Override

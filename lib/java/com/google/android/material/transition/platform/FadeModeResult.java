@@ -20,7 +20,6 @@
  */
 package com.google.android.material.transition.platform;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 class FadeModeResult {
   final int startAlpha;
   final int endAlpha;

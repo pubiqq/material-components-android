@@ -32,12 +32,10 @@ import androidx.annotation.Nullable;
 import android.transition.TransitionValues;
 import android.transition.Visibility;
 import com.google.android.material.animation.AnimationUtils;
-import com.google.android.material.animation.AnimatorSetCompat;
 import java.util.ArrayList;
 import java.util.List;
 
 /** A {@link Visibility} transition that is composed of a primary and secondary animator. */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 abstract class MaterialVisibility<P extends VisibilityAnimatorProvider> extends Visibility {
 
   private final P primaryAnimatorProvider;
@@ -139,7 +137,7 @@ abstract class MaterialVisibility<P extends VisibilityAnimatorProvider> extends 
 
     maybeApplyThemeValues(sceneRoot.getContext(), appearing);
 
-    AnimatorSetCompat.playTogether(set, animators);
+    set.playTogether(animators);
     return set;
   }
 

@@ -24,9 +24,6 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatDialog;
 import android.util.TypedValue;
@@ -139,12 +136,6 @@ public class BottomSheetDialog extends AppCompatDialog {
       EdgeToEdgeUtils.setStatusBarColor(window, 0);
 
       window.addFlags(LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-      if (VERSION.SDK_INT < VERSION_CODES.M) {
-        // It can be transparent for API 23 and above because we will handle switching the status
-        // bar icons to light or dark as appropriate. For API 21 and API 22 we just set the
-        // translucent status bar.
-        window.addFlags(LayoutParams.FLAG_TRANSLUCENT_STATUS);
-      }
       window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     }
   }
@@ -556,14 +547,12 @@ public class BottomSheetDialog extends AppCompatDialog {
    */
   @Deprecated
   public static void setLightStatusBar(@NonNull View view, boolean isLight) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      int flags = view.getSystemUiVisibility();
-      if (isLight) {
-        flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-      } else {
-        flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-      }
-      view.setSystemUiVisibility(flags);
+    int flags = view.getSystemUiVisibility();
+    if (isLight) {
+      flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+    } else {
+      flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
     }
+    view.setSystemUiVisibility(flags);
   }
 }

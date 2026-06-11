@@ -35,7 +35,6 @@ import com.google.android.material.animation.AnimationUtils;
  * from the {@code SceneRoot}'s context before it runs, and only use them if the corresponding
  * properties weren't already set on the transition instance.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class MaterialFade extends MaterialVisibility<FadeProvider> {
 
   private static final float DEFAULT_START_SCALE = 0.8f;

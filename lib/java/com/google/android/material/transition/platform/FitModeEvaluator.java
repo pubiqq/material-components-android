@@ -22,7 +22,6 @@ package com.google.android.material.transition.platform;
 
 import android.graphics.RectF;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 interface FitModeEvaluator {
 
   /** Calculate the current start and end view sizes and scales depending on the fit mode. */

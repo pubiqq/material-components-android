@@ -27,15 +27,12 @@ import static java.util.Calendar.MINUTE;
 import static java.util.Calendar.PM;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.res.Resources;
-import android.media.AudioManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.EditText;
 import android.widget.LinearLayout;

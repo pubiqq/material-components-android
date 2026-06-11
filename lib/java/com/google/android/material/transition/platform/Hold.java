@@ -33,7 +33,6 @@ import android.transition.Visibility;
  * A {@link Visibility} {@link android.transition.Transition} that does nothing to the target
  * views, which can be useful for preserving a scene on screen during a Fragment transition.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class Hold extends Visibility {
 
   @NonNull

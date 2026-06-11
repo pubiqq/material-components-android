@@ -327,8 +327,7 @@ In `res/menu/popup_menu.xml`:
 **Adding icons to popup menus**
 
 Currently, there is no public API to add icons to popup menus. The following
-workaround is for API 21+, and uses library-only APIs, and is not guaranteed to
-work in future versions.
+workaround uses library-only APIs, and is not guaranteed to work in future versions.
 
 The following example shows a popup menu with icons.
 
@@ -352,18 +351,9 @@ private fun showMenu(v: View, @MenuRes menuRes: Int) {
                     TypedValue.COMPLEX_UNIT_DIP, ICON_MARGIN.toFloat(), resources.displayMetrics)
                 .toInt()
             if (item.icon != null) {
-              if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-                  item.icon = InsetDrawable(item.icon, iconMarginPx, 0, iconMarginPx,0)
-              } else {
-                  item.icon =
-                      object : InsetDrawable(item.icon, iconMarginPx, 0, iconMarginPx, 0) {
-                          override fun getIntrinsicWidth(): Int {
-                              return intrinsicHeight + iconMarginPx + iconMarginPx
-                      }
-                }
-              }
-          }
-      }
+              item.icon = InsetDrawable(item.icon, iconMarginPx, 0, iconMarginPx,0)
+            }
+        }
     }
     ...
     popup.show()

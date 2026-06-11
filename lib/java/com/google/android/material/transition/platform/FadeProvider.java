@@ -33,7 +33,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /** A class that configures and is able to provide an {@link Animator} that fades a view. */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class FadeProvider implements VisibilityAnimatorProvider {
 
   private float incomingEndThreshold = 1F;

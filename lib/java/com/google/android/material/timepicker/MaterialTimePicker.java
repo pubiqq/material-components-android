@@ -217,7 +217,7 @@ public final class MaterialTimePicker extends DialogFragment implements OnDouble
     window.requestFeature(Window.FEATURE_NO_TITLE);
     // On some Android APIs the dialog won't wrap content by default. Explicitly update here.
     window.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-    // This has to be done after requestFeature() is called on API <= 23.
+    // This has to be done after requestFeature() is called.
     background.setElevation(window.getDecorView().getElevation());
 
     return dialog;

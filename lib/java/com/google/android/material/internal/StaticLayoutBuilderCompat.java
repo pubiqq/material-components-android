@@ -16,11 +16,6 @@
 
 package com.google.android.material.internal;
 
-import static androidx.core.util.Preconditions.checkNotNull;
-
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.text.Layout;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
@@ -37,8 +32,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.lang.reflect.Constructor;
 
 /**
- * Class to create StaticLayout using StaticLayout.Builder on API23+ and a hidden StaticLayout
- * constructor before that.
+ * Class to create StaticLayout.
  *
  * <p>Usage:
  *
@@ -54,8 +48,7 @@ import java.lang.reflect.Constructor;
 @RestrictTo(Scope.LIBRARY_GROUP)
 public final class StaticLayoutBuilderCompat {
 
-  static final int DEFAULT_HYPHENATION_FREQUENCY =
-      VERSION.SDK_INT >= VERSION_CODES.M ? StaticLayout.HYPHENATION_FREQUENCY_NORMAL : 0;
+  static final int DEFAULT_HYPHENATION_FREQUENCY = StaticLayout.HYPHENATION_FREQUENCY_NORMAL;
 
   // Default line spacing values to match android.text.Layout constants.
   static final float DEFAULT_LINE_SPACING_ADD = 0.0f;
@@ -180,7 +173,7 @@ public final class StaticLayoutBuilderCompat {
   }
 
   /**
-   * Set the line spacing addition and multiplier frequency. Only available on API level 23+.
+   * Set the line spacing addition and multiplier frequency.
    *
    * @param spacingAdd Line spacing addition for the resulting {@link StaticLayout}
    * @param lineSpacingMultiplier Line spacing multiplier for the resulting {@link StaticLayout}
@@ -196,7 +189,7 @@ public final class StaticLayoutBuilderCompat {
   }
 
   /**
-   * Set the hyphenation frequency. Only available on API level 23+.
+   * Set the hyphenation frequency.
    *
    * @param hyphenationFrequency Hyphenation frequency for the resulting {@link StaticLayout}
    * @return this builder, useful for chaining
@@ -236,13 +229,14 @@ public final class StaticLayoutBuilderCompat {
     return this;
   }
 
+  /**
+   * A method that builds the {@link StaticLayout} after options have been set.
+   */
   @NonNull
-  /** A method that allows to create a StaticLayout with maxLines on all supported API levels. */
-  public StaticLayout build() throws StaticLayoutBuilderCompatException {
+  public StaticLayout build() {
     if (source == null) {
       source = "";
     }
-
 
     int availableWidth = Math.max(0, width);
     CharSequence textToDraw = source;
@@ -251,115 +245,33 @@ public final class StaticLayoutBuilderCompat {
     }
 
     end = Math.min(textToDraw.length(), end);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      if (isRtl && maxLines == 1) {
-        alignment = Alignment.ALIGN_OPPOSITE;
-      }
-      // Marshmallow introduced StaticLayout.Builder which allows us not to use
-      // the hidden constructor.
-      StaticLayout.Builder builder =
-          StaticLayout.Builder.obtain(
-              textToDraw, start, end, paint, availableWidth);
-      builder.setAlignment(alignment);
-      builder.setIncludePad(includePad);
-      TextDirectionHeuristic textDirectionHeuristic = isRtl
-          ? TextDirectionHeuristics.RTL
-          : TextDirectionHeuristics.LTR;
-      builder.setTextDirection(textDirectionHeuristic);
-      if (ellipsize != null) {
-        builder.setEllipsize(ellipsize);
-      }
-      builder.setMaxLines(maxLines);
-      if (lineSpacingAdd != DEFAULT_LINE_SPACING_ADD
-          || lineSpacingMultiplier != DEFAULT_LINE_SPACING_MULTIPLIER) {
-        builder.setLineSpacing(lineSpacingAdd, lineSpacingMultiplier);
-      }
-      if (maxLines > 1) {
-        builder.setHyphenationFrequency(hyphenationFrequency);
-      }
-      if (staticLayoutBuilderConfigurer != null) {
-        staticLayoutBuilderConfigurer.configure(builder);
-      }
-      return builder.build();
+    if (isRtl && maxLines == 1) {
+      alignment = Alignment.ALIGN_OPPOSITE;
     }
-
-    createConstructorWithReflection();
-    // Use the hidden constructor on older API levels.
-    try {
-      return checkNotNull(constructor)
-          .newInstance(
-              textToDraw,
-              start,
-              end,
-              paint,
-              availableWidth,
-              alignment,
-              checkNotNull(textDirection),
-              1.0f,
-              0.0f,
-              includePad,
-              null,
-              availableWidth,
-              maxLines);
-    } catch (Exception cause) {
-      throw new StaticLayoutBuilderCompatException(cause);
+    StaticLayout.Builder builder =
+        StaticLayout.Builder.obtain(
+            textToDraw, start, end, paint, availableWidth);
+    builder.setAlignment(alignment);
+    builder.setIncludePad(includePad);
+    TextDirectionHeuristic textDirectionHeuristic = isRtl
+        ? TextDirectionHeuristics.RTL
+        : TextDirectionHeuristics.LTR;
+    builder.setTextDirection(textDirectionHeuristic);
+    if (ellipsize != null) {
+      builder.setEllipsize(ellipsize);
     }
-  }
-
-  /**
-   * set constructor to this hidden {@link StaticLayout constructor.}
-   *
-   * <pre>{@code
-   * StaticLayout(
-   *   CharSequence source,
-   *   int bufstart,
-   *   int bufend,
-   *   TextPaint paint,
-   *   int outerwidth,
-   *   Alignment align,
-   *   TextDirectionHeuristic textDir,
-   *   float spacingmult,
-   *   float spacingadd,
-   *   boolean includepad,
-   *   TextUtils.TruncateAt ellipsize,
-   *   int ellipsizedWidth,
-   *   int maxLines)
-   * }</pre>
-   */
-  private void createConstructorWithReflection() throws StaticLayoutBuilderCompatException {
-    if (initialized) {
-      return;
+    builder.setMaxLines(maxLines);
+    if (lineSpacingAdd != DEFAULT_LINE_SPACING_ADD
+        || lineSpacingMultiplier != DEFAULT_LINE_SPACING_MULTIPLIER) {
+      builder.setLineSpacing(lineSpacingAdd, lineSpacingMultiplier);
     }
-
-    try {
-      final Class<?> textDirClass;
-      boolean useRtl = isRtl && Build.VERSION.SDK_INT >= VERSION_CODES.M;
-      textDirClass = TextDirectionHeuristic.class;
-      textDirection = useRtl ? TextDirectionHeuristics.RTL : TextDirectionHeuristics.LTR;
-
-      final Class<?>[] signature =
-          new Class<?>[] {
-            CharSequence.class,
-            int.class,
-            int.class,
-            TextPaint.class,
-            int.class,
-            Alignment.class,
-            textDirClass,
-            float.class,
-            float.class,
-            boolean.class,
-            TextUtils.TruncateAt.class,
-            int.class,
-            int.class
-          };
-
-      constructor = StaticLayout.class.getDeclaredConstructor(signature);
-      constructor.setAccessible(true);
-      initialized = true;
-    } catch (Exception cause) {
-      throw new StaticLayoutBuilderCompatException(cause);
+    if (maxLines > 1) {
+      builder.setHyphenationFrequency(hyphenationFrequency);
     }
+    if (staticLayoutBuilderConfigurer != null) {
+      staticLayoutBuilderConfigurer.configure(builder);
+    }
+    return builder.build();
   }
 
   @NonNull
@@ -371,8 +283,10 @@ public final class StaticLayoutBuilderCompat {
   /**
    * Class representing a StaticLayoutBuilder exception from initializing a StaticLayout.
    *
+   * @deprecated This exception is no longer thrown by {@link #build()}.
    * @hide
    */
+  @Deprecated
   @RestrictTo(Scope.LIBRARY_GROUP)
   public static class StaticLayoutBuilderCompatException extends Exception {
 

@@ -67,7 +67,6 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.graphics.drawable.TintAwareDrawable;
 import androidx.core.text.BidiFormatter;
 import com.google.android.material.animation.MotionSpec;
-import com.google.android.material.canvas.CanvasCompat;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.drawable.DrawableUtils;
 import com.google.android.material.focus.FocusRingDrawable;
@@ -361,13 +360,6 @@ public class ChipDrawable extends MaterialShapeDrawable
         R.styleable.Chip_android_textSize, textAppearance.getTextSize());
     textAppearance.setTextSize(textSize);
 
-    if (VERSION.SDK_INT < VERSION_CODES.M) {
-      // This is necessary to work around a bug that doesn't support themed color referenced in
-      // ColorStateList for API level < 23.
-      textAppearance.setTextColor(
-          MaterialResources.getColorStateList(context, a, R.styleable.Chip_android_textColor));
-    }
-
     if (VERSION.SDK_INT >= VERSION_CODES.O) {
       int fontVariationSettingsIndex = MaterialResources.getIndexWithValue(
           a,
@@ -608,8 +600,7 @@ public class ChipDrawable extends MaterialShapeDrawable
     int saveCount = 0;
     if (alpha < 255) {
       saveCount =
-          CanvasCompat.saveLayerAlpha(
-              canvas, bounds.left, bounds.top, bounds.right, bounds.bottom, alpha);
+          canvas.saveLayerAlpha(bounds.left, bounds.top, bounds.right, bounds.bottom, alpha);
     }
 
     // 0. Draw 100% opaque surface layer underneath partial transparent background.

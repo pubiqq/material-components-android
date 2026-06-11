@@ -39,7 +39,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
-import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import androidx.appcompat.content.res.AppCompatResources;
@@ -645,7 +644,7 @@ public class TabLayout extends HorizontalScrollView {
     if (a.hasValue(R.styleable.TabLayout_tabSelectedTextColor)) {
       // We have an explicit selected text color set, so we need to make merge it with the
       // current colors. This is exposed so that developers can use theme attributes to set
-      // this (theme attrs in ColorStateLists are Lollipop+)
+      // this.
       final int selected = a.getColor(R.styleable.TabLayout_tabSelectedTextColor, 0);
       tabTextColors = createColorStateList(tabTextColors.getDefaultColor(), selected);
     }
@@ -1439,9 +1438,6 @@ public class TabLayout extends HorizontalScrollView {
   /**
    * Sets the ripple color for this TabLayout.
    *
-   * <p>When running on devices with KitKat, we draw this color as a filled overlay rather than a
-   * ripple.
-   *
    * @param color color (or ColorStateList) to use for the ripple
    * @attr ref com.google.android.material.R.styleable#TabLayout_tabRippleColor
    * @see #getTabRippleColor()
@@ -1460,9 +1456,6 @@ public class TabLayout extends HorizontalScrollView {
 
   /**
    * Sets the ripple color resource for this TabLayout.
-   *
-   * <p>When running on devices with KitKat, we draw this color as a filled overlay rather than a
-   * ripple.
    *
    * @param tabRippleColorResourceId A color resource to use as ripple color.
    * @see #getTabRippleColor()
@@ -3149,20 +3142,6 @@ public class TabLayout extends HorizontalScrollView {
       final View nextTitle = getChildAt(position + 1);
 
       tweenIndicatorPosition(firstTitle, nextTitle, positionOffset);
-    }
-
-    @Override
-    public void onRtlPropertiesChanged(int layoutDirection) {
-      super.onRtlPropertiesChanged(layoutDirection);
-
-      // Workaround for a bug before Android M where LinearLayout did not re-layout itself when
-      // layout direction changed
-      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-        if (this.layoutDirection != layoutDirection) {
-          requestLayout();
-          this.layoutDirection = layoutDirection;
-        }
-      }
     }
 
     @Override

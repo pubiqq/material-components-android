@@ -24,8 +24,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
@@ -157,9 +156,7 @@ public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec>
       animatorDelegate.cancelAnimatorImmediately();
     }
     // Restarts the main animator if it's visible and needs to be animated.
-    if (visible
-        && (animate
-            || (VERSION.SDK_INT <= VERSION_CODES.LOLLIPOP_MR1 && !isSystemAnimatorDisabled()))) {
+    if (visible && animate) {
       animatorDelegate.startAnimator();
     }
 

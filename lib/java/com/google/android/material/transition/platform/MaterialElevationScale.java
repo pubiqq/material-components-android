@@ -27,7 +27,6 @@ package com.google.android.material.transition.platform;
  * <p>This can be useful as an exit transition and reenter transition in conjunction with the {@link
  * MaterialContainerTransform}.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class MaterialElevationScale extends MaterialVisibility<ScaleProvider> {
 
   private static final float DEFAULT_SCALE = 0.85f;

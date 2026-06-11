@@ -40,20 +40,17 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import androidx.annotation.ColorInt;
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.math.MathUtils;
 import androidx.core.text.TextDirectionHeuristicsCompat;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.color.MaterialColors;
-import com.google.android.material.internal.StaticLayoutBuilderCompat.StaticLayoutBuilderCompatException;
 import com.google.android.material.resources.CancelableFontCallback;
 import com.google.android.material.resources.CancelableFontCallback.ApplyFont;
 import com.google.android.material.resources.TextAppearance;
@@ -1176,24 +1173,19 @@ public final class CollapsingTextHelper {
 
   private StaticLayout createStaticLayout(
       int maxLines, TextPaint textPaint, CharSequence text, float availableWidth, boolean isRtl) {
-    StaticLayout textLayout = null;
-    try {
-      // In multiline mode, the text alignment should be controlled by the static layout.
-      Alignment textAlignment = maxLines == 1 ? ALIGN_NORMAL : getMultilineTextLayoutAlignment();
-      textLayout =
-          StaticLayoutBuilderCompat.obtain(text, textPaint, (int) availableWidth)
-              .setEllipsize(titleTextEllipsize)
-              .setIsRtl(isRtl)
-              .setAlignment(textAlignment)
-              .setIncludePad(false)
-              .setMaxLines(maxLines)
-              .setLineSpacing(lineSpacingAdd, lineSpacingMultiplier)
-              .setHyphenationFrequency(hyphenationFrequency)
-              .setStaticLayoutBuilderConfigurer(staticLayoutBuilderConfigurer)
-              .build();
-    } catch (StaticLayoutBuilderCompatException e) {
-      Log.e(TAG, e.getCause().getMessage(), e);
-    }
+    // In multiline mode, the text alignment should be controlled by the static layout.
+    Alignment textAlignment = maxLines == 1 ? ALIGN_NORMAL : getMultilineTextLayoutAlignment();
+    StaticLayout textLayout =
+        StaticLayoutBuilderCompat.obtain(text, textPaint, (int) availableWidth)
+            .setEllipsize(titleTextEllipsize)
+            .setIsRtl(isRtl)
+            .setAlignment(textAlignment)
+            .setIncludePad(false)
+            .setMaxLines(maxLines)
+            .setLineSpacing(lineSpacingAdd, lineSpacingMultiplier)
+            .setHyphenationFrequency(hyphenationFrequency)
+            .setStaticLayoutBuilderConfigurer(staticLayoutBuilderConfigurer)
+            .build();
 
     return checkNotNull(textLayout);
   }
@@ -1272,37 +1264,30 @@ public final class CollapsingTextHelper {
     return expandedLineCount;
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public void setLineSpacingAdd(float spacingAdd) {
     this.lineSpacingAdd = spacingAdd;
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public float getLineSpacingAdd() {
     return textLayout.getSpacingAdd();
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public void setLineSpacingMultiplier(@FloatRange(from = 0.0) float spacingMultiplier) {
     this.lineSpacingMultiplier = spacingMultiplier;
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public float getLineSpacingMultiplier() {
     return textLayout.getSpacingMultiplier();
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public void setHyphenationFrequency(int hyphenationFrequency) {
     this.hyphenationFrequency = hyphenationFrequency;
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public int getHyphenationFrequency() {
     return hyphenationFrequency;
   }
 
-  @RequiresApi(VERSION_CODES.M)
   public void setStaticLayoutBuilderConfigurer(
       @Nullable StaticLayoutBuilderConfigurer staticLayoutBuilderConfigurer) {
     if (this.staticLayoutBuilderConfigurer != staticLayoutBuilderConfigurer) {

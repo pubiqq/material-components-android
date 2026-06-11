@@ -22,7 +22,6 @@ package com.google.android.material.transition.platform;
 
 import android.transition.Transition;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 abstract class TransitionListenerAdapter implements Transition.TransitionListener {
 
   @Override

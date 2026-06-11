@@ -120,7 +120,6 @@ import java.lang.annotation.RetentionPolicy;
  * @see #setScaleMaskProgressThresholds(ProgressThresholds)
  * @see #setShapeMaskProgressThresholds(ProgressThresholds)
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class MaterialContainerTransform extends Transition {
 
   /**
@@ -1230,7 +1229,7 @@ public final class MaterialContainerTransform extends Transition {
 
       // Clip the canvas to container's path. Anything drawn to the canvas after this clipping will
       // be masked inside the clipped area.
-      maskEvaluator.clip(canvas);
+      canvas.clipPath(maskEvaluator.getPath());
 
       maybeDrawContainerColor(canvas, containerPaint);
 

@@ -45,7 +45,6 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.animation.AnimatorSetCompat;
 import com.google.android.material.animation.ArgbEvaluatorCompat;
 import com.google.android.material.animation.ChildrenAlphaProperty;
 import com.google.android.material.animation.DrawableAlphaProperty;
@@ -158,7 +157,7 @@ public abstract class FabTransformationBehavior extends ExpandableTransformation
         dependency, child, expanded, isAnimating, spec, animations, listeners);
 
     AnimatorSet set = new AnimatorSet();
-    AnimatorSetCompat.playTogether(set, animations);
+    set.playTogether(animations);
     set.addListener(
         new AnimatorListenerAdapter() {
           @Override

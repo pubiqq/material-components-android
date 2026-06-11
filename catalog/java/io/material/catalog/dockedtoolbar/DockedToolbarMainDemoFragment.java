@@ -17,8 +17,6 @@ package io.material.catalog.dockedtoolbar;
 
 import io.material.catalog.R;
 
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -64,13 +62,11 @@ public class DockedToolbarMainDemoFragment extends DemoFragment {
 
     LinearLayout bodyContainer = view.findViewById(R.id.body_container);
 
-    if (VERSION.SDK_INT >= VERSION_CODES.M) {
-      AccessibilityManager am = getContext().getSystemService(AccessibilityManager.class);
-      if (am != null) {
-        am.addTouchExplorationStateChangeListener(enabled -> updateContentPaddingOnTalkback(bodyContainer, enabled));
-        if (am.isTouchExplorationEnabled()) {
-          updateContentPaddingOnTalkback(bodyContainer, /* talkbackEnabled= */ true);
-        }
+    AccessibilityManager am = getContext().getSystemService(AccessibilityManager.class);
+    if (am != null) {
+      am.addTouchExplorationStateChangeListener(enabled -> updateContentPaddingOnTalkback(bodyContainer, enabled));
+      if (am.isTouchExplorationEnabled()) {
+        updateContentPaddingOnTalkback(bodyContainer, /* talkbackEnabled= */ true);
       }
     }
 

@@ -28,6 +28,7 @@ import androidx.annotation.RestrictTo.Scope;
  * An extension of {@link DrawableWrapperCompat} that will take a given Drawable and scale it by the
  * specified width and height.
  */
+@Deprecated
 @RestrictTo(Scope.LIBRARY_GROUP)
 public class ScaledDrawableWrapper extends DrawableWrapperCompat {
   private ScaledDrawableWrapperState state;

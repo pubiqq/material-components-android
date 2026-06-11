@@ -140,7 +140,7 @@ public class RippleUtils {
    * <p>If given a null ColorStateList, this will return a new transparent ColorStateList since
    * RippleDrawable requires a non-null ColorStateList.
    *
-   * <p>If given a non-null ColorStateList, this method will log a warning for API 22-27 if the
+   * <p>If given a non-null ColorStateList, this method will log a warning for API < 28 if the
    * ColorStateList is transparent in the default state and non-transparent in the pressed state.
    * This will result in using the pressed state color for the ripple until the finger is lifted at
    * which point the ripple will transition to the default state color (transparent), making the
@@ -149,8 +149,7 @@ public class RippleUtils {
   @NonNull
   public static ColorStateList sanitizeRippleDrawableColor(@Nullable ColorStateList rippleColor) {
     if (rippleColor != null) {
-      if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1
-          && VERSION.SDK_INT <= VERSION_CODES.O_MR1
+      if (VERSION.SDK_INT <= VERSION_CODES.O_MR1
           && Color.alpha(rippleColor.getDefaultColor()) == 0
           && Color.alpha(rippleColor.getColorForState(ENABLED_PRESSED_STATE_SET, Color.TRANSPARENT))
               != 0) {
@@ -188,10 +187,24 @@ public class RippleUtils {
    * container view under certain conditions. Adding a mask when creating {@link RippleDrawable}
    * solves this. Besides that since {@link RippleDrawable} doesn't support radius setting on
    * Lollipop, adding masks will make the circle ripple size fit into the view boundary.
+   *
+   * @deprecated No longer needed as the library's minimum SDK is now higher than API 22.
    */
+  @Deprecated
   @NonNull
   public static Drawable createOvalRippleLollipop(@NonNull Context context, @Px int padding) {
-    return RippleUtilsLollipop.createOvalRipple(context, padding);
+    GradientDrawable maskDrawable = new GradientDrawable();
+    maskDrawable.setColor(Color.WHITE);
+    maskDrawable.setShape(GradientDrawable.OVAL);
+    InsetDrawable maskWithPaddings =
+        new InsetDrawable(maskDrawable, padding, padding, padding, padding);
+    return new RippleDrawable(
+        MaterialColors.getColorStateList(
+            context,
+            androidx.appcompat.R.attr.colorControlHighlight,
+            ColorStateList.valueOf(Color.TRANSPARENT)),
+        null,
+        maskWithPaddings);
   }
 
   @ColorInt
@@ -213,25 +226,5 @@ public class RippleUtils {
   private static int doubleAlpha(@ColorInt int color) {
     int alpha = Math.min(2 * Color.alpha(color), 255);
     return ColorUtils.setAlphaComponent(color, alpha);
-  }
-
-  private static class RippleUtilsLollipop {
-
-    // Note: we need to return Drawable here to maintain API compatibility
-    @DoNotInline
-    private static Drawable createOvalRipple(@NonNull Context context, @Px int padding) {
-      GradientDrawable maskDrawable = new GradientDrawable();
-      maskDrawable.setColor(Color.WHITE);
-      maskDrawable.setShape(GradientDrawable.OVAL);
-      InsetDrawable maskWithPaddings =
-          new InsetDrawable(maskDrawable, padding, padding, padding, padding);
-      return new RippleDrawable(
-          MaterialColors.getColorStateList(
-              context,
-              androidx.appcompat.R.attr.colorControlHighlight,
-              ColorStateList.valueOf(Color.TRANSPARENT)),
-          null,
-          maskWithPaddings);
-    }
   }
 }

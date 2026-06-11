@@ -28,7 +28,6 @@ import static com.google.android.material.transition.platform.TransitionUtils.le
 import android.graphics.RectF;
 import com.google.android.material.transition.platform.MaterialContainerTransform.FitMode;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 class FitModeEvaluators {
 
   private static final FitModeEvaluator WIDTH =

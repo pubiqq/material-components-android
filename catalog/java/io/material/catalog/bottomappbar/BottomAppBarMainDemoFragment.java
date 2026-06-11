@@ -18,8 +18,6 @@ package io.material.catalog.bottomappbar;
 
 import io.material.catalog.R;
 
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -147,11 +145,9 @@ public class BottomAppBarMainDemoFragment extends DemoFragment {
           return false;
         });
 
-    if (VERSION.SDK_INT >= VERSION_CODES.M) {
-      am = getContext().getSystemService(AccessibilityManager.class);
-      if (am != null && am.isTouchExplorationEnabled()) {
-        bar.post(() -> content.setPadding(0, content.getPaddingTop(), 0, bar.getMeasuredHeight()));
-      }
+    am = getContext().getSystemService(AccessibilityManager.class);
+    if (am != null && am.isTouchExplorationEnabled()) {
+      bar.post(() -> content.setPadding(0, content.getPaddingTop(), 0, bar.getMeasuredHeight()));
     }
 
     setUpDemoControls(view);

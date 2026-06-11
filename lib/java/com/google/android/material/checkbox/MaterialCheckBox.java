@@ -714,10 +714,10 @@ public class MaterialCheckBox extends AppCompatCheckBox {
 
   private void refreshButtonDrawable() {
     buttonDrawable =
-        DrawableUtils.createTintableMutatedDrawableIfNeeded(
+        DrawableUtils.createTintableDrawableIfNeeded(
             buttonDrawable, buttonTintList, CompoundButtonCompat.getButtonTintMode(this));
     buttonIconDrawable =
-        DrawableUtils.createTintableMutatedDrawableIfNeeded(
+        DrawableUtils.createTintableDrawableIfNeeded(
             buttonIconDrawable, buttonIconTintList, buttonIconTintMode);
 
     setUpDefaultButtonDrawableAnimationIfNeeded();

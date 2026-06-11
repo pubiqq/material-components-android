@@ -24,14 +24,12 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+
 import androidx.appcompat.widget.AppCompatEditText;
-import android.text.TextUtils;
+
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewParent;
-import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import androidx.annotation.NonNull;
@@ -201,36 +199,6 @@ public class TextInputEditText extends AppCompatEditText {
       return super.requestRectangleOnScreen(parentRect);
     } else {
       return super.requestRectangleOnScreen(rectangle);
-    }
-  }
-
-  @Override
-  public void onInitializeAccessibilityNodeInfo(@NonNull AccessibilityNodeInfo info) {
-    super.onInitializeAccessibilityNodeInfo(info);
-    TextInputLayout layout = getTextInputLayout();
-
-    // In APIs < 23, some things set in the parent TextInputLayout's AccessibilityDelegate get
-    // overwritten, so we set them here so that announcements are as expected.
-    if (VERSION.SDK_INT < VERSION_CODES.M && layout != null) {
-      info.setText(getAccessibilityNodeInfoText(layout));
-    }
-  }
-
-  @NonNull
-  private String getAccessibilityNodeInfoText(@NonNull TextInputLayout layout) {
-    CharSequence inputText = getText();
-    CharSequence hintText = layout.getHint();
-    boolean showingText = !TextUtils.isEmpty(inputText);
-    boolean hasHint = !TextUtils.isEmpty(hintText);
-
-    String hint = hasHint ? hintText.toString() : "";
-
-    if (showingText) {
-      return inputText + (!TextUtils.isEmpty(hint) ? (", " + hint) : "");
-    } else if (!TextUtils.isEmpty(hint)) {
-      return hint;
-    } else {
-      return "";
     }
   }
 }

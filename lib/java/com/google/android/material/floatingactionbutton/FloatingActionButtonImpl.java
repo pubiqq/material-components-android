@@ -51,7 +51,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Preconditions;
 import com.google.android.material.animation.AnimationUtils;
-import com.google.android.material.animation.AnimatorSetCompat;
 import com.google.android.material.animation.ImageMatrixProperty;
 import com.google.android.material.animation.MatrixEvaluator;
 import com.google.android.material.animation.MotionSpec;
@@ -355,11 +354,7 @@ class FloatingActionButtonImpl {
 
   void onElevationsChanged(
       float elevation, float hoveredFocusedTranslationZ, float pressedTranslationZ) {
-    if (Build.VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
-      // Animations produce NPE in version 21. Bluntly set the values instead in
-      // #onDrawableStateChanged (matching the logic in the animations below).
-      view.refreshDrawableState();
-    } else if (view.getStateListAnimator() == stateListAnimator) {
+    if (view.getStateListAnimator() == stateListAnimator) {
       // FAB is using the default StateListAnimator created here. Updates it with the new elevation.
       stateListAnimator =
           createDefaultStateListAnimator(
@@ -394,8 +389,7 @@ class FloatingActionButtonImpl {
     AnimatorSet set = new AnimatorSet();
     List<Animator> animators = new ArrayList<>();
     animators.add(ObjectAnimator.ofFloat(view, "elevation", elevation).setDuration(0));
-    if (Build.VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1
-        && Build.VERSION.SDK_INT <= VERSION_CODES.N) {
+    if (Build.VERSION.SDK_INT <= VERSION_CODES.N) {
       // This is a no-op animation which exists here only for introducing the duration
       // because setting the delay (on the next animation) via "setDelay" or "after"
       // can trigger a NPE between android versions 22 and 24 (due to a framework
@@ -419,22 +413,6 @@ class FloatingActionButtonImpl {
   void updateShapeElevation(float elevation) {
     if (shapeDrawable != null) {
       shapeDrawable.setElevation(elevation);
-    }
-  }
-
-  void onDrawableStateChangedForLollipop() {
-    if (view.isEnabled()) {
-      view.setElevation(elevation);
-      if (view.isPressed()) {
-        view.setTranslationZ(pressedTranslationZ);
-      } else if (view.isFocused() || view.isHovered()) {
-        view.setTranslationZ(hoveredFocusedTranslationZ);
-      } else {
-        view.setTranslationZ(0);
-      }
-    } else {
-      view.setElevation(0);
-      view.setTranslationZ(0);
     }
   }
 
@@ -651,7 +629,7 @@ class FloatingActionButtonImpl {
     animators.add(animatorIconScale);
 
     AnimatorSet set = new AnimatorSet();
-    AnimatorSetCompat.playTogether(set, animators);
+    set.playTogether(animators);
     return set;
   }
 
@@ -691,7 +669,7 @@ class FloatingActionButtonImpl {
           view.setImageMatrix(matrix);
         });
     animators.add(animator);
-    AnimatorSetCompat.playTogether(set, animators);
+    set.playTogether(animators);
     set.setDuration(
         MotionUtils.resolveThemeDuration(
             view.getContext(),

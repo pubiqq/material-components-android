@@ -19,7 +19,7 @@ package com.google.android.material.shadow;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 
-/** Delegate interface that can be used to facilitate rendering of shadows pre-lollipop. */
+/** Delegate interface that can be used to facilitate rendering of compat shadows. */
 public interface ShadowViewDelegate {
   float getRadius();
 

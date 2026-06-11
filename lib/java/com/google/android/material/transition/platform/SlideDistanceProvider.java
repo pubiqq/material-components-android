@@ -44,7 +44,6 @@ import java.lang.annotation.RetentionPolicy;
  * A class that can configure and create an {@link Animator} that slides a view vertically or
  * horizontally slide over a specific distance.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
 
   private static final int DEFAULT_DISTANCE = -1;

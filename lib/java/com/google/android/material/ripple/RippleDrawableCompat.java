@@ -44,7 +44,10 @@ import com.google.android.material.shape.StateListShapeAppearanceModel;
  * <p>Unlike the framework {@link android.graphics.drawable.RippleDrawable}, this will <b>not</b>
  * apply different alphas for pressed, focused, and hovered states and it does not provide a ripple
  * animation for the pressed state.
+ *
+ * @deprecated Use {@link android.graphics.drawable.RippleDrawable} instead.
  */
+@Deprecated
 @RestrictTo(Scope.LIBRARY_GROUP)
 public class RippleDrawableCompat extends Drawable implements Shapeable, TintAwareDrawable {
 

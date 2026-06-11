@@ -21,7 +21,6 @@ import com.google.android.material.R;
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_UP;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.CollectionInfoCompat.SELECTION_MODE_SINGLE;
-import static java.lang.Math.abs;
 import static java.lang.Math.max;
 
 import android.annotation.SuppressLint;

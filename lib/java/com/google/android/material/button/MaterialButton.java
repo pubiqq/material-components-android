@@ -38,8 +38,6 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.appcompat.content.res.AppCompatResources;
@@ -565,11 +563,6 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
                 + " disabled");
         materialButtonHelper.setBackgroundOverwritten();
         super.setBackgroundDrawable(background);
-      } else {
-        // ViewCompat.setBackgroundTintList() and setBackgroundTintMode() call setBackground() on
-        // the view in API 21, since background state doesn't automatically update in API 21. We
-        // capture this case here, and update our background without replacing it or re-tinting it.
-        getBackground().setState(background.getState());
       }
     } else {
       super.setBackgroundDrawable(background);
@@ -579,10 +572,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
   @Override
   protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
     super.onLayout(changed, left, top, right, bottom);
-    // Workaround for API 21 ripple bug (possibly internal in GradientDrawable)
-    if (VERSION.SDK_INT == VERSION_CODES.LOLLIPOP && materialButtonHelper != null) {
-      materialButtonHelper.updateMaskBounds(bottom - top, right - left);
-    }
+
     updateIconPosition(getMeasuredWidth(), getMeasuredHeight());
     updateSecondaryIconPosition(getMeasuredWidth(), getMeasuredHeight());
 

@@ -149,17 +149,7 @@ public class MenuMainDemoFragment extends DemoFragment {
                     TypedValue.COMPLEX_UNIT_DIP, ICON_MARGIN, getResources().getDisplayMetrics());
 
         if (item.getIcon() != null) {
-          if (VERSION.SDK_INT > VERSION_CODES.LOLLIPOP) {
-            item.setIcon(new InsetDrawable(item.getIcon(), iconMarginPx, 0, iconMarginPx, 0));
-          } else {
-            item.setIcon(
-                new InsetDrawable(item.getIcon(), iconMarginPx, 0, iconMarginPx, 0) {
-                  @Override
-                  public int getIntrinsicWidth() {
-                    return getIntrinsicHeight() + iconMarginPx + iconMarginPx;
-                  }
-                });
-          }
+          item.setIcon(new InsetDrawable(item.getIcon(), iconMarginPx, 0, iconMarginPx, 0));
         }
       }
     }

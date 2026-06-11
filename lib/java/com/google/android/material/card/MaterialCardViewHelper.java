@@ -43,7 +43,6 @@ import androidx.annotation.Dimension;
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import androidx.cardview.widget.CardView;
@@ -76,9 +75,9 @@ class MaterialCardViewHelper {
    * Multiplier for {@link MaterialCardView#getMaxCardElevation()} to calculate vertical shadow
    * padding. Horizontal shadow padding is equal to getMaxCardElevation(). Shadow padding is the
    * padding around the visible card that {@link CardView} adds in order to have space to render
-   * shadows pre-Lollipop.
+   * compat shadows.
    *
-   * <p>CardView's pre-Lollipop shadow is getMaxCardElevation() larger than the card on all sides
+   * <p>CardView's compat shadow is getMaxCardElevation() larger than the card on all sides
    * and offset down by 0.5 x getMaxCardElevation(). Thus, the additional padding required is:
    *
    * <ul>
@@ -541,7 +540,6 @@ class MaterialCardViewHelper {
     }
   }
 
-  @RequiresApi(api = VERSION_CODES.M)
   void forceRippleRedraw() {
     if (rippleDrawable != null) {
       Rect bounds = rippleDrawable.getBounds();
@@ -575,8 +573,7 @@ class MaterialCardViewHelper {
    * InsetDrawable.
    */
   private void updateInsetForeground(Drawable insetForeground) {
-    if (VERSION.SDK_INT >= VERSION_CODES.M
-        && materialCardView.getForeground() instanceof InsetDrawable) {
+    if (materialCardView.getForeground() instanceof InsetDrawable) {
       ((InsetDrawable) materialCardView.getForeground()).setDrawable(insetForeground);
     } else {
       materialCardView.setForeground(insetDrawable(insetForeground));
@@ -627,8 +624,8 @@ class MaterialCardViewHelper {
 
   /**
    * Calculates the amount of padding that should be added above and below the background shape.
-   * This should only be called pre-lollipop or when using compat padding. This accounts for shadow
-   * and corner padding when they are added outside the background.
+   * This should be called only when using compat padding. This accounts for shadow and
+   * corner padding when they are added outside the background.
    */
   private float calculateVerticalBackgroundPadding() {
     return materialCardView.getMaxCardElevation() * CARD_VIEW_SHADOW_MULTIPLIER
@@ -637,8 +634,8 @@ class MaterialCardViewHelper {
 
   /**
    * Calculates the amount of padding that should be added to the left and right of the background
-   * shape. This should only be called pre-lollipop or when using compat padding. This accounts for
-   * shadow and corner padding when they are added outside the background.
+   * shape. This should be called only when using compat padding. This accounts for shadow and
+   * corner padding when they are added outside the background.
    */
   private float calculateHorizontalBackgroundPadding() {
     return materialCardView.getMaxCardElevation()

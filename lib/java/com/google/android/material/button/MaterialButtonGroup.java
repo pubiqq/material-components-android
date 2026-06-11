@@ -28,8 +28,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+
 import androidx.appcompat.widget.PopupMenu;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -282,12 +281,8 @@ public class MaterialButtonGroup extends LinearLayout {
 
     int overflowMenuStyle =
         MaterialAttributes.resolveOrThrow(this, R.attr.materialButtonGroupPopupMenuStyle);
-    if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1) {
-      popupMenu = new PopupMenu(getContext(), overflowButton, Gravity.CENTER, 0, overflowMenuStyle);
-      popupMenu.setForceShowIcon(true);
-    } else {
-      popupMenu = new PopupMenu(getContext(), overflowButton, Gravity.CENTER);
-    }
+    popupMenu = new PopupMenu(getContext(), overflowButton, Gravity.CENTER, 0, overflowMenuStyle);
+    popupMenu.setForceShowIcon(true);
     overflowButton.setOnClickListener(
         v -> {
           updateOverflowMenuItemsState();

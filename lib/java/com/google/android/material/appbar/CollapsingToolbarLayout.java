@@ -50,7 +50,6 @@ import androidx.annotation.IntDef;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import androidx.core.graphics.drawable.DrawableCompat;
@@ -89,9 +88,8 @@ import java.lang.annotation.RetentionPolicy;
  * <h4>Status bar scrim</h4>
  *
  * A scrim which is shown or hidden behind the status bar when the scroll position has hit a certain
- * threshold. You can change this via {@link #setStatusBarScrim(Drawable)}. This only works on
- * {@link android.os.Build.VERSION_CODES#LOLLIPOP LOLLIPOP} devices when we set to fit system
- * windows.
+ * threshold. You can change this via {@link #setStatusBarScrim(Drawable)}. This only works when
+ * we set to fit system windows.
  *
  * <h4>Parallax scrolling children</h4>
  *
@@ -1828,14 +1826,12 @@ public class CollapsingToolbarLayout extends FrameLayout {
    * android.widget.TextView#setLineSpacing(float, float)}. Experimental Feature.
    */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public void setLineSpacingAdd(float spacingAdd) {
     collapsingTitleHelper.setLineSpacingAdd(spacingAdd);
   }
 
   /** Gets the line spacing addition of the title text, or -1 if not set. Experimental Feature. */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public float getLineSpacingAdd() {
     return collapsingTitleHelper.getLineSpacingAdd();
   }
@@ -1845,14 +1841,12 @@ public class CollapsingToolbarLayout extends FrameLayout {
    * android.widget.TextView#setLineSpacing(float, float)}. Experimental Feature.
    */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public void setLineSpacingMultiplier(@FloatRange(from = 0.0) float spacingMultiplier) {
     collapsingTitleHelper.setLineSpacingMultiplier(spacingMultiplier);
   }
 
   /** Gets the line spacing multiplier of the title text, or -1 if not set. Experimental Feature. */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public float getLineSpacingMultiplier() {
     return collapsingTitleHelper.getLineSpacingMultiplier();
   }
@@ -1862,14 +1856,12 @@ public class CollapsingToolbarLayout extends FrameLayout {
    * android.widget.TextView#setHyphenationFrequency(int)}. Experimental Feature.
    */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public void setHyphenationFrequency(int hyphenationFrequency) {
     collapsingTitleHelper.setHyphenationFrequency(hyphenationFrequency);
   }
 
   /** Gets the hyphenation frequency of the title text, or -1 if not set. Experimental Feature. */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public int getHyphenationFrequency() {
     return collapsingTitleHelper.getHyphenationFrequency();
   }
@@ -1886,7 +1878,6 @@ public class CollapsingToolbarLayout extends FrameLayout {
    * @hide
    */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public void setStaticLayoutBuilderConfigurer(
       @Nullable StaticLayoutBuilderConfigurer staticLayoutBuilderConfigurer) {
     collapsingTitleHelper.setStaticLayoutBuilderConfigurer(staticLayoutBuilderConfigurer);
@@ -2242,7 +2233,6 @@ public class CollapsingToolbarLayout extends FrameLayout {
    * @hide
    */
   @RestrictTo(LIBRARY_GROUP)
-  @RequiresApi(VERSION_CODES.M)
   public interface StaticLayoutBuilderConfigurer
       extends com.google.android.material.internal.StaticLayoutBuilderConfigurer {}
 }

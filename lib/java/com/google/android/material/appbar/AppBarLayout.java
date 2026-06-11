@@ -25,6 +25,9 @@ import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.Acces
 import static com.google.android.material.theme.overlay.MaterialThemeOverlay.wrap;
 import static java.lang.Math.abs;
 
+import android.animation.AnimatorInflater;
+import android.animation.ObjectAnimator;
+import android.animation.StateListAnimator;
 import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
@@ -208,6 +211,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
   private static final int DEF_STYLE_RES = R.style.Widget_Design_AppBarLayout;
   private static final int INVALID_SCROLL_RANGE = -1;
+  private static final int[] STATE_LIST_ANIM_ATTRS = new int[] {android.R.attr.stateListAnimator};
 
   private int currentOffset;
   private int totalScrollRange = INVALID_SCROLL_RANGE;
@@ -265,11 +269,11 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
     // Use the bounds view outline provider so that we cast a shadow, even without a background.
     if (getOutlineProvider() == ViewOutlineProvider.BACKGROUND) {
-      ViewUtilsLollipop.setBoundsViewOutlineProvider(this);
+      setOutlineProvider(ViewOutlineProvider.BOUNDS);
     }
 
     // Reset any state list animator from our default style.
-    ViewUtilsLollipop.setStateListAnimatorFromAttrs(this, attrs, defStyleAttr, DEF_STYLE_RES);
+    setStateListAnimatorFromAttrs(attrs, defStyleAttr, DEF_STYLE_RES);
 
     final TypedArray a =
         ThemeEnforcement.obtainStyledAttributes(
@@ -295,8 +299,8 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
     }
 
     if (a.hasValue(R.styleable.AppBarLayout_elevation)) {
-      ViewUtilsLollipop.setDefaultAppBarLayoutStateListAnimator(
-          this, a.getDimensionPixelSize(R.styleable.AppBarLayout_elevation, 0));
+      setDefaultAppBarLayoutStateListAnimator(
+          a.getDimensionPixelSize(R.styleable.AppBarLayout_elevation, 0));
     }
 
     // Set the background drawable last to ensure that the background is updated for lift on scroll.
@@ -333,6 +337,46 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
             return onWindowInsetChanged(insets);
           }
         });
+  }
+
+  private void setStateListAnimatorFromAttrs(AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    final Context context = getContext();
+    final TypedArray a =
+        ThemeEnforcement.obtainStyledAttributes(
+            context, attrs, STATE_LIST_ANIM_ATTRS, defStyleAttr, defStyleRes);
+    try {
+      if (a.hasValue(0)) {
+        StateListAnimator sla =
+            AnimatorInflater.loadStateListAnimator(context, a.getResourceId(0, 0));
+        setStateListAnimator(sla);
+      }
+    } finally {
+      a.recycle();
+    }
+  }
+
+  /** Creates and sets a {@link StateListAnimator} with a custom elevation value */
+  private void setDefaultAppBarLayoutStateListAnimator(final float elevation) {
+    final int dur = getResources().getInteger(R.integer.app_bar_elevation_anim_duration);
+
+    final StateListAnimator sla = new StateListAnimator();
+
+    // Enabled and liftable, but not lifted means not elevated
+    sla.addState(
+        new int[] {android.R.attr.state_enabled, R.attr.state_liftable, -R.attr.state_lifted},
+        ObjectAnimator.ofFloat(this, "elevation", 0f).setDuration(dur));
+
+    // Default enabled state
+    sla.addState(
+        new int[] {android.R.attr.state_enabled},
+        ObjectAnimator.ofFloat(this, "elevation", elevation).setDuration(dur));
+
+    // Disabled state
+    sla.addState(
+        new int[0],
+        ObjectAnimator.ofFloat(this, "elevation", 0).setDuration(0));
+
+    setStateListAnimator(sla);
   }
 
   private Drawable maybeCreateLiftOnScrollBackground(
@@ -1302,7 +1346,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
    */
   @Deprecated
   public void setTargetElevation(float elevation) {
-    ViewUtilsLollipop.setDefaultAppBarLayoutStateListAnimator(this, elevation);
+    setDefaultAppBarLayoutStateListAnimator(elevation);
   }
 
   /**
@@ -2346,7 +2390,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
         if (layout.getBackground() != null) {
           layout.getBackground().jumpToCurrentState();
         }
-        if (VERSION.SDK_INT >= VERSION_CODES.M && layout.getForeground() != null) {
+        if (layout.getForeground() != null) {
           layout.getForeground().jumpToCurrentState();
         }
         if (layout.getStateListAnimator() != null) {

@@ -48,7 +48,6 @@ import com.google.android.material.shape.CornerSize;
 import com.google.android.material.shape.RelativeCornerSize;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 class TransitionUtils {
 
   static final int NO_DURATION = -1;

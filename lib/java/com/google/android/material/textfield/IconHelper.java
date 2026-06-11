@@ -16,8 +16,6 @@
 
 package com.google.android.material.textfield;
 
-import static com.google.android.material.internal.ViewUtils.dpToPx;
-
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -34,7 +32,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.Px;
 import androidx.core.graphics.drawable.DrawableCompat;
 import com.google.android.material.internal.CheckableImageButton;
-import com.google.android.material.ripple.RippleUtils;
+
 import java.util.Arrays;
 
 class IconHelper {
@@ -139,16 +137,6 @@ class IconHelper {
     System.arraycopy(iconStates, 0, states, index, iconStates.length);
 
     return states;
-  }
-
-  static void setCompatRippleBackgroundIfNeeded(@NonNull CheckableImageButton iconView) {
-    if (VERSION.SDK_INT < VERSION_CODES.M) {
-      // Note that this is aligned with ?attr/actionBarItemBackground on API 23+, which sets ripple
-      // radius to 20dp. Therefore we set the padding here to (48dp [view size] - 20dp * 2) / 2.
-      iconView.setBackground(
-          RippleUtils.createOvalRippleLollipop(
-              iconView.getContext(), (int) dpToPx(iconView.getContext(), 4)));
-    }
   }
 
   /** Sets the minimum size for the icon. */

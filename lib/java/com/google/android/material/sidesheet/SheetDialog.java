@@ -20,8 +20,6 @@ import com.google.android.material.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatDialog;
 import android.util.TypedValue;
@@ -105,12 +103,6 @@ abstract class SheetDialog<C extends SheetCallback> extends AppCompatDialog {
       EdgeToEdgeUtils.setStatusBarColor(window, 0);
 
       window.addFlags(LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-      if (VERSION.SDK_INT < VERSION_CODES.M) {
-        // It can be transparent for API 23 and above because we will handle switching the status
-        // bar icons to light or dark as appropriate. For API 21 and API 22 we just set the
-        // translucent status bar.
-        window.addFlags(LayoutParams.FLAG_TRANSLUCENT_STATUS);
-      }
       window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
     }
   }

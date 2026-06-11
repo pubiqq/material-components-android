@@ -28,7 +28,6 @@ import static com.google.android.material.transition.platform.TransitionUtils.le
 
 import com.google.android.material.transition.platform.MaterialContainerTransform.FadeMode;
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 class FadeModeEvaluators {
 
   private static final FadeModeEvaluator IN =

@@ -88,23 +88,23 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
       ShapeAppearanceModel.builder().setAllCorners(CornerFamily.ROUNDED, 0).build();
 
   /**
-   * Try to draw native elevation shadows if possible, otherwise use fake shadows. This is best for
-   * paths which will always be convex. If the path might change to be concave, you should consider
-   * using {@link #SHADOW_COMPAT_MODE_ALWAYS} otherwise the shadows could suddenly switch from
-   * native to fake in the middle of an animation.
+   * Try to draw native elevation shadows if possible, otherwise use compat shadows. This is best
+   * for paths which will always be convex. If the path might change to be concave, you should
+   * consider using {@link #SHADOW_COMPAT_MODE_ALWAYS} otherwise the shadows could suddenly switch
+   * from native to fake in the middle of an animation.
    */
   public static final int SHADOW_COMPAT_MODE_DEFAULT = 0;
 
   /**
-   * Never draw fake shadows. You may want to enable this if backwards compatibility for shadows
+   * Never draw compat shadows. You may want to enable this if backwards compatibility for shadows
    * isn't as important as performance. Native shadow elevation shadows will still be drawn if
    * possible.
    */
   public static final int SHADOW_COMPAT_MODE_NEVER = 1;
 
   /**
-   * Always draw fake shadows, never draw native elevation shadows. If a path could be concave, this
-   * will prevent the shadow from suddenly being rendered natively.
+   * Always draw compat shadows, never draw native elevation shadows. If a path could be concave,
+   * this will prevent the shadow from suddenly being rendered natively.
    */
   public static final int SHADOW_COMPAT_MODE_ALWAYS = 2;
 
@@ -692,14 +692,13 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Set the shadow compatibility mode. This allows control over when fake shadows should drawn
+   * Set the shadow compatibility mode. This allows control over when compat shadows should drawn
    * instead of native elevation shadows.
    *
-   * <p>Note: To prevent clipping of fake shadow for views on API levels above lollipop, the parent
-   * view must disable clipping of children by calling {@link
-   * android.view.ViewGroup#setClipChildren(boolean)}, or by setting `android:clipChildren="false"`
-   * in xml. `clipToPadding` may also need to be false if there is any padding on the parent that
-   * could intersect the shadow.
+   * <p>Note: To prevent clipping of compat shadow for views, the parent view must disable clipping
+   * of children by calling {@link android.view.ViewGroup#setClipChildren(boolean)}, or by setting
+   * `android:clipChildren="false"` in xml. `clipToPadding` may also need to be false if there is
+   * any padding on the parent that could intersect the shadow.
    */
   public void setShadowCompatibilityMode(@CompatibilityShadowMode int mode) {
     if (drawableState.shadowCompatMode != mode) {
@@ -711,7 +710,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   /**
    * Get shadow rendering status for shadows when {@link #requiresCompatShadow()} is true.
    *
-   * @return true if fake shadows should be drawn, false otherwise.
+   * @return true if compat shadows should be drawn, false otherwise.
    * @deprecated use {@link #getShadowCompatibilityMode()} instead
    */
   @Deprecated
@@ -725,10 +724,10 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
    * Setting this to false could provide some performance benefits on older devices if you don't
    * mind no shadows being drawn.
    *
-   * <p>Note: native elevation shadows will still be drawn on API 21 and up if the shape is convex
-   * and the view with this background has elevation.
+   * <p>Note: native elevation shadows will still be drawn if the shape is convex and the view
+   * with this background has elevation.
    *
-   * @param shadowEnabled true if fake shadows should be drawn; false if not.
+   * @param shadowEnabled true if compat shadows should be drawn; false if not.
    * @deprecated use {@link #setShadowCompatibilityMode(int)} instead.
    */
   @Deprecated
@@ -812,18 +811,16 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Returns the elevation used to render both fake shadows when {@link #requiresCompatShadow()} is
-   * true and elevation overlays. This value is the same as the native elevation that would be used
-   * to render shadows on API 21 and up.
+   * Returns the elevation used to render both compat shadows when {@link #requiresCompatShadow()}
+   * is true and elevation overlays.
    */
   public float getElevation() {
     return drawableState.elevation;
   }
 
   /**
-   * Sets the elevation used to render both fake shadows when {@link #requiresCompatShadow()} is
-   * true and elevation overlays. This value is the same as the native elevation that would be used
-   * to render shadows on API 21 and up.
+   * Sets the elevation used to render both compat shadows when {@link #requiresCompatShadow()} is
+   * true and elevation overlays.
    */
   public void setElevation(float elevation) {
     if (drawableState.elevation != elevation) {
@@ -833,18 +830,16 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Returns the translationZ used to render both fake shadows when {@link #requiresCompatShadow()}
-   * is true and elevation overlays. This value is the same as the native translationZ that would be
-   * used to render shadows on API 21 and up.
+   * Returns the translationZ used to render both compat shadows when {@link #requiresCompatShadow()}
+   * is true and elevation overlays.
    */
   public float getTranslationZ() {
     return drawableState.translationZ;
   }
 
   /**
-   * Sets the translationZ used to render both fake shadows when {@link #requiresCompatShadow()} is
-   * true and elevation overlays. This value is the same as the native translationZ that would be
-   * used to render shadows on API 21 and up.
+   * Sets the translationZ used to render both compat shadows when {@link #requiresCompatShadow()}
+   * is true and elevation overlays.
    */
   public void setTranslationZ(float translationZ) {
     if (drawableState.translationZ != translationZ) {
@@ -927,7 +922,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Sets the shadow offset rendered by the fake shadow when {@link #requiresCompatShadow()} is
+   * Sets the shadow offset rendered by the compat shadow when {@link #requiresCompatShadow()} is
    * true. This can make the shadow appear more on the bottom or top of the view to make a more
    * realistic looking shadow depending on the placement of the view on the screen. Normally, if the
    * View is positioned further down on the screen, less shadow appears above the View, and more
@@ -944,7 +939,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Returns the rotation offset applied to the fake shadow which is drawn when {@link
+   * Returns the rotation offset applied to the compat shadow which is drawn when {@link
    * #requiresCompatShadow()} is true.
    */
   public int getShadowCompatRotation() {
@@ -952,7 +947,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Set the rotation offset applied to the fake shadow which is drawn when {@link
+   * Set the rotation offset applied to the compat shadow which is drawn when {@link
    * #requiresCompatShadow()} is true. 0 degrees will draw the shadow below the shape.
    *
    * <p>This allows for the Drawable to be wrapped in a {@link
@@ -1031,7 +1026,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Set whether fake shadow color should match next set tint color. This will only be drawn when
+   * Set whether compat shadow color should match next set tint color. This will only be drawn when
    * {@link #requiresCompatShadow()} is true, otherwise native elevation shadows will be drawn which
    * don't support colored shadows.
    *
@@ -1045,7 +1040,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
   }
 
   /**
-   * Set the color of fake shadow rendered behind the shape. This will only be drawn when {@link
+   * Set the color of compat shadow rendered behind the shape. This will only be drawn when {@link
    * #requiresCompatShadow()} is true, otherwise native elevation shadows will be drawn which don't
    * support colored shadows.
    *
@@ -1313,7 +1308,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
       canvas.drawPath(path, shadowRenderer.getShadowPaint());
     }
 
-    // Draw the fake shadow for each of the corners and edges.
+    // Draw the compat shadow for each of the corners and edges.
     for (int index = 0; index < NUM_CORNERS; index++) {
       cornerShadowOperation[index].draw(shadowRenderer, drawableState.shadowCompatRadius, canvas);
       edgeShadowOperation[index].draw(shadowRenderer, drawableState.shadowCompatRadius, canvas);

@@ -30,7 +30,6 @@ import androidx.annotation.Nullable;
  * An interface which is able to provide an Animator to be supplied to a {@link
  * android.transition.Visibility} transition when a target view is appearing or disappearing.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public interface VisibilityAnimatorProvider {
 
   /**

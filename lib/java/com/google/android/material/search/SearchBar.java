@@ -30,7 +30,6 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
-import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Parcel;
@@ -1117,13 +1116,7 @@ public class SearchBar extends Toolbar {
       appBarLayout.setBackgroundColor(Color.TRANSPARENT);
 
       // Remove AppBarLayout elevation shadow
-      if (Build.VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
-        // Workaround for elevation crash that only happens on Android 5.0
-        // Similar to https://stackoverflow.com/q/40928788
-        appBarLayout.setOutlineProvider(null);
-      } else {
-        appBarLayout.setTargetElevation(0);
-      }
+      appBarLayout.setTargetElevation(0);
     }
 
     @Override

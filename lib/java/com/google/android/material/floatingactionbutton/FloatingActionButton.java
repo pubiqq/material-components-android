@@ -33,7 +33,6 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.Parcelable;
 import androidx.appcompat.widget.AppCompatDrawableManager;
@@ -70,8 +69,8 @@ import com.google.android.material.expandable.ExpandableWidgetHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButtonImpl.InternalTransformationCallback;
 import com.google.android.material.floatingactionbutton.FloatingActionButtonImpl.InternalVisibilityChangedListener;
 import com.google.android.material.internal.DescendantOffsetUtils;
-import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
+import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.VisibilityAwareImageButton;
 import com.google.android.material.resources.MaterialAttributes;
 import com.google.android.material.resources.MaterialResources;
@@ -328,9 +327,6 @@ public class FloatingActionButton extends VisibilityAwareImageButton
   /**
    * Sets the ripple color for this button.
    *
-   * <p>When running on devices with KitKat, we draw this color as a filled circle rather
-   * than a ripple.
-   *
    * @param color ARGB color to use for the ripple
    * @attr ref com.google.android.material.R.styleable#FloatingActionButton_rippleColor
    * @see #getRippleColor()
@@ -341,9 +337,6 @@ public class FloatingActionButton extends VisibilityAwareImageButton
 
   /**
    * Sets the ripple color for this button.
-   *
-   * <p>When running on devices with KitKat, we draw this color as a filled circle rather
-   * than a ripple.
    *
    * @param color color state list to use for the ripple
    * @attr ref com.google.android.material.R.styleable#FloatingActionButton_rippleColor
@@ -718,7 +711,11 @@ public class FloatingActionButton extends VisibilityAwareImageButton
    *     Lollipop and after, to ensure consistent dimensions on all platforms.
    * @attr ref com.google.android.material.R.styleable#FloatingActionButton_useCompatPadding
    * @see #getUseCompatPadding()
+   *
+   * @deprecated Dimensions are consistent across all supported platforms regardless of whether
+   *     compat padding is used, so consider doing without it.
    */
+  @Deprecated
   public void setUseCompatPadding(boolean useCompatPadding) {
     if (compatPadding != useCompatPadding) {
       compatPadding = useCompatPadding;
@@ -733,7 +730,10 @@ public class FloatingActionButton extends VisibilityAwareImageButton
    *     to ensure consistent dimensions on all platforms.
    * @attr ref com.google.android.material.R.styleable#FloatingActionButton_useCompatPadding
    * @see #setUseCompatPadding(boolean)
+   *
+   * @deprecated See {@link #setUseCompatPadding(boolean)}
    */
+  @Deprecated
   public boolean getUseCompatPadding() {
     return compatPadding;
   }
@@ -875,14 +875,6 @@ public class FloatingActionButton extends VisibilityAwareImageButton
   protected void onDetachedFromWindow() {
     super.onDetachedFromWindow();
     getImpl().onDetachedFromWindow();
-  }
-
-  @Override
-  protected void drawableStateChanged() {
-    super.drawableStateChanged();
-    if (Build.VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
-      getImpl().onDrawableStateChangedForLollipop();
-    }
   }
 
   @SuppressWarnings("RedundantOverride")
@@ -1201,7 +1193,7 @@ public class FloatingActionButton extends VisibilityAwareImageButton
     }
 
     /**
-     * Pre-Lollipop we use padding so that the shadow has enough space to be drawn. This method
+     * We use padding so that the compat shadow has enough space to be drawn. This method
      * offsets our layout position so that we're positioned correctly if we're on one of our
      * parent's edges.
      */

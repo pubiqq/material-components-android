@@ -47,10 +47,8 @@ public abstract class ShapeableDelegate {
   public static ShapeableDelegate create(@NonNull View view) {
     if (VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {
       return new ShapeableDelegateV33(view);
-    } else if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1) {
-      return new ShapeableDelegateV22(view);
     } else {
-      return new ShapeableDelegateV14();
+      return new ShapeableDelegateV22(view);
     }
   }
 

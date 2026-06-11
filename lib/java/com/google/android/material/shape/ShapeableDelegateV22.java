@@ -18,12 +18,10 @@ package com.google.android.material.shape;
 
 import android.graphics.Outline;
 import android.graphics.Rect;
-import android.os.Build.VERSION_CODES;
 import android.view.View;
 import android.view.ViewOutlineProvider;
 import androidx.annotation.DoNotInline;
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.VisibleForTesting;
 
 /**
@@ -34,7 +32,6 @@ import androidx.annotation.VisibleForTesting;
  * <p>{@link Outline#setRoundRect(Rect, float)} is only able to clip to a rectangle with a single
  * corner radius for all four corners.
  */
-@RequiresApi(VERSION_CODES.LOLLIPOP_MR1)
 class ShapeableDelegateV22 extends ShapeableDelegate {
 
   private boolean canUseViewOutline = false;

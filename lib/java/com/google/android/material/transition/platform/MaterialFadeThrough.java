@@ -32,7 +32,6 @@ import androidx.annotation.AttrRes;
  * values from the {@code SceneRoot}'s context before it runs, and only use them if the
  * corresponding properties weren't already set on the transition instance.
  */
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.LOLLIPOP)
 public final class MaterialFadeThrough extends MaterialVisibility<FadeThroughProvider> {
 
   private static final float DEFAULT_START_SCALE = 0.92f;

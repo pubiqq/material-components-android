@@ -29,8 +29,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+
 import androidx.annotation.Dimension;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -211,7 +210,7 @@ class MaterialButtonHelper {
   }
 
   /**
-   * Create RippleDrawable background for Lollipop (API 21) and later API versions
+   * Creates RippleDrawable background.
    *
    * @return Drawable representing background for this button.
    */
@@ -255,12 +254,6 @@ class MaterialButtonHelper {
             maskDrawable);
     FocusRingDrawable.layer(context, rippleDrawable);
     return rippleDrawable;
-  }
-
-  void updateMaskBounds(int height, int width) {
-    if (maskDrawable != null) {
-      maskDrawable.setBounds(insetLeft, insetTop, width - insetRight, height - insetBottom);
-    }
   }
 
   void setBackgroundColor(int color) {
@@ -385,43 +378,30 @@ class MaterialButtonHelper {
   }
 
   private void updateButtonShape() {
-    // There seems to be a bug to drawables that is affecting Lollipop, since invalidation is not
-    // changing an existing drawable shape. This is a fallback.
-    if (VERSION.SDK_INT < VERSION_CODES.M && !backgroundOverwritten) {
-      // Store padding before setting background, since background overwrites padding values
-      int paddingStart = materialButton.getPaddingStart();
-      int paddingTop = materialButton.getPaddingTop();
-      int paddingEnd = materialButton.getPaddingEnd();
-      int paddingBottom = materialButton.getPaddingBottom();
-      updateBackground();
-      // Set the stored padding values
-      materialButton.setPaddingRelative(paddingStart, paddingTop, paddingEnd, paddingBottom);
-    } else {
-      MaterialShapeDrawable backgroundDrawable = getMaterialShapeDrawable();
-      if (backgroundDrawable != null) {
-        backgroundDrawable.setShapeAppearance(shapeAppearance);
-        if (cornerSpringForce != null) {
-          backgroundDrawable.setCornerSpringForce(cornerSpringForce);
-        }
+    MaterialShapeDrawable backgroundDrawable = getMaterialShapeDrawable();
+    if (backgroundDrawable != null) {
+      backgroundDrawable.setShapeAppearance(shapeAppearance);
+      if (cornerSpringForce != null) {
+        backgroundDrawable.setCornerSpringForce(cornerSpringForce);
       }
-      MaterialShapeDrawable strokeDrawable = getSurfaceColorStrokeDrawable();
-      if (strokeDrawable != null) {
-        strokeDrawable.setShapeAppearance(shapeAppearance);
-        if (cornerSpringForce != null) {
-          strokeDrawable.setCornerSpringForce(cornerSpringForce);
-        }
+    }
+    MaterialShapeDrawable strokeDrawable = getSurfaceColorStrokeDrawable();
+    if (strokeDrawable != null) {
+      strokeDrawable.setShapeAppearance(shapeAppearance);
+      if (cornerSpringForce != null) {
+        strokeDrawable.setCornerSpringForce(cornerSpringForce);
       }
-      Shapeable animatedShapeable = getMaskDrawable();
-      if (animatedShapeable != null) {
-        if (animatedShapeable instanceof MaterialShapeDrawable) {
-          MaterialShapeDrawable maskDrawable = (MaterialShapeDrawable) animatedShapeable;
-          maskDrawable.setShapeAppearance(shapeAppearance);
-          if (cornerSpringForce != null) {
-            maskDrawable.setCornerSpringForce(cornerSpringForce);
-          }
-        } else {
-          animatedShapeable.setShapeAppearanceModel(shapeAppearance.getDefaultShape());
+    }
+    Shapeable animatedShapeable = getMaskDrawable();
+    if (animatedShapeable != null) {
+      if (animatedShapeable instanceof MaterialShapeDrawable) {
+        MaterialShapeDrawable maskDrawable = (MaterialShapeDrawable) animatedShapeable;
+        maskDrawable.setShapeAppearance(shapeAppearance);
+        if (cornerSpringForce != null) {
+          maskDrawable.setCornerSpringForce(cornerSpringForce);
         }
+      } else {
+        animatedShapeable.setShapeAppearanceModel(shapeAppearance.getDefaultShape());
       }
     }
   }

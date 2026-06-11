@@ -34,7 +34,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
 import android.graphics.drawable.RippleDrawable;
-import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatCheckBox;
@@ -80,7 +79,6 @@ import com.google.android.material.focus.FocusRingDrawable;
 import com.google.android.material.internal.MaterialCheckable;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialAttributes;
-import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.resources.TextAppearance;
 import com.google.android.material.resources.TextAppearanceFontCallback;
 import com.google.android.material.ripple.RippleUtils;
@@ -220,12 +218,6 @@ public class Chip extends AppCompatCheckBox
             R.styleable.Chip,
             defStyleAttr,
             DEF_STYLE_RES);
-    if (VERSION.SDK_INT < VERSION_CODES.M) {
-      // This is necessary to work around a bug that doesn't support themed color referenced in
-      // ColorStateList for API level < 23.
-      setTextColor(
-          MaterialResources.getColorStateList(context, a, R.styleable.Chip_android_textColor));
-    }
     boolean hasShapeAppearanceAttribute = a.hasValue(R.styleable.Chip_shapeAppearance);
     a.recycle();
 
@@ -1025,13 +1017,7 @@ public class Chip extends AppCompatCheckBox
       node.setClickable(isClickable());
       node.setClassName(getAccessibilityClassName());
       CharSequence chipText = getText();
-      if (VERSION.SDK_INT >= VERSION_CODES.M) {
-        node.setText(chipText);
-      } else {
-        // Before M, TalkBack doesn't get the text from setText, so we have to set the content
-        // description instead.
-        node.setContentDescription(chipText);
-      }
+      node.setText(chipText);
     }
 
     @Override

@@ -32,7 +32,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.util.Preconditions;
-import com.google.android.material.animation.AnimatorSetCompat;
 import com.google.android.material.animation.MotionSpec;
 import java.util.ArrayList;
 import java.util.List;
@@ -195,7 +194,7 @@ abstract class BaseMotionStrategy implements MotionStrategy {
     }
 
     AnimatorSet set = new AnimatorSet();
-    AnimatorSetCompat.playTogether(set, animators);
+    set.playTogether(animators);
     return set;
   }
 }

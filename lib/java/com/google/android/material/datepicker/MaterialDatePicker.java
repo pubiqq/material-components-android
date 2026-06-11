@@ -597,7 +597,6 @@ public class MaterialDatePicker<S> extends DialogFragment {
     return dateSelector;
   }
 
-  // Create StateListDrawable programmatically for pre-lollipop support
   @NonNull
   private static Drawable createHeaderToggleDrawable(Context context) {
     StateListDrawable toggleDrawable = new StateListDrawable();

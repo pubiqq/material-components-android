@@ -187,8 +187,8 @@ public class ShapePath {
   /**
    * Add a quad to the ShapePath.
    *
-   * <p>Note: This operation will not draw compatibility shadows. This means no shadow will be drawn
-   * on API < 21 and a shadow will only be drawn on API < 29 if the final path is convex.
+   * <p>Note: This operation will not draw compatibility shadows. This means a shadow will only be
+   * drawn on API < 29 if the final path is convex.
    *
    * @param controlX the control point x of the arc.
    * @param controlY the control point y of the arc.
@@ -212,8 +212,8 @@ public class ShapePath {
   /**
    * Add a cubic to the ShapePath.
    *
-   * <p>Note: This operation will not draw compatibility shadows. This means no shadow will be drawn
-   * on API < 21 and a shadow will only be drawn on API < 29 if the final path is convex.
+   * <p>Note: This operation will not draw compatibility shadows. This means a shadow will only be
+   * drawn on API < 29 if the final path is convex.
    *
    * @param controlX1 the 1st control point x of the arc.
    * @param controlY1 the 1st control point y of the arc.

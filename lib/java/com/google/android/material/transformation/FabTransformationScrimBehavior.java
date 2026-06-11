@@ -27,7 +27,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.animation.AnimatorSetCompat;
 import com.google.android.material.animation.MotionTiming;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
@@ -83,7 +82,7 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
     createScrimAnimation(child, expanded, isAnimating, animations, listeners);
 
     AnimatorSet set = new AnimatorSet();
-    AnimatorSetCompat.playTogether(set, animations);
+    set.playTogether(animations);
     set.addListener(
         new AnimatorListenerAdapter() {
           @Override
