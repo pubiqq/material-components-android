@@ -98,7 +98,9 @@
     <item name="android:background">@android:color/transparent</item>
   </style>
 
-  <style name="Widget.Material3.TabLayout.OnSurface" parent="Base.Widget.Material3.TabLayout.OnSurface"/>
+  <style name="Widget.Material3.TabLayout.OnSurface" parent="Base.Widget.Material3.TabLayout.OnSurface">
+    <item name="android:background">@drawable/m3_tabs_transparent_background</item>
+  </style>
 
   <!-- Style for M3 secondary tabs, which are used as an alternate when primary tabs are already
        present in the UI. -->

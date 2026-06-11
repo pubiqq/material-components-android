@@ -152,7 +152,7 @@ Element                          | Attribute  | Related method(s)          | Def
 
 Element                                        | Attribute                                                                                          | Related method(s)                      | Default value
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------- | -------------
-**`MaterialToolbar` icon**                     | `android:src` and `app:srcCompat` in `actionOverflowButtonStyle` (in app theme)                    | `setOverflowIcon`<br>`getOverflowIcon` | `@drawable/abc_ic_menu_overflow_material` (before API 23) or `@drawable/ic_menu_moreoverflow_material` (after API 23)
+**`MaterialToolbar` icon**                     | `android:src` and `app:srcCompat` in `actionOverflowButtonStyle` (in app theme)                    | `setOverflowIcon`<br>`getOverflowIcon` | `@drawable/abc_ic_menu_overflow_material`
 **`MaterialToolbar` overflow theme**           | `app:popupTheme`                                                                                   | `setPopupTheme`<br>`getPopupTheme`     | `@style/ThemeOverlay.Material3.*`
 **`MaterialToolbar` overflow item typography** | `textAppearanceSmallPopupMenu` and `textAppearanceLargePopupMenu` in `app:popupTheme` or app theme | N/A                                    | `?attr/textAppearanceBodyLarge`
 
@@ -820,7 +820,7 @@ bars and affects other components:
     <item name="colorSurface">@color/shrine_pink_100</item>
     <item name="colorOnSurface">@color/shrine_pink_900</item>
     <item name="android:statusBarColor">?attr/colorPrimary</item>
-    <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    <item name="android:windowLightStatusBar">true</item>
     <item name="textAppearanceTitleLarge">@style/TextAppearance.App.TitleLarge</item>
     <item name="textAppearanceTitleMedium">@style/TextAppearance.App.TitleMedium</item>
 </style>
@@ -918,7 +918,7 @@ Element                 | Attribute               | Related method(s)           
 
 Element                      | Attribute                                                                       | Related method(s)                      | Default value
 ---------------------------- | ------------------------------------------------------------------------------- | -------------------------------------- | -------------
-**Icon**                     | `android:src` and `app:srcCompat` in `actionOverflowButtonStyle` (in app theme) | `setOverflowIcon`<br>`getOverflowIcon` | `@drawable/abc_ic_menu_overflow_material` (before API 23) or `@drawable/ic_menu_moreoverflow_material` (after API 23)
+**Icon**                     | `android:src` and `app:srcCompat` in `actionOverflowButtonStyle` (in app theme) | `setOverflowIcon`<br>`getOverflowIcon` | `@drawable/abc_ic_menu_overflow_material`
 **Overflow item typography** | `textAppearanceSmallPopupMenu` and `textAppearanceLargePopupMenu` in app theme  | N/A                                    | `?attr/textAppearanceTitleMedium`
 
 #### Container attributes

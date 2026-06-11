@@ -21,7 +21,7 @@
     <item name="colorOnSecondary">@color/cat_music_player_on_secondary</item>
 
     <item name="android:statusBarColor">?attr/colorControlNormal</item>
-    <item name="android:windowLightStatusBar" tools:targetApi="m">?attr/isLightTheme</item>
+    <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
   </style>
 
   <style name="ThemeOverlay.Catalog.MusicPlayer.Player" parent="">

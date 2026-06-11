@@ -77,7 +77,7 @@
          determined by the elevation overlay. -->
     <attr name="liftOnScrollColor" format="color"/>
     <!-- The drawable to display in front of the layout's content, but behind the status bar.
-         Only works on Lollipop when used together with android:fitSystemWindows="true". -->
+         Only works when used together with android:fitSystemWindows="true". -->
     <attr name="statusBarForeground" format="color"/>
   </declare-styleable>
 
@@ -201,8 +201,8 @@
          it has been scrolled sufficiently off screen. -->
     <attr name="contentScrim" format="color"/>
     <!-- The drawable to use as a scrim for the status bar content when the
-         CollapsingToolbarLayout has been scrolled sufficiently off screen. Only works on
-         Lollipop when used together with android:fitSystemWindows="true". -->
+         CollapsingToolbarLayout has been scrolled sufficiently off screen. Only works when
+         used together with android:fitSystemWindows="true". -->
     <attr name="statusBarScrim" format="color"/>
     <!-- The id of the primary Toolbar child that you wish to use for the purpose of collapsing.
          This Toolbar descendant view does not need to be a direct child of the layout.
