@@ -366,7 +366,7 @@ public class BottomSheetDialog extends AppCompatDialog {
           public void onInitializeAccessibilityNodeInfo(
               View host, @NonNull AccessibilityNodeInfoCompat info) {
             super.onInitializeAccessibilityNodeInfo(host, info);
-            if (cancelable) {
+            if (cancelable && !behavior.isAccessibilityDelegateViewSet()) {
               info.addAction(AccessibilityNodeInfoCompat.ACTION_DISMISS);
               info.setDismissable(true);
             } else {
@@ -376,7 +376,9 @@ public class BottomSheetDialog extends AppCompatDialog {
 
           @Override
           public boolean performAccessibilityAction(View host, int action, Bundle args) {
-            if (action == AccessibilityNodeInfoCompat.ACTION_DISMISS && cancelable) {
+            if (action == AccessibilityNodeInfoCompat.ACTION_DISMISS
+                && cancelable
+                && !behavior.isAccessibilityDelegateViewSet()) {
               cancel();
               return true;
             }
