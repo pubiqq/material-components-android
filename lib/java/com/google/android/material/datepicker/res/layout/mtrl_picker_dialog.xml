@@ -42,8 +42,7 @@
     <include
       layout="@layout/mtrl_picker_actions"
       android:layout_width="match_parent"
-      android:layout_height="@dimen/mtrl_calendar_action_height"/>
-
+      android:layout_height="wrap_content"/>
 
   </LinearLayout>
 
