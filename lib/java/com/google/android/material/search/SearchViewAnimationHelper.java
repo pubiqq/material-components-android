@@ -558,7 +558,7 @@ class SearchViewAnimationHelper {
     backHelper.cancelBackProgress(searchBar);
 
     if (backProgressAnimatorSet != null) {
-      backProgressAnimatorSet.reverse();
+      backProgressAnimatorSet.setCurrentPlayTime(0);
     }
     backProgressAnimatorSet = null;
   }
