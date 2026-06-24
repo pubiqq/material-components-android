@@ -48,6 +48,7 @@ final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicato
   // The length (horizontal) of the track in px.
   private float trackLength = 300f;
   private float displayedTrackThickness;
+  private float displayedTrackStopIndicatorSize;
   private float displayedCornerRadius;
   private float displayedInnerCornerRadius;
   private float displayedAmplitude;
@@ -124,6 +125,7 @@ final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicato
 
     // These are set for the drawing the indicator and track.
     displayedTrackThickness = spec.trackThickness * trackThicknessFraction;
+    displayedTrackStopIndicatorSize = spec.getActualTrackStopIndicatorSize() * trackThicknessFraction;
     displayedCornerRadius =
         min(spec.trackThickness / 2, spec.getTrackCornerRadiusInPx()) * trackThicknessFraction;
     displayedAmplitude = spec.waveAmplitude * trackThicknessFraction;
@@ -437,24 +439,23 @@ final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicato
       @IntRange(from = 0, to = 255) int drawableAlpha) {
     int paintColor = MaterialColors.compositeARGBWithAlpha(color, drawableAlpha);
     drawingDeterminateIndicator = false;
-    int trackStopIndicatorSize = spec.getActualTrackStopIndicatorSize();
-    if (trackStopIndicatorSize > 0 && Color.alpha(paintColor) > 0) {
+    if (displayedTrackStopIndicatorSize > 0 && Color.alpha(paintColor) > 0) {
       // Draws the stop indicator at the end of the track if needed.
       paint.setStyle(Style.FILL);
       paint.setColor(paintColor);
       float stopIndicatorCenterX =
           spec.trackStopIndicatorPadding != null
-              ? spec.trackStopIndicatorPadding.floatValue() + trackStopIndicatorSize / 2f
+              ? spec.trackStopIndicatorPadding.floatValue() + displayedTrackStopIndicatorSize / 2f
               : displayedTrackThickness / 2;
       drawRoundedBlock(
           canvas,
           paint,
           new PathPoint(
               new float[] {trackLength / 2 - stopIndicatorCenterX, 0}, new float[] {1, 0}),
-          trackStopIndicatorSize,
-          trackStopIndicatorSize,
-          displayedCornerRadius * trackStopIndicatorSize / displayedTrackThickness,
-          displayedCornerRadius * trackStopIndicatorSize / displayedTrackThickness,
+          displayedTrackStopIndicatorSize,
+          displayedTrackStopIndicatorSize,
+          displayedCornerRadius * displayedTrackStopIndicatorSize / displayedTrackThickness,
+          displayedCornerRadius * displayedTrackStopIndicatorSize / displayedTrackThickness,
           /* isStartPathPoint */ false);
     }
   }
