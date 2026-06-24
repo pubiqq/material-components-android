@@ -305,12 +305,12 @@
           <com.google.android.material.textfield.TextInputLayout
             style="?attr/textInputFilledStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="@string/cat_all_components_filled_text_field_hint">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="@string/cat_all_components_filled_text_field_hint"
               android:inputType="text"
               android:autofillHints="notApplicable" />
           </com.google.android.material.textfield.TextInputLayout>
@@ -322,12 +322,12 @@
           <com.google.android.material.textfield.TextInputLayout
             style="?attr/textInputOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="@string/cat_all_components_outlined_text_field_hint">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="@string/cat_all_components_outlined_text_field_hint"
               android:inputType="text"
               android:autofillHints="notApplicable" />
           </com.google.android.material.textfield.TextInputLayout>

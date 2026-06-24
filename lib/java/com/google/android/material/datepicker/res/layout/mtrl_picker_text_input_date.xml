@@ -27,6 +27,7 @@
       android:id="@+id/mtrl_picker_text_input_date"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:hint="@string/mtrl_picker_text_input_date_hint"
       android:minWidth="@dimen/material_textinput_min_width_with_label"
       android:maxWidth="@dimen/material_textinput_max_width"
       android:layout_gravity="center_horizontal">
@@ -35,7 +36,6 @@
         android:id="@+id/mtrl_picker_edit_text_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/mtrl_picker_text_input_date_hint"
         android:inputType="date"
         android:imeOptions="flagNoExtractUi"/>
   </com.google.android.material.textfield.TextInputLayout>
