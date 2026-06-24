@@ -444,7 +444,7 @@ final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicato
       paint.setColor(paintColor);
       float stopIndicatorCenterX =
           spec.trackStopIndicatorPadding != null
-              ? spec.trackStopIndicatorPadding.floatValue() + spec.trackStopIndicatorSize / 2f
+              ? spec.trackStopIndicatorPadding.floatValue() + trackStopIndicatorSize / 2f
               : displayedTrackThickness / 2;
       drawRoundedBlock(
           canvas,
