@@ -269,6 +269,22 @@ public class SingleDateSelectorTest {
   }
 
   @Test
+  @Config(qualifiers = "ko")
+  public void textField_addDelimitersAutomaticallyEvenForKorean() {
+    View root = getRootView();
+    ((ViewGroup) activity.findViewById(android.R.id.content)).addView(root);
+    TextInputLayout textInputLayout = root.findViewById(R.id.mtrl_picker_text_input_date);
+    EditText editText = textInputLayout.getEditText();
+
+    editText.append("2");
+    editText.append("0");
+    editText.append("2");
+    editText.append("3");
+
+    assertThat(editText.getText().toString()).isEqualTo("2023.");
+  }
+
+  @Test
   public void textField_addsMultipleDelimitersAutomatically() {
     singleDateSelector.setTextInputFormat(new SimpleDateFormat("mm/.-dd/.-yyyy"));
     View root = getRootView();
@@ -313,22 +329,6 @@ public class SingleDateSelectorTest {
     editText.getText().delete(editText.length() - 4, editText.length());
 
     assertThat(editText.getText().toString()).isEqualTo("12");
-  }
-
-  @Test
-  @Config(qualifiers = "ko")
-  public void textField_shouldNotAddDelimitersAutomaticallyForKorean() {
-    View root = getRootView();
-    ((ViewGroup) activity.findViewById(android.R.id.content)).addView(root);
-    TextInputLayout textInputLayout = root.findViewById(R.id.mtrl_picker_text_input_date);
-    EditText editText = textInputLayout.getEditText();
-
-    editText.append("2");
-    editText.append("0");
-    editText.append("2");
-    editText.append("3");
-
-    assertThat(editText.getText().toString()).isEqualTo("2023");
   }
 
   @Test
