@@ -596,6 +596,16 @@ public class CarouselLayoutManagerTest {
 
     scrollToPosition(recyclerView, layoutManager, itemCount / 2);
 
+    layoutManager.setCarouselStrategy(
+        new CarouselStrategy() {
+          @NonNull
+          @Override
+          public KeylineState onFirstChildMeasuredWithMargins(
+              @NonNull Carousel carousel, @NonNull View child) {
+            return getTestCenteredVerticalKeylineState();
+          }
+        });
+
     setVerticalOrientation(recyclerView, layoutManager);
     assertThat(layoutManager.scrollOffset).isNotEqualTo(layoutManager.minScroll);
     assertThat(layoutManager.computeScrollVectorForPosition(itemCount / 2).y).isEqualTo(0f);
