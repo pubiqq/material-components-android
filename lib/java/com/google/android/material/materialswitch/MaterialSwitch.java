@@ -32,9 +32,12 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.TintTypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.Px;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import com.google.android.material.drawable.DrawableUtils;
 import com.google.android.material.focus.FocusRingDrawable;
 import com.google.android.material.internal.ThemeEnforcement;
@@ -54,9 +57,51 @@ public class MaterialSwitch extends SwitchCompat {
   private static final int DEF_STYLE_RES = R.style.Widget_Material3_CompoundButton_MaterialSwitch;
   private static final int[] STATE_SET_WITH_ICON = { R.attr.state_with_icon };
 
+  @IntDef({
+      THUMB_ICON_VISIBILITY_ALWAYS,
+      THUMB_ICON_VISIBILITY_WHEN_CHECKED,
+      THUMB_ICON_VISIBILITY_WHEN_UNCHECKED,
+      THUMB_ICON_VISIBILITY_NEVER
+  })
+  @Retention(RetentionPolicy.SOURCE)
+  public @interface ThumbIconVisibility {}
+
+  /**
+   * The thumb icon is displayed in both the checked and unchecked states.
+   *
+   * @see #setThumbIconVisibility(int)
+   * @see #getThumbIconVisibility()
+   */
+  public static final int THUMB_ICON_VISIBILITY_ALWAYS = 0;
+
+  /**
+   * The thumb icon is displayed only in the checked state.
+   *
+   * @see #setThumbIconVisibility(int)
+   * @see #getThumbIconVisibility()
+   */
+  public static final int THUMB_ICON_VISIBILITY_WHEN_CHECKED = 1;
+
+  /**
+   * The thumb icon is displayed only in the unchecked state.
+   *
+   * @see #setThumbIconVisibility(int)
+   * @see #getThumbIconVisibility()
+   */
+  public static final int THUMB_ICON_VISIBILITY_WHEN_UNCHECKED = 2;
+
+  /**
+   * The thumb icon is never displayed.
+   *
+   * @see #setThumbIconVisibility(int)
+   * @see #getThumbIconVisibility()
+   */
+  public static final int THUMB_ICON_VISIBILITY_NEVER = 3;
+
   @Nullable private Drawable thumbDrawable;
   @Nullable private Drawable thumbIconDrawable;
-  @Px private int thumbIconSize = DrawableUtils.INTRINSIC_SIZE;
+  @Px private int thumbIconSize;
+  @ThumbIconVisibility private int thumbIconVisibility;
 
   @Nullable private Drawable trackDrawable;
   @Nullable private Drawable trackDecorationDrawable;
@@ -99,6 +144,8 @@ public class MaterialSwitch extends SwitchCompat {
     thumbIconDrawable = attributes.getDrawable(R.styleable.MaterialSwitch_thumbIcon);
     thumbIconSize = attributes.getDimensionPixelSize(
         R.styleable.MaterialSwitch_thumbIconSize, DrawableUtils.INTRINSIC_SIZE);
+    thumbIconVisibility = attributes.getInt(
+        R.styleable.MaterialSwitch_thumbIconVisibility, THUMB_ICON_VISIBILITY_ALWAYS);
 
     thumbIconTintList = attributes.getColorStateList(R.styleable.MaterialSwitch_thumbIconTint);
     thumbIconTintMode =
@@ -142,16 +189,48 @@ public class MaterialSwitch extends SwitchCompat {
 
   @Override
   protected int[] onCreateDrawableState(int extraSpace) {
-    int[] drawableState = super.onCreateDrawableState(extraSpace + 1);
-
-    if (thumbIconDrawable != null) {
+    final int[] drawableState;
+    if (shouldShowThumbIcon()) {
+      drawableState = super.onCreateDrawableState(extraSpace + 1);
       mergeDrawableStates(drawableState, STATE_SET_WITH_ICON);
+    } else {
+      drawableState = super.onCreateDrawableState(extraSpace);
     }
 
     currentStateUnchecked = DrawableUtils.getUncheckedState(drawableState);
     currentStateChecked = DrawableUtils.getCheckedState(drawableState);
 
     return drawableState;
+  }
+
+  private boolean shouldShowThumbIcon() {
+    if (thumbIconDrawable == null) {
+      return false;
+    }
+
+    switch (thumbIconVisibility) {
+      case THUMB_ICON_VISIBILITY_ALWAYS:
+        return true;
+      case THUMB_ICON_VISIBILITY_WHEN_CHECKED:
+        return isChecked();
+      case THUMB_ICON_VISIBILITY_WHEN_UNCHECKED:
+        return !isChecked();
+      case THUMB_ICON_VISIBILITY_NEVER:
+        return false;
+      default:
+        throw new IllegalArgumentException("Unexpected thumbIconVisibility: " + thumbIconVisibility);
+    }
+  }
+
+  @Override
+  public void setChecked(boolean checked) {
+    boolean oldState = shouldShowThumbIcon();
+    super.setChecked(checked);
+    boolean newState = shouldShowThumbIcon();
+
+    if (oldState != newState) {
+      refreshThumbDrawable();
+    }
   }
 
   @Override
@@ -290,6 +369,32 @@ public class MaterialSwitch extends SwitchCompat {
     return thumbIconTintMode;
   }
 
+  /**
+   * Sets the checked state(s) in which the thumb icon will be displayed. The default value is
+   * {@link #THUMB_ICON_VISIBILITY_ALWAYS}.
+   *
+   * @param thumbIconVisibility one of {@link #THUMB_ICON_VISIBILITY_ALWAYS},
+   *     {@link #THUMB_ICON_VISIBILITY_WHEN_CHECKED}, {@link #THUMB_ICON_VISIBILITY_WHEN_UNCHECKED},
+   *     or {@link #THUMB_ICON_VISIBILITY_NEVER}
+   * @attr ref com.google.android.material.R.styleable#MaterialSwitch_thumbIconVisibility
+   */
+  public void setThumbIconVisibility(@ThumbIconVisibility int thumbIconVisibility) {
+    if (this.thumbIconVisibility != thumbIconVisibility) {
+      this.thumbIconVisibility = thumbIconVisibility;
+      refreshThumbDrawable();
+    }
+  }
+
+  /**
+   * Returns the checked state(s) in which the thumb icon is displayed.
+   *
+   * @attr ref com.google.android.material.R.styleable#MaterialSwitch_thumbIconVisibility
+   */
+  @ThumbIconVisibility
+  public int getThumbIconVisibility() {
+    return thumbIconVisibility;
+  }
+
   @Override
   public void setTrackDrawable(@Nullable Drawable track) {
     trackDrawable = track;
@@ -414,8 +519,9 @@ public class MaterialSwitch extends SwitchCompat {
 
     updateDrawableTints();
 
+    Drawable effectiveThumbIconDrawable = shouldShowThumbIcon() ? thumbIconDrawable : null;
     super.setThumbDrawable(DrawableUtils.compositeTwoLayeredDrawable(
-        thumbDrawable, thumbIconDrawable, thumbIconSize, thumbIconSize));
+        thumbDrawable, effectiveThumbIconDrawable, thumbIconSize, thumbIconSize));
 
     refreshDrawableState();
   }

@@ -23,6 +23,18 @@
   <declare-styleable name="MaterialSwitch">
     <!-- Drawable used for the thumb icon that will be drawn upon the thumb. -->
     <attr name="thumbIcon" format="reference"/>
+    <!-- Determines the checked state(s) in which the thumb icon will be displayed.
+         Defaults to "always". -->
+    <attr name="thumbIconVisibility" format="enum">
+      <!-- The thumb icon is shown in both checked and unchecked states. -->
+      <enum name="always" value="0" />
+      <!-- The thumb icon is shown only in the checked state. -->
+      <enum name="whenChecked" value="1" />
+      <!-- The thumb icon is shown only in the unchecked state. -->
+      <enum name="whenUnchecked" value="2" />
+      <!-- The thumb icon is never shown. -->
+      <enum name="never" value="3" />
+    </attr>
     <!-- Tint that will be applied to the thumb icon drawable. -->
     <attr name="thumbIconTint" format="color"/>
     <!-- The blending mode used to apply the tint specified by thumbIconTint
