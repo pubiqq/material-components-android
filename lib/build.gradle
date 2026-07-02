@@ -161,17 +161,18 @@ publishing {
   publications {
     release(MavenPublication) {
       artifact androidSourcesJar
-      groupId = 'com.google.android.material'
+      groupId = 'com.pubiqq.android.material'
       artifactId = 'material'
       version project.version
       pom {
         name = 'Material Components for Android'
-        description = 'Material Components for Android is a static library ' +
-          'that you can add to your Android application in order to use ' +
-          'APIs that provide implementations of the Material Design specification. ' +
+        description = 'Maintained fork of Material Components for Android (the ' +
+          'upstream library is in maintenance mode). A static library that you can ' +
+          'add to your Android application in order to use APIs that provide ' +
+          'implementations of the Material Design specification. ' +
           'Compatible on devices running API 23 or later.'
-        url = 'https://github.com/material-components/material-components-android'
-        inceptionYear = '2015'
+        url = 'https://github.com/pubiqq/material-components-android'
+        inceptionYear = '2026'
         licenses {
           license {
             name = 'The Apache Software License, Version 2.0'
@@ -181,12 +182,18 @@ publishing {
         }
         developers {
           developer {
+            name = 'pubiqq'
+            url = 'https://github.com/pubiqq'
+          }
+        }
+        contributors {
+          contributor {
             name = 'The Android Open Source Project'
           }
         }
         scm {
-          connection = 'scm:git:https://github.com/material-components/material-components-android.git'
-          url = 'https://github.com/material-components/material-components-android'
+          connection = 'scm:git:https://github.com/pubiqq/material-components-android.git'
+          url = 'https://github.com/pubiqq/material-components-android'
         }
       }
 
