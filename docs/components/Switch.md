@@ -117,8 +117,7 @@ does not auto-inflate, unlike other selection controls, and must be explicitly
 specified in layouts.
 
 **Note:** For the old `SwitchMaterial` documentation, please refer to
-[Switch (deprecated)](#switch-deprecated) and
-[Theming switch (deprecated)](#theming-switch-deprecated).
+[Switch (deprecated)](#switch-deprecated).
 
 ### Adding switch
 
@@ -196,11 +195,8 @@ API and source code:
     *   [Class definition](https://developer.android.com/reference/com/google/android/material/materialswitch/MaterialSwitch)
     *   [Class source](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/materialswitch/MaterialSwitch.java)
 
-**Note:** Since version 1.7.0, the new `MaterialSwitch` class will replace the
-obsolete `SwitchMaterial` class. In most cases you should be able to just
-replace all `SwitchMaterial` class reference with `MaterialSwitch` to achieve
-the default look and feel. Please refer to the following sections if you need to
-customize the new styles.
+**Note:** For the old `SwitchMaterial` documentation, please refer to
+[Theming switch (deprecated)](#theming-switch-deprecated).
 
 The following example shows a list of switches with Material theming.
 

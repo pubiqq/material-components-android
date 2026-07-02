@@ -267,11 +267,6 @@ to the Material components for Android library. For more information, go to the
 [Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
 page.
 
-Note: Material Search was introduced in `1.8.0`. To use Material Search, make
-sure you're depending on
-[library version `1.8.0`](https://github.com/pubiqq/material-components-android/releases/tag/1.8.0)
-or later.
-
 API and source code
 
 *   [Class definition](https://developer.android.com/reference/com/google/android/material/search/SearchView)

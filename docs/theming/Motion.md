@@ -15,12 +15,6 @@ attributes, semantic spring theme attributes, components that use themed motion
 for their built-in animations, and a set of transitions for
 navigational events or custom animations.
 
-The easing and duration motion system is available in version `1.6.0` or later.
-The physics motion system is available in version `1.13.0` or later. For more
-information, see the
-[Getting started](https://github.com/pubiqq/material-components-android/tree/dev/docs/getting-started.md)
-page.
-
 1.  [Theming](#theming)
 2.  [Transitions](#transitions)
 

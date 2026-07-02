@@ -43,43 +43,19 @@ To use it:
     ```groovy
       dependencies {
         // ...
-        implementation 'com.google.android.material:material:<version>'
+        implementation 'com.pubiqq.android.material:material:<version>'
         // ...
       }
     ```
 
 Visit
-[Google's Maven Repository](https://maven.google.com/web/index.html#com.google.android.material:material)
-or
-[MVN Repository](https://mvnrepository.com/artifact/com.google.android.material/material)
+[MVN Repository](https://mvnrepository.com/artifact/com.pubiqq.android.material/material)
 to find the latest version of the library.
-
-**Note:** In order to use the new `Material3` themes and component styles, you
-should depend on version `1.5.0` or later.
-
-**Note:** In order to use the new `Material3Expressive` themes and component
-styles, you should depend on version `1.14.0` or later.
-
-#### New Namespace and AndroidX
-
-If your app currently depends on the original Design Support Library, you can
-make use of the
-[`Refactor to AndroidX…`](https://developer.android.com/jetpack/androidx/migrate)
-option provided by Android Studio. Doing so will update your app's dependencies
-and code to use the newly packaged `androidx` and `com.google.android.material`
-libraries.
-
-If you don't want to switch over to the new `androidx` and
-`com.google.android.material` packages yet, you can use Material Components via
-the `com.android.support:design:28.0.0` dependency.
-
-**Note:** You should not use the `com.android.support` and
-`com.google.android.material` dependencies in your app at the same time.
 
 #### Non-Transitive R Classes (referencing library resources programmatically)
 
-Starting with version `1.13.0-alpha12`, the Material library is built with AGP
-8.7.3 (or later) and `android.nonTransitiveRClass=true`, meaning
+The Material library is built with AGP 8.7.3+ and
+`android.nonTransitiveRClass=true`, meaning
 [R classes are no longer transitive](https://developer.android.com/build/optimize-your-build#use-non-transitive-r-classes)
 and resources must be fully qualified with their library path when used
 programmatically.
@@ -117,9 +93,8 @@ for more information on Java 8 support and how to enable it for your app.
 
 ### 5. Gradle, AGP, and Android Studio
 
-When using MDC-Android version `1.13.0` and above, you will need to make sure
-your project is built with the following minimum requirements, in order to
-support the latest build features such as XML `macro`:
+You need to make sure your project is built with the following minimum
+requirements, in order to support the latest build features such as XML `macro`:
 
 -   [Gradle version 8.9](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)
 -   [Android Gradle Plugin (AGP) version 8.7.3](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)
@@ -153,10 +128,6 @@ to your theme. See the
 section for more details.
 
 #### **`Material3Expressive` themes**
-
-**Note:** You must depend on library version `1.14.0-alpha01` or later to use
-`Theme.Material3Expressive.*` themes, which are required for
-`Widget.Material3Expressive.*` component styles.
 
 Here are the `Material3Expressive` themes you can use to get the latest
 component styles and theme-level attributes, as well as their `Material3`

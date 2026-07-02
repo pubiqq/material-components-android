@@ -292,11 +292,6 @@ page.
 
 ### Adding side sheets
 
-Note: Side sheets were introduced in `1.8.0`. To use side sheets, make sure
-you're depending on
-[library version `1.8.0`](https://github.com/pubiqq/material-components-android/releases/tag/1.8.0)
-or later.
-
 **Standard side sheet basic usage:**
 
 ```xml
