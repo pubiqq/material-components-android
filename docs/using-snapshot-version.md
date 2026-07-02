@@ -31,7 +31,7 @@ maven {
 ```
 
 Then you can use a snapshot version by adding a
-`com.google.android.material:material:<version>-SNAPSHOT` dependency as per
+`com.pubiqq.android.material:material:<version>-SNAPSHOT` dependency as per
 usual (see latest release
 [here](https://github.com/pubiqq/material-components-android/packages/81484/versions)).
 This will fetch the latest snapshot version, which your Gradle build won't
@@ -43,7 +43,7 @@ See the offical doc on
 for additional information.
 
 If you prefer to depend on a specific snapshot version, you can add
-`com.google.android.material:material:<version>-<uniqueversion>`, where
+`com.pubiqq.android.material:material:<version>-<uniqueversion>`, where
 `<uniqueversion>` is a combination of the date, a timestamp, and a counter (see
 all versions
 [here](https://github.com/pubiqq/material-components-android/packages/81484/versions)).

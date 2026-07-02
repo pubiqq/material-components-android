@@ -98,9 +98,8 @@ Surface Container Highest | colorSurfaceContainerHighest | neutral90         | s
 
 ## Using Surface Colors
 
-As of version 1.11.0-alpha02 and above, Material3 components will use the
-following tonal surface color roles by default (instead of elevation overlays
-which involved blending the Surface and Primary colors):
+Material3 components use the following tonal surface color roles by default (instead of
+elevation overlays which involved blending the Surface and Primary colors):
 
 -   `colorSurfaceContainer`
 -   `colorSurfaceContainerLow`

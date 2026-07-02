@@ -31,19 +31,16 @@ when swiping back within the app itself.
 
 ## Usage
 
-To opt in to predictive back, apps must:
-
-1. Migrate from the legacy back handling APIs (`Activity#onBackPressed`,
-`KeyEvent.KEYCODE_BACK`, etc.) to the more recently introduced "back callback"
-APIs (`OnBackAnimationCallback`, `OnBackPressedCallback`, etc.). This involves
-flipping the `android:enableOnBackInvokedCallback` manifest flag to `true`, and
+To opt in to predictive back, apps must migrate from the legacy back handling
+APIs (`Activity#onBackPressed`, `KeyEvent.KEYCODE_BACK`, etc.) to the more
+recently introduced "back callback" APIs (`OnBackAnimationCallback`,
+`OnBackPressedCallback`, etc.). This involves flipping the
+`android:enableOnBackInvokedCallback` manifest flag to `true`, and
 registering callbacks to handle back pressed on Android T and above. More
 details on this general back migration can be found at the
 [Framework & AndroidX Predictive Back developer guide](https://developer.android.com/guide/navigation/predictive-back-gesture).
 
-2. Upgrade to MDC-Android library version **1.10.0** or above.
-
-Once completing these steps, you will get most of the predictive back animations
+Once you do this, you will get most of the predictive back animations
 within Material Components for free on Android U devices. See the section below
 to understand which components support predictive back and to learn about
 special considerations for each component.

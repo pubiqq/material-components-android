@@ -38,10 +38,6 @@ Bottom app bars provide access to up to four actions, including the
 4.  Navigation icon (optional)
 5.  Overflow menu (optional)
 
-**Note:** This doc reflects the Bottom App Bar after the changes in 1.7 to
-reflect the current M3 style. Use `Widget.Material3.BottomAppBar.Legacy` to
-revert back to the previous style.
-
 ## M3 Expressive update
 
 Before you can use `Material3Expressive` component styles, follow the
@@ -122,6 +118,11 @@ See the full list of
 [styles](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomappbar/res/values/styles.xml)
 and
 [attrs](https://github.com/pubiqq/material-components-android/tree/dev/lib/java/com/google/android/material/bottomappbar/res/values/attrs.xml).
+
+`*.Legacy` styles have been added to revert to the previous behavior (**not
+recommended**):
+
+-   `Widget.Material3.BottomAppBar.Legacy`
 
 ## Code implementation
 
