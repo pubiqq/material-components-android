@@ -16,6 +16,45 @@
 For information on how to get started with Material Components for Android,
 take a look at our [Getting Started](docs/getting-started.md) guide.
 
+## Installation
+
+1. Make sure the `mavenCentral()` and `google()` repositories are declared in your project:
+
+    ```groovy
+    repositories {
+        mavenCentral()
+        google()
+    }
+    ```
+
+2. Add the dependency to your module's `build.gradle` file:
+
+    ```groovy
+    dependencies {
+        implementation 'com.pubiqq.android.material:material:<version>'
+    }
+    ```
+
+    If your module has a `com.google.android.material:material` dependency, remove it.
+
+3. If your module has a transitive `com.google.android.material:material` dependency,
+   add the following to your module's `build.gradle` file:
+
+    ```groovy
+    configurations.configureEach {
+        resolutionStrategy {
+            dependencySubstitution {
+                substitute module('com.google.android.material:material')
+                    using module('com.pubiqq.android.material:material:<version>')
+            }
+        }
+    }
+    ```
+
+For more details, see the
+[Installing the library](docs/getting-started.md#2-installing-the-library)
+section of our Getting Started guide.
+
 ## Submitting Bugs or Feature Requests
 
 For usage questions: ask on
