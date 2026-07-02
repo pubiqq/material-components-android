@@ -29,8 +29,8 @@ ext {
     ? project.property('mavenRepoUrl') : '/tmp/myRepo/')
 
   // Current version of the library (could be in-development/unreleased).
-  mdcLibraryVersion = '1.14.0'
-  mdcLibraryPackage = "com.google.android.material"
+  mdcLibraryVersion = '1.0.0'
+  mdcLibraryPackage = "com.pubiqq.android.material"
   mdcLibraryDir = "com/google/android/material"
 }
 
@@ -91,7 +91,7 @@ subprojects {
 
 subprojects {
   version = rootProject.ext.mdcLibraryVersion
-  group = 'com.google.android.material'
+  group = 'com.pubiqq.android.material'
 
   // Disable strict dependency resolution version constraints for test projects
   if (project.name.contains("tests")) {
