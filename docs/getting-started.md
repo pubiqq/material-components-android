@@ -20,37 +20,55 @@ look at our
 [legacy guide](https://material.io/blog/migrate-android-material-components) to
 help you migrate your codebase to Material Components for Android.
 
-### 2. Maven library dependency
+### 2. Installing the library
 
-Material Components for Android is available through Google's Maven Repository.
-To use it:
-
-1.  Open the `build.gradle` file for your application.
-2.  Make sure that the `repositories` section includes Google's Maven Repository
-    `google()`. For example:
+1.  Make sure the `mavenCentral()` and `google()` repositories are declared
+    in your project:
 
     ```groovy
-      allprojects {
-        repositories {
-          google()
-          mavenCentral()
-        }
-      }
+    repositories {
+        mavenCentral()
+        google()
+    }
     ```
 
-3.  Add the library to the `dependencies` section:
+2.  Add the dependency to your module's `build.gradle` file:
 
     ```groovy
-      dependencies {
-        // ...
+    dependencies {
         implementation 'com.pubiqq.android.material:material:<version>'
-        // ...
-      }
+    }
     ```
 
-Visit
-[MVN Repository](https://mvnrepository.com/artifact/com.pubiqq.android.material/material)
-to find the latest version of the library.
+3.  Make sure your module has no `com.google.android.material:material`
+    dependency, not even a transitive one. If your module declares a direct
+    `com.google.android.material:material` dependency, remove it. To replace
+    all transitive `com.google.android.material:material` dependencies with
+    `com.pubiqq.android.material:material`, add the following to your module's
+    `build.gradle` file:
+
+    ```groovy
+    configurations.configureEach {
+        resolutionStrategy {
+            dependencySubstitution {
+                substitute module('com.google.android.material:material')
+                    using module('com.pubiqq.android.material:material:<version>')
+            }
+        }
+    }
+    ```
+
+    As an alternative to substitution, you can *exclude*
+    `com.google.android.material:material` from the module's dependencies:
+
+    ```groovy
+    configurations.configureEach {
+        exclude group: 'com.google.android.material', module: 'material'
+    }
+    ```
+
+    Since `com.pubiqq.android.material:material` provides the same classes,
+    this has the same effect as substitution.
 
 #### Non-Transitive R Classes (referencing library resources programmatically)
 
