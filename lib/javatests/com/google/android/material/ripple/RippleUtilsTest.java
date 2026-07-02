@@ -56,7 +56,7 @@ public class RippleUtilsTest {
   }
 
   @Test
-  @Config(sdk = Config.OLDEST_SDK)
+  @Config(sdk = VERSION_CODES.M)
   public void testValidateColor_transparentDefaultColor_returnsSelf_lollipopMr1_logsWarning() {
     ColorStateList rippleColor = createTransparentDefaultColor();
     assertThat(RippleUtils.sanitizeRippleDrawableColor(rippleColor)).isEqualTo(rippleColor);

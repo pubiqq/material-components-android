@@ -194,7 +194,7 @@ public class MaterialButtonToggleGroupTest {
   }
 
   @Test
-  @Config(sdk = Config.OLDEST_SDK)
+  @Config(sdk = 23)
   public void onInitializeAccessibilityNodeInfo() {
     AccessibilityNodeInfo groupInfo = AccessibilityNodeInfo.obtain();
     toggleGroup.onInitializeAccessibilityNodeInfo(groupInfo);

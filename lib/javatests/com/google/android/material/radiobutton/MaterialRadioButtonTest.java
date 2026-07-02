@@ -22,6 +22,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -62,7 +63,7 @@ public class MaterialRadioButtonTest {
    * run for API 22+.
    */
   @Test
-  @Config(sdk = Config.OLDEST_SDK)
+  @Config(sdk = VERSION_CODES.M)
   public void testThemeableAndroidButtonTint() {
     testThemeableButtonTint(
         (RadioButton) radioButtons.findViewById(R.id.test_radiobutton_android_button_tint));

@@ -209,7 +209,7 @@ public class MaterialButtonTest {
   }
 
   @Test
-  @Config(minSdk = Config.OLDEST_SDK, maxSdk = 28)
+  @Config(minSdk = 23, maxSdk = 28)
   public void setIcon_iconNotUpdated_whenPositionChanged() {
     callCount = 0;
     MaterialButton materialButton =
