@@ -1102,6 +1102,9 @@ public final class MaterialContainerTransform extends Transition {
     private final Paint shadowPaint = new Paint();
     private final Paint scrimPaint = new Paint();
 
+    private final int startContainerColorAlpha;
+    private final int endContainerColorAlpha;
+
     // Motion path
     private final MaskEvaluator maskEvaluator = new MaskEvaluator();
     private final PathMeasure motionPathMeasure;
@@ -1180,6 +1183,9 @@ public final class MaterialContainerTransform extends Transition {
       containerPaint.setColor(containerColor);
       startContainerPaint.setColor(startContainerColor);
       endContainerPaint.setColor(endContainerColor);
+
+      startContainerColorAlpha = Color.alpha(startContainerColor);
+      endContainerColorAlpha = Color.alpha(endContainerColor);
 
       compatShadowDrawable.setFillColor(ColorStateList.valueOf(Color.TRANSPARENT));
       compatShadowDrawable.setShadowCompatibilityMode(
@@ -1331,7 +1337,7 @@ public final class MaterialContainerTransform extends Transition {
       // Fill the container at the current layer with a color. Useful when the start or end view
       // does not have a background or when the container size exceeds the image size which it can
       // in large start/end size changes.
-      if (Color.alpha(containerPaint.getColor()) > 0 && containerPaint.getAlpha() > 0) {
+      if (containerPaint.getAlpha() > 0) {
         canvas.drawRect(getBounds(), containerPaint);
       }
     }
@@ -1458,12 +1464,10 @@ public final class MaterialContainerTransform extends Transition {
               FadeThroughProvider.FADE_THROUGH_THRESHOLD);
 
       // Update start and end container paints to share the same opacity as their respective view
-      if (Color.alpha(startContainerPaint.getColor()) > 0) {
-        startContainerPaint.setAlpha(fadeModeResult.startAlpha);
-      }
-      if (Color.alpha(endContainerPaint.getColor()) > 0) {
-        endContainerPaint.setAlpha(fadeModeResult.endAlpha);
-      }
+      startContainerPaint.setAlpha(
+          Math.round(fadeModeResult.startAlpha * (startContainerColorAlpha / 255f)));
+      endContainerPaint.setAlpha(
+          Math.round(fadeModeResult.endAlpha * (endContainerColorAlpha / 255f)));
 
       invalidateSelf();
     }
