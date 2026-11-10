@@ -175,6 +175,31 @@ public class MaterialSwitch extends SwitchCompat {
   }
 
   @Override
+  public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+    int switchHeight = Math.max(
+        getIntrinsicHeight(super.getThumbDrawable()),
+        getIntrinsicHeight(super.getTrackDrawable()));
+
+    int minSwitchRoomHeight = getPaddingTop() + switchHeight + getPaddingBottom();
+    if (minSwitchRoomHeight > getMeasuredHeight()) {
+      setMeasuredDimension(
+          getMeasuredWidthAndState(),
+          resolveSizeAndState(minSwitchRoomHeight, heightMeasureSpec, 0));
+    }
+  }
+
+  private static int getIntrinsicHeight(@Nullable Drawable drawable) {
+    if (drawable == null) {
+      return 0;
+    }
+
+    int intrinsicHeight = drawable.getIntrinsicHeight();
+    return intrinsicHeight != -1 ? intrinsicHeight : 0;
+  }
+
+  @Override
   protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
     super.onLayout(changed, left, top, right, bottom);
 
