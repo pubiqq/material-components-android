@@ -165,11 +165,10 @@ publishing {
       artifactId = 'material'
       version project.version
       pom {
-        name = 'Material Components for Android'
-        description = 'Maintained fork of Material Components for Android (the ' +
-          'upstream library is in maintenance mode). A static library that you can ' +
-          'add to your Android application in order to use APIs that provide ' +
-          'implementations of the Material Design specification. ' +
+        name = 'Material Components for Android (community fork)'
+        description = 'A fork of Material Components for Android, a static library ' +
+          'that you can add to your Android application in order to use ' +
+          'APIs that provide implementations of the Material Design specification. ' +
           'Compatible on devices running API 23 or later.'
         url = 'https://github.com/pubiqq/material-components-android'
         inceptionYear = '2026'
@@ -184,11 +183,13 @@ publishing {
           developer {
             name = 'pubiqq'
             url = 'https://github.com/pubiqq'
+            roles = ['Maintainer']
           }
         }
         contributors {
           contributor {
             name = 'The Android Open Source Project'
+            roles = ['Original Author']
           }
         }
         scm {
