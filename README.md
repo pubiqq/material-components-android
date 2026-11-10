@@ -31,7 +31,7 @@ take a look at our [Getting Started](docs/getting-started.md) guide.
 
     ```groovy
     dependencies {
-        implementation 'com.pubiqq.android.material:material:<version>'
+        implementation 'com.pubiqq.android.material:material:1.0.0-beta01'
     }
     ```
 
@@ -45,7 +45,7 @@ take a look at our [Getting Started](docs/getting-started.md) guide.
         resolutionStrategy {
             dependencySubstitution {
                 substitute module('com.google.android.material:material')
-                    using module('com.pubiqq.android.material:material:<version>')
+                    using module('com.pubiqq.android.material:material:1.0.0-beta01')
             }
         }
     }
