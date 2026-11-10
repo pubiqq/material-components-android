@@ -2,6 +2,7 @@ import javax.inject.Inject
 
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 version = mdcLibraryVersion
 
@@ -203,6 +204,10 @@ publishing {
       }
     }
   }
+}
+
+signing {
+  sign publishing.publications
 }
 
 /**

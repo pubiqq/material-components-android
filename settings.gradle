@@ -1,3 +1,7 @@
+plugins {
+  id 'com.gradleup.nmcp.settings' version '1.6.2'
+}
+
 include ':lib'
 
 include ':testing:java:com:google:android:material:testapp'
@@ -26,5 +30,16 @@ rootProject.children.each { p ->
     // be named :java-io-material-catalog). Doing so avoids the need to
     // have unique directory names throughout our subprojects.
     project.name = project.path.substring(1).replace(':', '-')
+  }
+}
+
+nmcpSettings {
+  centralPortal {
+    username = providers.gradleProperty('centralPortal.username')
+      .getOrNull()
+    password = providers.gradleProperty('centralPortal.password')
+      .getOrNull()
+    publishingType = providers.gradleProperty('centralPortal.publishingType')
+      .getOrElse('USER_MANAGED')
   }
 }
