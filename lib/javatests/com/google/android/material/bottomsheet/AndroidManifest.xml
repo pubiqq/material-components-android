@@ -19,7 +19,7 @@
   package="com.google.android.material.bottomsheet">
 
   <uses-sdk
-    android:targetSdkVersion="33"
+    android:targetSdkVersion="35"
     tools:overrideLibrary="androidx.test.core"/>
 
   <application/>

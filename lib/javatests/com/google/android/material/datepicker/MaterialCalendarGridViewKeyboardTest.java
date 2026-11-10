@@ -21,13 +21,12 @@ import static com.google.common.truth.Truth.assertThat;
 import static java.util.Calendar.APRIL;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.view.KeyEvent;
-import android.view.View.MeasureSpec;
 import androidx.annotation.Nullable;
-import androidx.test.core.app.ApplicationProvider;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.datepicker.CalendarConstraints.DateValidator;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +34,7 @@ import java.util.Locale;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.ShadowLooper;
 
@@ -44,15 +44,14 @@ public final class MaterialCalendarGridViewKeyboardTest {
 
   private MaterialCalendarGridView gridView;
   private MonthAdapter adapter;
-  private Context context;
+  private AppCompatActivity activity;
   private Month month;
   private SpyOnMonthNavigationListener monthNavigationListener;
 
   @Before
   public void setup() {
     Locale.setDefault(Locale.US);
-    ApplicationProvider.getApplicationContext().setTheme(R.style.Theme_MaterialComponents_Light);
-    context = ApplicationProvider.getApplicationContext();
+    activity = Robolectric.buildActivity(TestActivity.class).setup().get();
     month = Month.create(2024, APRIL);
     monthNavigationListener = new SpyOnMonthNavigationListener();
   }
@@ -262,7 +261,7 @@ public final class MaterialCalendarGridViewKeyboardTest {
   }
 
   private void setupGridView(@Nullable DateValidator validator) {
-    gridView = new MaterialCalendarGridView(context);
+    gridView = new MaterialCalendarGridView(activity);
     SingleDateSelector dateSelector = new SingleDateSelector();
     CalendarConstraints.Builder constraintsBuilder = new CalendarConstraints.Builder();
     if (validator != null) {
@@ -273,10 +272,8 @@ public final class MaterialCalendarGridViewKeyboardTest {
     gridView.setAdapter(adapter);
     gridView.setNumColumns(7);
     gridView.setOnMonthNavigationListener(monthNavigationListener);
-    gridView.measure(
-        MeasureSpec.makeMeasureSpec(1000, MeasureSpec.EXACTLY),
-        MeasureSpec.makeMeasureSpec(1000, MeasureSpec.EXACTLY));
-    gridView.layout(0, 0, 1000, 1000);
+
+    activity.setContentView(gridView);
     ShadowLooper.idleMainLooper();
   }
 
@@ -344,6 +341,14 @@ public final class MaterialCalendarGridViewKeyboardTest {
     public boolean onMonthNavigationPrevious() {
       navigatedPrevious = true;
       return true;
+    }
+  }
+
+  private static class TestActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle bundle) {
+      super.onCreate(bundle);
+      setTheme(R.style.Theme_MaterialComponents_Light);
     }
   }
 }

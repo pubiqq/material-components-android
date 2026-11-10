@@ -19,7 +19,7 @@ allprojects {
 ext {
   compileSdkVersion = 35
   minSdkVersion = 23
-  targetSdkVersion = 33
+  targetSdkVersion = 35
 
   // Enforce the use of prebuilt dependencies in all sub-projects. This is
   // required for the doclava dependency.
