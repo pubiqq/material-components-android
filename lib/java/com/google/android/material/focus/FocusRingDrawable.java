@@ -704,11 +704,21 @@ public class FocusRingDrawable extends DrawableWrapper {
     if (!shapeAppearancePath.isEmpty()) {
       return shapeAppearancePath;
     }
-    if (materialShapeDrawable != null && materialShapeDrawable.get() != null) {
-      Path path = materialShapeDrawable.get().getPath();
-      if (!path.isEmpty()) {
-        return path;
+
+    if (materialShapeDrawable != null) {
+      MaterialShapeDrawable drawable = materialShapeDrawable.get();
+      if (drawable == null) {
+        return null;
       }
+
+      // MaterialShapeDrawable doesn't keep its path up to date when its shape is a round rect,
+      // so the path can't be relied on when drawing the focus ring.
+      if (drawable.calculateRoundRectCornerSize() >= 0) {
+        return null;
+      }
+
+      Path path = drawable.getPath();
+      return !path.isEmpty() ? path : null;
     }
     return null;
   }
