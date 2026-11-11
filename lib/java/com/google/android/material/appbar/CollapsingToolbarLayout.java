@@ -1333,9 +1333,8 @@ public class CollapsingToolbarLayout extends FrameLayout {
     if (d != null && d.isStateful()) {
       changed |= d.setState(state);
     }
-    if (collapsingTitleHelper != null) {
-      changed |= collapsingTitleHelper.setState(state);
-    }
+    changed |= collapsingTitleHelper.setState(state);
+    changed |= collapsingSubtitleHelper.setState(state);
 
     if (changed) {
       invalidate();
