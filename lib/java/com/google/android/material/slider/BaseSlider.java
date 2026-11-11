@@ -325,6 +325,7 @@ abstract class BaseSlider<
   private ValueAnimator labelsOutAnimator;
 
   private final int scaledTouchSlop;
+  private final int focusRingPadding;
   private final int thumbHeightDecreaseFocusRing;
 
   private int minTrackSidePadding;
@@ -517,6 +518,10 @@ abstract class BaseSlider<
     stopIndicatorPaint.setStyle(Style.FILL);
     stopIndicatorPaint.setStrokeCap(Cap.ROUND);
 
+    focusRingPadding =
+        context
+            .getResources()
+            .getDimensionPixelOffset(R.dimen.m3_slider_focus_ring_padding);
     thumbHeightDecreaseFocusRing =
         context
             .getResources()
@@ -715,6 +720,9 @@ abstract class BaseSlider<
     int minSideSpaceWidthForActiveTick = tickActiveRadius;
     int minSideSpaceWidthForInactiveTick = tickInactiveRadius;
     int minSideSpaceWidthForStopIndicator = MathUtils.ceilDiv(trackStopIndicatorSize, 2);
+    int minSideSpaceWidthForFocusRing = isFocusRingEnabled()
+        ? MathUtils.ceilDiv(thumbWidth, 2) + focusRingPadding * 2
+        : 0;
 
     int newTrackSidePadding =
         minTrackSidePadding +
@@ -723,7 +731,8 @@ abstract class BaseSlider<
                 minSideSpaceWidthForTrack,
                 minSideSpaceWidthForActiveTick,
                 minSideSpaceWidthForInactiveTick,
-                minSideSpaceWidthForStopIndicator);
+                minSideSpaceWidthForStopIndicator,
+                minSideSpaceWidthForFocusRing);
 
     if (trackSidePadding == newTrackSidePadding) {
       return false;
@@ -1779,6 +1788,9 @@ abstract class BaseSlider<
     int minSpaceHeightForActiveTick = tickActiveRadius * 2;
     int minSpaceHeightForInactiveTick = tickInactiveRadius * 2;
     int minSpaceHeightForStopIndicator = trackStopIndicatorSize;
+    int minSpaceHeightForFocusRing = isFocusRingEnabled()
+        ? thumbHeight + focusRingPadding * 2
+        : 0;
 
     int newWidgetThickness = paddings +
         MathUtils.max(
@@ -1786,7 +1798,8 @@ abstract class BaseSlider<
             minSpaceHeightForTrack,
             minSpaceHeightForActiveTick,
             minSpaceHeightForInactiveTick,
-            minSpaceHeightForStopIndicator);
+            minSpaceHeightForStopIndicator,
+            minSpaceHeightForFocusRing);
 
     newWidgetThickness = max(minWidgetThickness, newWidgetThickness);
     if (newWidgetThickness == widgetThickness) {
@@ -2796,14 +2809,12 @@ abstract class BaseSlider<
   private void updateFocusRingBounds(float x, float y) {
     FocusRingDrawable focusRingDrawable = getFocusRing();
     if (focusRingDrawable != null) {
-      int padding = getResources().getDimensionPixelOffset(R.dimen.m3_slider_focus_ring_padding);
-
       float left;
       float right;
       float top;
       float bottom;
-      float paddingMajor = thumbWidth / 2f + padding * 2f;
-      float paddingMinor = thumbHeight / 2f + padding;
+      float paddingMajor = thumbWidth / 2f + focusRingPadding * 2f;
+      float paddingMinor = thumbHeight / 2f + focusRingPadding;
 
       if (!isVertical()) {
         left = x - paddingMajor;
