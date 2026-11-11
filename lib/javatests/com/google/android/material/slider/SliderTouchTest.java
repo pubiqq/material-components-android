@@ -143,28 +143,54 @@ public class SliderTouchTest {
 
   @Test
   public void test2thumbs_minSeparation_leftThumbDoesNotMove() {
-    slider.setValues(20.0f, 40.0f);
-    slider.setMinSeparationValue(20.0f);
+    slider.setValues(20.0f, 70.0f);
+    slider.setMinSeparationValue(50.0f);
 
     // Slide left thumb towards right thumb
-    dragSliderBetweenValues(slider, 20.01f, 40.0f, 100);
+    dragSliderBetweenValues(slider, 20.01f, 70.0f, 100);
 
     // Verify the left thumb didn't move
     assertThat(slider.getValues()).contains(20.0f);
-    assertThat(slider.getValues()).contains(40.0f);
+    assertThat(slider.getValues()).contains(70.0f);
   }
 
   @Test
   public void test2thumbs_minSeparation_rightThumbDoesNotMove() {
-    slider.setValues(20.0f, 40.0f);
-    slider.setMinSeparationValue(20.0f);
+    slider.setValues(20.0f, 70.0f);
+    slider.setMinSeparationValue(50.0f);
 
     // Slide right thumb towards left thumb
-    dragSliderBetweenValues(slider, 39.99f, 20.0f, 100);
+    dragSliderBetweenValues(slider, 69.99f, 20.0f, 100);
 
     // Verify the right thumb didn't move
     assertThat(slider.getValues()).contains(20.0f);
-    assertThat(slider.getValues()).contains(40.0f);
+    assertThat(slider.getValues()).contains(70.0f);
+  }
+
+  @Test
+  public void test2thumbs_minSeparationPx_leftThumbDoesNotMove() {
+    slider.setValues(20.0f, 70.0f);
+    slider.setMinSeparation(slider.getTrackWidth() / 2f);  // 50 units
+
+    // Slide left thumb towards right thumb
+    dragSliderBetweenValues(slider, 20.01f, 70.0f, 100);
+
+    // Verify the left thumb didn't move
+    assertThat(slider.getValues()).contains(20.0f);
+    assertThat(slider.getValues()).contains(70.0f);
+  }
+
+  @Test
+  public void test2thumbs_minSeparationPx_rightThumbDoesNotMove() {
+    slider.setValues(20.0f, 70.0f);
+    slider.setMinSeparation(slider.getTrackWidth() / 2f);  // 50 units
+
+    // Slide right thumb towards left thumb
+    dragSliderBetweenValues(slider, 69.99f, 20.0f, 100);
+
+    // Verify the right thumb didn't move
+    assertThat(slider.getValues()).contains(20.0f);
+    assertThat(slider.getValues()).contains(70.0f);
   }
 
   @Test
@@ -213,6 +239,34 @@ public class SliderTouchTest {
   public void test3thumbs_minSeparation_middleThumbDoesNotMoveRight() {
     slider.setValues(20.0f, 40.0f, 60.0f);
     slider.setMinSeparationValue(20.0f);
+
+    // Slide middle thumb towards right thumb
+    dragSliderBetweenValues(slider, 40.01f, 60.0f, 100);
+
+    // Verify the middle thumb didn't move
+    assertThat(slider.getValues()).contains(20.0f);
+    assertThat(slider.getValues()).contains(40.0f);
+    assertThat(slider.getValues()).contains(60.0f);
+  }
+
+  @Test
+  public void test3thumbs_minSeparationPx_middleThumbDoesNotMoveLeft() {
+    slider.setValues(20.0f, 40.0f, 60.0f);
+    slider.setMinSeparation(slider.getTrackWidth() * 0.2f);  // 20 units
+
+    // Slide middle thumb towards left thumb
+    dragSliderBetweenValues(slider, 39.99f, 20.0f, 100);
+
+    // Verify the middle thumb didn't move
+    assertThat(slider.getValues()).contains(20.0f);
+    assertThat(slider.getValues()).contains(40.0f);
+    assertThat(slider.getValues()).contains(60.0f);
+  }
+
+  @Test
+  public void test3thumbs_minSeparationPx_middleThumbDoesNotMoveRight() {
+    slider.setValues(20.0f, 40.0f, 60.0f);
+    slider.setMinSeparation(slider.getTrackWidth() * 0.2f);  // 20 units
 
     // Slide middle thumb towards right thumb
     dragSliderBetweenValues(slider, 40.01f, 60.0f, 100);

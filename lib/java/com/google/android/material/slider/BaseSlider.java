@@ -3671,9 +3671,6 @@ abstract class BaseSlider<
   private float getClampedValue(int idx, float value) {
     float minSeparation = this.minSeparation;
     minSeparation = separationUnit == UNIT_PX ? dimenToValue(minSeparation) : minSeparation;
-    if (isRtl() || isVertical()) {
-      minSeparation = -minSeparation;
-    }
 
     float upperBound = idx + 1 >= values.size() ? valueTo : values.get(idx + 1) - minSeparation;
     float lowerBound = idx - 1 < 0 ? valueFrom : values.get(idx - 1) + minSeparation;
@@ -3681,10 +3678,10 @@ abstract class BaseSlider<
   }
 
   private float dimenToValue(float dimen) {
-    if (dimen == 0) {
+    if (trackWidth == 0) {
       return 0;
     }
-    return ((dimen - trackSidePadding) / trackWidth) * (valueFrom - valueTo) + valueFrom;
+    return dimen / trackWidth * (valueTo - valueFrom);
   }
 
   protected float getMinSeparation() {
