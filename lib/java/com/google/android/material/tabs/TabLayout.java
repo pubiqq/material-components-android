@@ -1220,7 +1220,7 @@ public class TabLayout extends HorizontalScrollView {
     this.tabIndicatorAnimationMode = tabIndicatorAnimationMode;
     switch (tabIndicatorAnimationMode) {
       case INDICATOR_ANIMATION_MODE_LINEAR:
-        this.tabIndicatorInterpolator = new TabIndicatorInterpolator();
+        this.tabIndicatorInterpolator = new LinearTabIndicatorInterpolator();
         break;
       case INDICATOR_ANIMATION_MODE_ELASTIC:
         this.tabIndicatorInterpolator = new ElasticTabIndicatorInterpolator();

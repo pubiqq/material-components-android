@@ -16,8 +16,6 @@
 
 package com.google.android.material.tabs;
 
-import static com.google.android.material.animation.AnimationUtils.lerp;
-
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -33,9 +31,6 @@ import com.google.android.material.tabs.TabLayout.TabView;
  * A class used to manipulate the {@link SlidingTabIndicator}'s indicator {@link Drawable} at any
  * point at or between tabs.
  *
- * <p>By default, this class will size the indicator according to {@link
- * TabLayout#isTabIndicatorFullWidth()} and linearly move the indicator between tabs.
- *
  * <p>Subclasses can override {@link #setIndicatorBoundsForTab(TabLayout, View, Drawable)} and
  * {@link #updateIndicatorForOffset(TabLayout, View, View, float, Drawable)} (TabLayout, View, View,
  * float, Drawable)} to define how the indicator should be drawn for a single tab or at any point
@@ -45,7 +40,7 @@ import com.google.android.material.tabs.TabLayout.TabView;
  * #calculateIndicatorWidthForTab(TabLayout, View)} and {@link
  * #calculateTabViewContentBounds(TabView, int)} to capture the bounds of the tab or tab's content.
  */
-class TabIndicatorInterpolator {
+abstract class TabIndicatorInterpolator {
 
   @Dimension(unit = Dimension.DP)
   private static final int MIN_INDICATOR_WIDTH = 24;
@@ -142,8 +137,6 @@ class TabIndicatorInterpolator {
    * between 0.0 and 1.0, the {@code indicator} is moving between the startTitle and endTitle and
    * the indicator should reflect this movement.
    *
-   * <p>By default, this class will move the indicator linearly between tab destinations.
-   *
    * @param tabLayout The TabLayout parent of the indicator being drawn.
    * @param startTitle The title that should be indicated as selected when offset is 0.0.
    * @param endTitle The title that should be indicated as selected when offset is 1.0.
@@ -152,20 +145,10 @@ class TabIndicatorInterpolator {
    * @param indicator The drawable to be drawn to indicate the selected tab. Update the drawable's
    *     bounds, color, etc as {@code offset} changes to show the indicator in the correct position.
    */
-  void updateIndicatorForOffset(
+  abstract void updateIndicatorForOffset(
       TabLayout tabLayout,
       View startTitle,
       View endTitle,
       @FloatRange(from = 0.0, to = 1.0) float offset,
-      @NonNull Drawable indicator) {
-    RectF startIndicator = calculateIndicatorWidthForTab(tabLayout, startTitle);
-    // Linearly interpolate the indicator's position, using it's left and right bounds, between the
-    // two destinations.
-    RectF endIndicator = calculateIndicatorWidthForTab(tabLayout, endTitle);
-    indicator.setBounds(
-        lerp((int) startIndicator.left, (int) endIndicator.left, offset),
-        indicator.getBounds().top,
-        lerp((int) startIndicator.right, (int) endIndicator.right, offset),
-        indicator.getBounds().bottom);
-  }
+      @NonNull Drawable indicator);
 }
