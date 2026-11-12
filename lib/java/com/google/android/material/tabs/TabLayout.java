@@ -1217,21 +1217,29 @@ public class TabLayout extends HorizontalScrollView {
    */
   public void setTabIndicatorAnimationMode(
       @TabIndicatorAnimationMode int tabIndicatorAnimationMode) {
-    this.tabIndicatorAnimationMode = tabIndicatorAnimationMode;
+    final TabIndicatorInterpolator newTabIndicatorInterpolator;
     switch (tabIndicatorAnimationMode) {
       case INDICATOR_ANIMATION_MODE_LINEAR:
-        this.tabIndicatorInterpolator = new LinearTabIndicatorInterpolator();
+        newTabIndicatorInterpolator = new LinearTabIndicatorInterpolator();
         break;
       case INDICATOR_ANIMATION_MODE_ELASTIC:
-        this.tabIndicatorInterpolator = new ElasticTabIndicatorInterpolator();
+        newTabIndicatorInterpolator = new ElasticTabIndicatorInterpolator();
         break;
       case INDICATOR_ANIMATION_MODE_FADE:
-        this.tabIndicatorInterpolator = new FadeTabIndicatorInterpolator();
+        newTabIndicatorInterpolator = new FadeTabIndicatorInterpolator();
         break;
       default:
         throw new IllegalArgumentException(
             tabIndicatorAnimationMode + " is not a valid TabIndicatorAnimationMode");
     }
+
+    if (this.tabIndicatorInterpolator != null) {
+      this.tabIndicatorInterpolator.resetIndicator(tabSelectedIndicator);
+    }
+    this.tabIndicatorAnimationMode = tabIndicatorAnimationMode;
+    this.tabIndicatorInterpolator = newTabIndicatorInterpolator;
+    this.tabIndicatorInterpolator.prepareIndicator(tabSelectedIndicator);
+    slidingTabIndicator.postInvalidateOnAnimation();
   }
 
   /**

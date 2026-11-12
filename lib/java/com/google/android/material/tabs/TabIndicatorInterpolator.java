@@ -130,6 +130,26 @@ abstract class TabIndicatorInterpolator {
   }
 
   /**
+   * Called when this interpolator starts being used to draw the {@code indicator}, e.g. when it
+   * is set as the active interpolator on the {@link TabLayout}. Typically used to set the visual
+   * state the {@code indicator} requires.
+   *
+   * @param indicator The indicator drawable to be prepared for use by this interpolator.
+   * @see #resetIndicator(Drawable)
+   */
+  void prepareIndicator(@NonNull Drawable indicator) {}
+
+  /**
+   * Called when this interpolator stops being used to draw the {@code indicator}, e.g. when it is
+   * replaced by another interpolator. Typically used to undo any visual state changes made to
+   * the {@code indicator}.
+   *
+   * @param indicator The indicator drawable to be restored after use by this interpolator.
+   * @see #prepareIndicator(Drawable)
+   */
+  void resetIndicator(@NonNull Drawable indicator) {}
+
+  /**
    * Called whenever the {@code indicator} should be drawn between two destinations and the {@link
    * Drawable}'s bounds should be changed. When {@code offset} is 0.0, the tab {@code indicator}
    * should indicate that the {@code startTitle} tab is selected. When {@code offset} is 1.0, the
