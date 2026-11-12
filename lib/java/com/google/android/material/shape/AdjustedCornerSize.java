@@ -37,12 +37,12 @@ public final class AdjustedCornerSize implements CornerSize {
   public AdjustedCornerSize(float adjustment, @NonNull CornerSize other) {
     // Rollup other Adjustments into this one
     while (other instanceof AdjustedCornerSize) {
-      other = ((AdjustedCornerSize) other).other;
       adjustment += ((AdjustedCornerSize) other).adjustment;
+      other = ((AdjustedCornerSize) other).other;
     }
 
-    this.other = other;
     this.adjustment = adjustment;
+    this.other = other;
   }
 
   @Override
