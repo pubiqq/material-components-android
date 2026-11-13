@@ -339,7 +339,9 @@ public final class TabLayoutMediator {
       RecyclerView.Adapter<?> currentAdapter = viewPager.getAdapter();
       if (adapter != currentAdapter) {
         detach();
-        attach();
+        if (currentAdapter != null) {
+          attach();
+        }
       }
     }
   }
