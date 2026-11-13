@@ -2688,10 +2688,12 @@ public class TabLayout extends HorizontalScrollView {
       final int widthMeasureSpec;
       final int heightMeasureSpec = origHeightMeasureSpec;
 
-      if (maxWidth > 0 && (specWidthMode == MeasureSpec.UNSPECIFIED || specWidthSize > maxWidth)) {
+      if (maxWidth > 0
+          && (specWidthMode == MeasureSpec.UNSPECIFIED
+              || (specWidthMode == MeasureSpec.AT_MOST && specWidthSize > maxWidth))) {
         // If we have a max width and a given spec which is either unspecified or
-        // larger than the max width, update the width spec using the same mode
-        widthMeasureSpec = MeasureSpec.makeMeasureSpec(tabMaxWidth, MeasureSpec.AT_MOST);
+        // an at-most spec larger than the max width, update the width spec using the same mode
+        widthMeasureSpec = MeasureSpec.makeMeasureSpec(maxWidth, specWidthMode);
       } else {
         // Else, use the original width spec
         widthMeasureSpec = origWidthMeasureSpec;
