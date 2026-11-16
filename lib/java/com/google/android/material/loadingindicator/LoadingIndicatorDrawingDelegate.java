@@ -50,7 +50,7 @@ class LoadingIndicatorDrawingDelegate {
    * negative value if it depends on the {@link android.view.View}.
    */
   int getPreferredWidth() {
-    return max(specs.containerHeight, specs.indicatorSize);
+    return max(specs.containerWidth, specs.indicatorSize);
   }
 
   /**
@@ -58,7 +58,7 @@ class LoadingIndicatorDrawingDelegate {
    * negative value if it depends on the {@link android.view.View}.
    */
   int getPreferredHeight() {
-    return max(specs.containerWidth, specs.indicatorSize);
+    return max(specs.containerHeight, specs.indicatorSize);
   }
 
   void adjustCanvas(@NonNull Canvas canvas, @NonNull Rect bounds) {
@@ -80,9 +80,6 @@ class LoadingIndicatorDrawingDelegate {
         -getPreferredHeight() / 2f,
         getPreferredWidth() / 2f,
         getPreferredHeight() / 2f);
-
-    // Rotates canvas 90 degrees so that 0 degree at the top.
-    canvas.rotate(-90f);
   }
 
   void drawContainer(
@@ -114,7 +111,9 @@ class LoadingIndicatorDrawingDelegate {
     paint.setColor(color);
     paint.setStyle(Style.FILL);
     canvas.save();
-    canvas.rotate(indicatorState.rotationDegree);
+    // Rotates the canvas by the indicator's rotation, with an extra -90 degrees so that 0 degree
+    // is at the top.
+    canvas.rotate(indicatorState.rotationDegree - 90f);
     // Draws the shape morph.
     indicatorPath.rewind();
     int shapeMorphFraction = (int) Math.floor(indicatorState.morphFraction);
