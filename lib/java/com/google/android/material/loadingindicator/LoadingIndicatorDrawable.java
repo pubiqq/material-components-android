@@ -103,17 +103,15 @@ public final class LoadingIndicatorDrawable extends Drawable implements Drawable
       return;
     }
 
-    if (isSystemAnimatorDisabled() && staticDummyDrawable != null) {
-      staticDummyDrawable.setBounds(bounds);
-      staticDummyDrawable.setTint(specs.indicatorColors[0]);
-      staticDummyDrawable.draw(canvas);
-      return;
-    }
-
     canvas.save();
     drawingDelegate.adjustCanvas(canvas, bounds);
     drawingDelegate.drawContainer(canvas, paint, specs.containerColor, getAlpha());
-    drawingDelegate.drawIndicator(canvas, paint, animatorDelegate.indicatorState, getAlpha());
+    if (isSystemAnimatorDisabled() && staticDummyDrawable != null) {
+      drawingDelegate.drawStaticDummyIndicator(
+          canvas, staticDummyDrawable, specs.indicatorColors[0], getAlpha());
+    } else {
+      drawingDelegate.drawIndicator(canvas, paint, animatorDelegate.indicatorState, getAlpha());
+    }
     canvas.restore();
   }
 

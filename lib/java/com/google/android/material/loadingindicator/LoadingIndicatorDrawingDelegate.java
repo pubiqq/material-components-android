@@ -25,6 +25,7 @@ import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 import androidx.annotation.ColorInt;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
@@ -128,6 +129,18 @@ class LoadingIndicatorDrawingDelegate {
     indicatorPath.transform(indicatorPathTransform);
     canvas.drawPath(indicatorPath, paint);
     canvas.restore();
+  }
+
+  void drawStaticDummyIndicator(
+      @NonNull Canvas canvas,
+      @NonNull Drawable dummyDrawable,
+      @ColorInt int color,
+      @IntRange(from = 0, to = 255) int drawableAlpha) {
+    color = MaterialColors.compositeARGBWithAlpha(color, drawableAlpha);
+    int halfSize = Math.round(specs.indicatorSize / 2f);
+    dummyDrawable.setBounds(-halfSize, -halfSize, halfSize, halfSize);
+    dummyDrawable.setTint(color);
+    dummyDrawable.draw(canvas);
   }
 
   private static final RoundedPolygon[] INDETERMINATE_SHAPES =
