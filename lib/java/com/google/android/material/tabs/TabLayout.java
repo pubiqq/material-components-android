@@ -264,7 +264,7 @@ public class TabLayout extends HorizontalScrollView {
 
   /**
    * Gravity used to fill the {@link TabLayout} as much as possible. This option only takes effect
-   * when used with {@link #MODE_FIXED} on non-landscape screens less than 600dp wide.
+   * when used with {@link #MODE_FIXED}.
    *
    * @see #setTabGravity(int)
    * @see #getTabGravity()
@@ -523,7 +523,7 @@ public class TabLayout extends HorizontalScrollView {
     // Disable the Scroll Bar
     setHorizontalScrollBarEnabled(false);
 
-    // Add the TabStrip
+    // Add the TabIndicator
     slidingTabIndicator = new SlidingTabIndicator(context);
     super.addView(
         slidingTabIndicator,
@@ -1126,9 +1126,12 @@ public class TabLayout extends HorizontalScrollView {
    *       and can contain longer tab labels and a larger number of tabs. They are best used for
    *       browsing contexts in touch interfaces when users don't need to directly compare the tab
    *       labels. This mode is commonly used with a {@link androidx.viewpager.widget.ViewPager}.
+   *   <li>{@link #MODE_AUTO}: Auto-sizing tabs behave like MODE_FIXED with GRAVITY_CENTER while
+   *       the tabs fit within the TabLayout's content width, and like MODE_SCROLLABLE once they
+   *       outgrow it, allowing for a dynamic number of tabs.
    * </ul>
    *
-   * @param mode one of {@link #MODE_FIXED} or {@link #MODE_SCROLLABLE}.
+   * @param mode one of {@link #MODE_FIXED}, {@link #MODE_SCROLLABLE}, or {@link #MODE_AUTO}.
    * @attr ref com.google.android.material.R.styleable#TabLayout_tabMode
    */
   public void setTabMode(@Mode int mode) {
@@ -1141,6 +1144,7 @@ public class TabLayout extends HorizontalScrollView {
   /**
    * Returns the current mode used by this {@link TabLayout}.
    *
+   * @return one of {@link #MODE_FIXED}, {@link #MODE_SCROLLABLE}, or {@link #MODE_AUTO}.
    * @see #setTabMode(int)
    */
   @Mode
@@ -1151,7 +1155,8 @@ public class TabLayout extends HorizontalScrollView {
   /**
    * Set the gravity to use when laying out the tabs.
    *
-   * @param gravity one of {@link #GRAVITY_CENTER} or {@link #GRAVITY_FILL}.
+   * @param gravity one of {@link #GRAVITY_START}, {@link #GRAVITY_CENTER}, or {@link
+   *     #GRAVITY_FILL}.
    * @attr ref com.google.android.material.R.styleable#TabLayout_tabGravity
    */
   public void setTabGravity(@TabGravity int gravity) {
@@ -1164,7 +1169,7 @@ public class TabLayout extends HorizontalScrollView {
   /**
    * The current gravity used for laying out tabs.
    *
-   * @return one of {@link #GRAVITY_CENTER} or {@link #GRAVITY_FILL}.
+   * @return one of {@link #GRAVITY_START}, {@link #GRAVITY_CENTER}, or {@link #GRAVITY_FILL}.
    */
   @TabGravity
   public int getTabGravity() {
@@ -1210,8 +1215,8 @@ public class TabLayout extends HorizontalScrollView {
    * <p>Defaults to {@link #INDICATOR_ANIMATION_MODE_LINEAR}. Changing this is useful as a stylistic
    * choice.
    *
-   * @param tabIndicatorAnimationMode one of {@link #INDICATOR_ANIMATION_MODE_LINEAR} or {@link
-   *     #INDICATOR_ANIMATION_MODE_ELASTIC}
+   * @param tabIndicatorAnimationMode one of {@link #INDICATOR_ANIMATION_MODE_LINEAR}, {@link
+   *     #INDICATOR_ANIMATION_MODE_ELASTIC}, or {@link #INDICATOR_ANIMATION_MODE_FADE}.
    * @attr ref com.google.android.material.R.styleable#TabLayout_tabIndicatorAnimationMode
    * @see #getTabIndicatorAnimationMode()
    */
@@ -1246,8 +1251,8 @@ public class TabLayout extends HorizontalScrollView {
    * Get the current indicator animation mode used to animate the selection indicator between
    * destinations.
    *
-   * @return one of {@link #INDICATOR_ANIMATION_MODE_LINEAR} or {@link
-   *     #INDICATOR_ANIMATION_MODE_ELASTIC}
+   * @return one of {@link #INDICATOR_ANIMATION_MODE_LINEAR}, {@link
+   *     #INDICATOR_ANIMATION_MODE_ELASTIC}, or {@link #INDICATOR_ANIMATION_MODE_FADE}.
    * @attr ref com.google.android.material.R.styleable#TabLayout_tabIndicatorAnimationMode
    * @see #setTabIndicatorAnimationMode(int)
    */
@@ -1871,7 +1876,7 @@ public class TabLayout extends HorizontalScrollView {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
     if (getChildCount() == 1) {
-      // If we're in fixed mode then we need to make sure the tab strip is the same width as us
+      // If we're in fixed mode then we need to make sure the tab indicator is the same width as us
       // so we don't scroll
       final View child = getChildAt(0);
       boolean remeasure = false;
@@ -3454,7 +3459,7 @@ public class TabLayout extends HorizontalScrollView {
   @Override
   public LayoutParams generateLayoutParams(AttributeSet attrs) {
     // We don't care about the layout params of any views added to us, since we don't actually
-    // add them. The only view we add is the SlidingTabStrip, which is done manually.
+    // add them. The only view we add is the SlidingTabIndicator, which is done manually.
     // We return the default layout params so that we don't blow up if we're given a TabItem
     // without android:layout_* values.
     return generateDefaultLayoutParams();
