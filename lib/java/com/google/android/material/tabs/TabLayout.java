@@ -2757,8 +2757,10 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     void reset() {
+      removeBadge();
       setTab(null);
       setSelected(false);
+      setId(NO_ID);
     }
 
     final void updateTab() {
