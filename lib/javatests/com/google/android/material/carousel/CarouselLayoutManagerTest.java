@@ -20,6 +20,7 @@ import static com.google.android.material.carousel.CarouselHelper.createDataSetW
 import static com.google.android.material.carousel.CarouselHelper.getKeylineMaskPercentage;
 import static com.google.android.material.carousel.CarouselHelper.getTestCenteredKeylineState;
 import static com.google.android.material.carousel.CarouselHelper.getTestCenteredVerticalKeylineState;
+import static com.google.android.material.carousel.CarouselHelper.relayout;
 import static com.google.android.material.carousel.CarouselHelper.scrollHorizontallyBy;
 import static com.google.android.material.carousel.CarouselHelper.scrollToPosition;
 import static com.google.android.material.carousel.CarouselHelper.scrollVerticallyBy;
@@ -85,6 +86,25 @@ public class CarouselLayoutManagerTest {
   public void testMeasureChild_usesStateItemSize() throws Throwable {
     setAdapterItems(recyclerView, layoutManager, adapter, createDataSetWithSize(1));
     assertThat(recyclerView.getChildAt(0).getMeasuredWidth()).isEqualTo(DEFAULT_ITEM_WIDTH);
+  }
+
+  @Test
+  public void testMeasureChildWithMargins_usesStateItemSizeMinusMargins() throws Throwable {
+    final int ITEM_LEFT_MARGIN = 10;
+    final int ITEM_RIGHT_MARGIN = 15;
+
+    setAdapterItems(recyclerView, layoutManager, adapter, createDataSetWithSize(1));
+
+    final View child = recyclerView.getChildAt(0);
+    final RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) child.getLayoutParams();
+    lp.leftMargin = ITEM_LEFT_MARGIN;
+    lp.rightMargin = ITEM_RIGHT_MARGIN;
+    child.requestLayout();
+
+    relayout(recyclerView, layoutManager);
+
+    final int expectedWidth = DEFAULT_ITEM_WIDTH - ITEM_LEFT_MARGIN - ITEM_RIGHT_MARGIN;
+    assertThat(child.getMeasuredWidth()).isEqualTo(expectedWidth);
   }
 
   @Test

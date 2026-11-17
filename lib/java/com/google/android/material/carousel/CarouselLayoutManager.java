@@ -1040,14 +1040,30 @@ public class CarouselLayoutManager extends LayoutManager
     // If the strategy's keyline set is available, use the item size from the keyline set.
     // Otherwise, measure the item to what it would like to be so the strategy will be given an
     // opportunity to use this desired size in making it's sizing decision.
-    final float childWidthDimension =
-        keylineStateList != null && orientationHelper.orientation == HORIZONTAL
-            ? keylineStateList.getDefaultState().getItemSize()
-            : lp.width;
-    final float childHeightDimension =
-        keylineStateList != null && orientationHelper.orientation == VERTICAL
-            ? keylineStateList.getDefaultState().getItemSize()
-            : lp.height;
+    final float childWidthDimension;
+    if (keylineStateList != null && orientationHelper.orientation == HORIZONTAL) {
+      final float itemWidth = keylineStateList.getDefaultState().getItemSize();
+      final float contentWidth = itemWidth
+          - lp.leftMargin - lp.rightMargin
+          - insets.left - insets.right;
+
+      childWidthDimension = max(0f, contentWidth);
+    } else {
+      childWidthDimension = lp.width;
+    }
+
+    final float childHeightDimension;
+    if (keylineStateList != null && orientationHelper.orientation == VERTICAL) {
+      final float itemHeight = keylineStateList.getDefaultState().getItemSize();
+      final float contentHeight = itemHeight
+          - lp.topMargin - lp.bottomMargin
+          - insets.top - insets.bottom;
+
+      childHeightDimension = max(0f, contentHeight);
+    } else {
+      childHeightDimension = lp.height;
+    }
+
     final int widthSpec =
         getChildMeasureSpec(
             getWidth(),

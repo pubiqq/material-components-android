@@ -94,6 +94,22 @@ class CarouselHelper {
   }
 
   /**
+   * Handles forcing the recycler view to do a measure and layout pass and waiting until the
+   * recycler view has made the layout pass.
+   */
+  static void relayout(RecyclerView recyclerView, WrappedCarouselLayoutManager layoutManager)
+      throws Throwable {
+    layoutManager.expectLayouts(1);
+    // Ping the recycler view to do a measure and layout.
+    recyclerView.measure(
+        MeasureSpec.makeMeasureSpec(recyclerView.getMeasuredWidth(), MeasureSpec.EXACTLY),
+        MeasureSpec.makeMeasureSpec(recyclerView.getMeasuredHeight(), MeasureSpec.EXACTLY));
+    // Force the recycler view to do a measure and layout.
+    recyclerView.layout(0, 0, recyclerView.getMeasuredWidth(), recyclerView.getMeasuredHeight());
+    layoutManager.waitForLayout(3L);
+  }
+
+  /**
    * Handles scrolling the recycler view to an adapter position and waiting until the recycler view
    * has made a layout pass.
    */
